@@ -18,7 +18,6 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.cmdheight = 2
 vim.opt.tabstop = 8
 vim.opt.shiftwidth = 2
-vim.opt.smartindent = true
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
 vim.opt.title = true
@@ -171,7 +170,6 @@ lvim.plugins = {
      {"morhetz/gruvbox"},
      {"tpope/vim-fugitive"},
      {"tpope/vim-rhubarb"},
-     {"github/copilot.vim"},
      {"BurntSushi/ripgrep"},
      {
        "folke/trouble.nvim",
