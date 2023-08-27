@@ -1,0 +1,29 @@
+<application>
+  <component name="LessonStateBase">
+    <option name="map">
+      <map>
+        <entry key="actions" value="NOT_PASSED" />
+        <entry key="code completion" value="NOT_PASSED" />
+        <entry key="codeassistance.localhistory" value="NOT_PASSED" />
+        <entry key="comment line" value="NOT_PASSED" />
+        <entry key="context.actions" value="NOT_PASSED" />
+        <entry key="duplicate" value="NOT_PASSED" />
+        <entry key="extract variable" value="NOT_PASSED" />
+        <entry key="file structure" value="NOT_PASSED" />
+        <entry key="find in files" value="NOT_PASSED" />
+        <entry key="git.annotate" value="NOT_PASSED" />
+        <entry key="git.basicworkflow" value="NOT_PASSED" />
+        <entry key="git.changelistsandshelf" value="NOT_PASSED" />
+        <entry key="git.commit" value="NOT_PASSED" />
+        <entry key="git.interactiverebase" value="NOT_PASSED" />
+        <entry key="git.projecthistory" value="NOT_PASSED" />
+        <entry key="git.quickstart" value="NOT_PASSED" />
+        <entry key="multiple selections" value="NOT_PASSED" />
+        <entry key="refactorings.rename" value="NOT_PASSED" />
+        <entry key="rider.refactoring.menu" value="NOT_PASSED" />
+        <entry key="search everywhere" value="NOT_PASSED" />
+        <entry key="select" value="NOT_PASSED" />
+      </map>
+    </option>
+  </component>
+</application>

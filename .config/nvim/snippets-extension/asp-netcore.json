@@ -1,0 +1,522 @@
+{
+    "ASP.NET Core 2.0 csproj Generator": {
+        "prefix": "ac_csproj_2.0",
+        "body": [
+            "<Project Sdk=\"Microsoft.NET.Sdk.Web\">",
+            "\t<PropertyGroup>",
+            "\t\t<TargetFramework>netcoreapp2.0</TargetFramework>",
+            "\t</PropertyGroup>",
+            "\t<ItemGroup>",
+            "\t\t<Folder Include=\"wwwroot\\\" />",
+            "\t</ItemGroup>",
+            "\t<ItemGroup>",
+            "\t\t<PackageReference Include=\"Microsoft.AspNetCore.All\" Version=\"2.0.0\" />",
+            "\t</ItemGroup>",
+            "</Project>"
+        ],
+        "description": "ASP.NET Core 2.0 csproj Generator"
+    },
+    "ASP.NET Core 2.1 csproj Generator": {
+        "prefix": "ac_csproj_2.1",
+        "body": [
+            "<Project Sdk=\"Microsoft.NET.Sdk.Web\">",
+            "\t<PropertyGroup>",
+            "\t\t<TargetFramework>netcoreapp2.1</TargetFramework>",
+            "\t</PropertyGroup>",
+            "\t<ItemGroup>",
+            "\t\t<Folder Include=\"wwwroot\\\" />",
+            "\t</ItemGroup>",
+            "\t<ItemGroup>",
+            "\t\t<PackageReference Include=\"Microsoft.AspNetCore.All\" Version=\"2.1.0\" />",
+            "\t</ItemGroup>",
+            "</Project>"
+        ],
+        "description": "ASP.NET Core 2.1 csproj Generator"
+    },
+    "ASP.NET Core 3.1 csproj Generator": {
+        "prefix": "ac_csproj_3.1",
+        "body": [
+            "<Project Sdk=\"Microsoft.NET.Sdk.Web\">",
+            "\t<PropertyGroup>",
+            "\t\t<TargetFramework>netcoreapp3.1</TargetFramework>",
+            "\t</PropertyGroup>",
+            "</Project>"
+        ],
+        "description": "ASP.NET Core 3.1 csproj Generator"
+    },
+    "ASP.NET 5 csproj Generator": {
+        "prefix": "ac_csproj_5",
+        "body": [
+            "<Project Sdk=\"Microsoft.NET.Sdk.Web\">",
+            "\t<PropertyGroup>",
+            "\t\t<TargetFramework>net5.0</TargetFramework>",
+            "\t</PropertyGroup>",
+            "</Project>"
+        ],
+        "description": "ASP.NET Core 5 csproj Generator"
+    },
+    "ASP.NET Core - Creates a HelloWorld sample - Startup": {
+        "prefix": "ac_#helloworld_Startup",
+        "body": [
+            "using System;",
+            "using System.Collections.Generic;",
+            "using System.Linq;",
+            "using System.Threading.Tasks;",
+            "using Microsoft.AspNetCore.Builder;",
+            "using Microsoft.AspNetCore.Hosting;",
+            "using Microsoft.AspNetCore.Http;",
+            "using Microsoft.Extensions.DependencyInjection;",
+            "",
+            "namespace WebApp",
+            "{",
+            "\tpublic class Startup",
+            "\t{",
+            "\t\tpublic void ConfigureServices(IServiceCollection services)",
+            "\t\t{",
+            "\t\t}",
+            "",
+            "\t\tpublic void Configure(IApplicationBuilder app, IHostingEnvironment env)",
+            "\t\t{",
+            "\t\t\tif (env.IsDevelopment())",
+            "\t\t\t{",
+            "\t\t\t\tapp.UseDeveloperExceptionPage();",
+            "\t\t\t}",
+            "",
+            "\t\t\tapp.Run(async (context) =>",
+            "\t\t\t{",
+            "\t\t\t\tawait context.Response.WriteAsync(\"Hello World!\");",
+            "\t\t\t});",
+            "\t\t}",
+            "\t}",
+            "}"
+        ],
+        "description": "ASP.NET Core - Creates a HelloWorld sample - Startup"
+    },
+    "ASP.NET Core - Creates a HelloWorld sample - WebApp": {
+        "prefix": "ac_#helloworld_WebApp",
+        "body": [
+            "using System;",
+            "using System.Collections.Generic;",
+            "using System.IO;",
+            "using System.Linq;",
+            "using System.Threading.Tasks;",
+            "using Microsoft.AspNetCore;",
+            "using Microsoft.AspNetCore.Hosting;",
+            "using Microsoft.Extensions.Configuration;",
+            "using Microsoft.Extensions.Logging;",
+            "",
+            "namespace WebApp",
+            "{",
+            "\tpublic class Program",
+            "\t{",
+            "\t\tpublic static void Main(string[] args)",
+            "\t\t{",
+            "\t\t\tBuildWebHost(args).Run();",
+            "\t\t}",
+            "",
+            "\t\tpublic static IWebHost BuildWebHost(string[] args) =>",
+            "\t\tWebHost.CreateDefaultBuilder(args)",
+            "\t\t\t.UseStartup<Startup>()",
+            "\t\t\t.Build();",
+            "\t}",
+            "}"
+        ],
+        "description": "ASP.NET Core - Creates a HelloWorld sample - WebApp"
+    },
+    "ASP.NET Core - Creates a HelloWorld sample - WebApi": {
+        "prefix": "ac_#helloworld_WebApi",
+        "body": [
+            "using System;",
+            "using Microsoft.AspNetCore;",
+            "using Microsoft.AspNetCore.Builder;",
+            "using Microsoft.AspNetCore.Http;",
+            "using Microsoft.AspNetCore.Routing;",
+            "",
+            "Console.WriteLine(\"http://localhost:5000/hello/test\");",
+            "WebHost.Start(routes => routes.MapGet(\"hello/{name}\", (request, response, data) => response.WriteAsync($\"Hello, {data.Values[\"name\"]}\")));",
+            "Console.ReadKey();"
+        ],
+        "description": "ASP.NET Core - Creates a HelloWorld sample - WebApi"
+    },
+    "ASP.NET Core - Creates a MVC/Api Action": {
+        "prefix": "ac_action",
+        "body": [
+            "[${1:HttpGet}(nameof($2))]",
+            "public async Task<IActionResult> ${2:ActionName}(${3:string} ${4:name})",
+            "{",
+            "\t$0",
+            "\treturn Ok;",
+            "}"
+        ],
+        "description": "ASP.NET Core - Creates a MVC/Api Action"
+    },
+    "ASP.NET Core - Creates a comment block in ASP.NET": {
+        "prefix": "ac_comment",
+        "body": [
+            "<%-- $0 -->"
+        ],
+        "description": "ASP.NET Core - Creates a comment block in ASP.NET"
+    },
+    "ASP.NET Core - Creates a way to configure the JSON configuration provider": {
+        "prefix": "ac_conf",
+        "body": [
+            "// Remember imports: using Microsoft.Extensions.Configuration;",
+            "public IConfiguration Configuration { get; set; }",
+            "",
+            "public Startup(IConfiguration configuration)",
+            "{",
+            "\tConfiguration = configuration;",
+            "}"
+        ],
+        "description": "ASP.NET Core - Creates a way to configure the JSON configuration provider"
+    },
+    "ASP.NET Core - Creates a way to configure the JSON configuration provider with a custom config file": {
+        "prefix": "ac_conf_file",
+        "body": [
+            "var builder = new ConfigurationBuilder()",
+            ".SetBasePath(env.ContentRootPath)",
+            ".AddJsonFile(\"${1:mySettings}.json\", optional: true, reloadOnChange: true);",
+            "",
+            "// Remember to create the property",
+            "// public IConfiguration Configuration { get; set; }",
+            "Configuration = builder.Build();"
+        ],
+        "description": "ASP.NET Core - Creates a way to configure the JSON configuration provider with a custom config file"
+    },
+    "ASP.NET Core - Creates the base of a controller": {
+        "prefix": "ac_controller",
+        "body": [
+            "namespace ${1:Name}.Controllers",
+            "{",
+            "",
+            "\tusing Microsoft.AspNetCore.Mvc;",
+            "",
+            "\tpublic class ${2:Name}Controller : Controller",
+            "\t{",
+            "\t\tpublic IActionResult Index()",
+            "\t\t{",
+            "\t\t\treturn View();",
+            "\t\t}",
+            "",
+            "\t\tpublic IActionResult ${3:Welcome}()",
+            "\t\t{",
+            "\t\t\tViewData[\"Message\"] = \"Your welcome message\";",
+            "",
+            "\t\t\treturn View();",
+            "\t\t}",
+            "\t}",
+            "}"
+        ],
+        "description": "ASP.NET Core - Creates the base of a controller"
+    },
+    "ASP.NET Core - Creates the Startup constructor to be used with the web hosting environment": {
+        "prefix": "ac_startupenv",
+        "body": [
+            "public Startup(IHostingEnvironment env)",
+            "{",
+            "\tvar builder = new ConfigurationBuilder()",
+            "\t\t.SetBasePath(env.ContentRootPath)",
+            "\t\t.AddJsonFile(\"appsettings.json\", optional: false, reloadOnChange: true)",
+            "\t\t.AddJsonFile($\"appsettings.{env.EnvironmentName}.json\", optional: true)",
+            "\t\t.AddEnvironmentVariables();",
+            "",
+            "\tConfiguration = builder.Build();",
+            "}"
+        ],
+        "description": "ASP.NET Core - Creates the Startup constructor to be used with the web hosting environment"
+    },
+    "ASP.NET Core Web Api - Creates the base of a controller": {
+        "prefix": "api_controller",
+        "body": [
+            "\tusing Microsoft.AspNetCore.Mvc;",
+            "",
+            "\t[Route(\"api/[controller]\")]",
+            "\t[ApiController]",
+            "\tpublic class ${2:Name}Controller : ControllerBase",
+            "\t{",
+            "\t}"
+        ],
+        "description": "ASP.NET Core Web Api - Creates the base of a controller"
+    },
+    "ASP.NET Core Web Api - Creates the Delete Action of the WebApi": {
+        "prefix": "api_delete",
+        "body": [
+            "[HttpDelete(\"{${1:value}\\}\")]",
+            "public async Task ${2:DeleteAsync}(${3:string} $1)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "ASP.NET Core Web Api - Creates the Delete Action of the WebApi"
+    },
+    "ASP.NET Core Web Api - Creates the Get Action of the WebApi": {
+        "prefix": "api_get",
+        "body": [
+            "[HttpGet(\"{${1:value}\\}\")]",
+            "public async Task<ActionResult<${2:string}>> ${3:GetAsync}(${4:string} $1)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "ASP.NET Core Web Api - Creates the Get Action of the WebApi"
+    },
+    "ASP.NET Core Web Api - Creates the Put Action of the WebApi": {
+        "prefix": "api_put",
+        "body": [
+            "[HttpPut(\"{${1:value}\\}\")]",
+            "public async Task ${2:PutAsync}(${3:string} $1)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "ASP.NET Core Web Api - Creates the Put Action of the WebApi"
+    },
+    "ASP.NET Core Web Api - Creates the Post Action of the WebApi": {
+        "prefix": "api_post",
+        "body": [
+            "[HttpPost(\"{${1:value}\\}\")]",
+            "public async Task ${2:PostAsync}([FromBody] ${3:string} $1)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "ASP.NET Core Web Api - Creates the Post Action of the WebApi"
+    },
+    "ASP.NET Core Razor - Creates a code block for Razor": {
+        "prefix": "rz_code",
+        "body": [
+            "@code {",
+            "\t$0",
+            "}"
+        ],
+        "description": "ASP.NET Core Razor - Creates a code block for Razor"
+    },
+    "ASP.NET Core Razor - Creates a comment block for Razor": {
+        "prefix": "rz_comment",
+        "body": [
+            "@* $0 *@"
+        ],
+        "description": "ASP.NET Core Razor - Creates a comment block for Razor"
+    },
+    "ASP.NET Core Razor - Creates a directive block for Razor": {
+        "prefix": "rz_directive",
+        "body": [
+            "@{",
+            "\t$0",
+            "}"
+        ],
+        "description": "ASP.NET Core Razor - Creates a directive block for Razor"
+    },
+    "ASP.NET Core Razor - Creates a do while loop for Razor": {
+        "prefix": "rz_dowhile",
+        "body": [
+            "@{ var ${1:flag} = ${2:true}; }",
+            "@do",
+            "{",
+            "\t$0",
+            "} while ($1)"
+        ],
+        "description": "ASP.NET Core Razor - Creates a do while loop for Razor"
+    },
+    "ASP.NET Core Razor - Creates a for statement for Razor": {
+        "prefix": "rz_for",
+        "body": [
+            "@for (var ${1:i} = 0; $1 < ${2:length}; $1++)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "ASP.NET Core Razor - Creates a for statement for Razor"
+    },
+    "ASP.NET Core Razor - Creates a foreach statement for Razor": {
+        "prefix": "rz_foreach",
+        "body": [
+            "@foreach (var ${1:person} in ${2:people})",
+            "{",
+            "\t<${3:p}>${4:Name}: @$1.$4</$3>",
+            "\t$0",
+            "}"
+        ],
+        "description": "ASP.NET Core Razor - Creates a foreach statement for Razor"
+    },
+    "ASP.NET Core Razor - Creates a functions block for Razor": {
+        "prefix": "rz_functions",
+        "body": [
+            "@functions {",
+            "\t$0",
+            "}"
+        ],
+        "description": "ASP.NET Core Razor - Creates a functions block for Razor"
+    },
+    "ASP.NET Core Razor - Creates an if statement for Razor": {
+        "prefix": "rz_if",
+        "body": [
+            "@if (${1:true})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "ASP.NET Core Razor - Creates an if statement for Razor"
+    },
+    "ASP.NET Core Razor - Creates an if else statement for Razor": {
+        "prefix": "rz_ifelse",
+        "body": [
+            "@if (${1:true})",
+            "{",
+            "\t$0",
+            "}",
+            "else",
+            "{",
+            "\t$2",
+            "}"
+        ],
+        "description": "ASP.NET Core Razor - Creates an if else statement for Razor"
+    },
+    "ASP.NET Core Razor - Implements an interface for Razor": {
+        "prefix": "rz_implements",
+        "body": [
+            "@implements I${1:MyInterface}",
+            "",
+            "\t$0"
+        ],
+        "description": "ASP.NET Core Razor - Implements an interface for Razor"
+    },
+    "ASP.NET Core Razor - Creates an inherits directive for Razor": {
+        "prefix": "rz_inherits",
+        "body": [
+            "@inherits ${1:MyClassToInheritFrom}",
+            "",
+            "\t$0"
+        ],
+        "description": "ASP.NET Core Razor - Creates an inherits directive for Razor"
+    },
+    "ASP.NET Core Razor - Creates an inject directive for Razor": {
+        "prefix": "rz_inject",
+        "body": [
+            "@inject I${1:MyInterface} ${2:MyInterface}",
+            "$0"
+        ],
+        "description": "ASP.NET Core Razor - Creates an inject directive for Razor"
+    },
+    "ASP.NET Core Razor - Specifies the model to use for Razor": {
+        "prefix": "rz_model",
+        "body": [
+            "@model ${1:MyModel}",
+            "$0"
+        ],
+        "description": "ASP.NET Core Razor - Specifies the model to use for Razor"
+    },
+    "ASP.NET Core Razor - Specifies the namespace to use for Razor": {
+        "prefix": "rz_namespace",
+        "body": [
+            "@namespace ${1:MyNamespace}",
+            "$0"
+        ],
+        "description": "ASP.NET Core Razor - Specifies the namespace to use for Razor"
+    },
+    "ASP.NET Core Razor - Creates a HTML markup for Razor": {
+        "prefix": "rz_raw",
+        "body": [
+            "@Html.Raw(\"<${1:span}>${2:Hello World}</$1>\")"
+        ],
+        "description": "ASP.NET Core Razor - Creates a HTML markup for Razor"
+    },
+    "ASP.NET Core Razor - Creates a RenderBody for Razor": {
+        "prefix": "rz_renderbody",
+        "body": [
+            "@RenderBody()"
+        ],
+        "description": "ASP.NET Core Razor - Creates RenderBody for Razor"
+    },
+    "ASP.NET Core Razor - Creates a switch statement for Razor": {
+        "prefix": "rz_switch",
+        "body": [
+            "@switch (${1:value})",
+            "{",
+            "\tcase ${2:value1}:",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\tbreak;",
+            "}",
+            "$0"
+        ],
+        "description": "ASP.NET Core Razor - Creates a switch statement for Razor"
+    },
+    "ASP.NET Core Razor - Creates a try catch finally for Razor": {
+        "prefix": "rz_try",
+        "body": [
+            "@try",
+            "{",
+            "\t$0",
+            "}",
+            "catch (${1:Exception} ${2:ex})",
+            "{",
+            "\t<${3:p}>Error: @$2.Message</$3>",
+            "}",
+            "finally",
+            "{",
+            "\t",
+            "}"
+        ],
+        "description": "ASP.NET Core Razor - Creates a try catch finally for Razor"
+    },
+    "ASP.NET Core Razor - Creates an using statement for Razor": {
+        "prefix": "rz_using",
+        "body": [
+            "@using (${1:Html.BeginForm()})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "ASP.NET Core Razor - Creates an using statement for Razor"
+    },
+    "ASP.NET Core Razor - Creates a ViewBag for Razor": {
+        "prefix": "rz_viewbag",
+        "body": [
+            "@ViewBag.${1:MyViewBagName}",
+            "$0"
+        ],
+        "description": "ASP.NET Core Razor - Creates a ViewBag for Razor"
+    },
+    "ASP.NET Core Razor - Creates a ViewData for Razor": {
+        "prefix": "rz_viewdata",
+        "body": [
+            "@ViewData[\"${1:myViewData}\"]",
+            "$0"
+        ],
+        "description": "ASP.NET Core Razor - Creates a ViewData for Razor"
+    },
+    "ASP.NET Core Razor - Creates a while loop for Razor": {
+        "prefix": "rz_while",
+        "body": [
+            "@{ var ${1:flag} = ${2:true}; }",
+            "@while ($1)",
+            "{",
+            "\t$0",
+            "\t$1 = ${3:false};",
+            "}"
+        ],
+        "description": "ASP.NET Core Razor - Creates a while loop for Razor"
+    },
+    ".NET Core - Creates a MS-Test class": {
+        "prefix": "mstest",
+        "body": [
+            "using Microsoft.VisualStudio.TestTools.UnitTesting;",
+            "using System;",
+            "",
+            "namespace ${1:ProjectNamespace}.Test",
+            "{",
+            "\t[TestClass]",
+            "\tpublic class ${2:ClassName}Test",
+            "\t{",
+            "\t\t[TestMethod]",
+            "\t\tpublic void ${3:MethodName}()",
+            "\t\t{",
+            "\t\t\t",
+            "\t\t}",
+            "\t}",
+            "}"
+        ],
+        "description": "Creates a MS-Test class with the basic usings and configurable namespace, class and method names"
+    }
+}

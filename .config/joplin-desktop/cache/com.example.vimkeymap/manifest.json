@@ -1,0 +1,14 @@
+{
+	"manifest_version": 1,
+	"id": "com.example.vimkeymap",
+	"app_min_version": "2.8",
+	"version": "1.0.0",
+	"name": "personal-keymap",
+	"description": "pheotush&#39;s personal vim keybindings",
+	"author": "phetoush",
+	"homepage_url": "",
+	"repository_url": "https://github.com/prLorence/joplin-keymap",
+	"keywords": [],
+	"categories": [],
+	"_package_hash": "ab9142992886d421f6d9e2df08793da7"
+}

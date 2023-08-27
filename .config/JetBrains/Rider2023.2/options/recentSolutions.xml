@@ -1,0 +1,74 @@
+<application>
+  <component name="RiderRecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/Documents/github_repos/personal/eShopOnWeb/Everything.sln">
+          <value>
+            <RecentProjectMetaInfo frameTitle="Everything – ~/Documents/github_repos/personal/eShopOnWeb/README.md" opened="true" projectWorkspaceId="2U3HcAiaBDffo72wHpgn3Z4e5cm">
+              <option name="activationTimestamp" value="1692161448028" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="RD-232.8660.212" />
+              <option name="buildTimestamp" value="1690830402290" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="3" />
+              </option>
+              <frame x="5" y="26" width="1910" height="1049" />
+              <option name="productionCode" value="RD" />
+              <option name="projectOpenTimestamp" value="1692161427072" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/github_repos/personal/dsa_csharp/dsa_csharp.csproj">
+          <value>
+            <RecentProjectMetaInfo displayName="dsa_csharp" frameTitle="dsa_csharp – Program.cs" projectWorkspaceId="2UKd0NV3WgOD4tZlybENytpUBi6">
+              <option name="activationTimestamp" value="1693022766009" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="RD-232.9559.61" />
+              <option name="buildTimestamp" value="1692734779843" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="3" y="27" width="1910" height="1049" />
+              <option name="metadata" value="dsa_csharp|/home/phetoush/Documents/github_repos/personal/dsa_csharp/dsa_csharp.csproj" />
+              <option name="productionCode" value="RD" />
+              <option name="projectOpenTimestamp" value="1693021168643" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/github_repos/personal/InvSys/InvSys.sln">
+          <value>
+            <RecentProjectMetaInfo frameTitle="InvSys – CreateRole.cs" projectWorkspaceId="2TnFUMPr4exEpGlQwGUIG63vuaT">
+              <option name="activationTimestamp" value="1693039835903" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="RD-232.9559.61" />
+              <option name="buildTimestamp" value="1692734800877" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="1" />
+              </option>
+              <frame x="5" y="46" width="1910" height="1029" />
+              <option name="productionCode" value="RD" />
+              <option name="projectOpenTimestamp" value="1693023768491" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/github_repos/personal/EDASample/EDASample.sln">
+          <value>
+            <RecentProjectMetaInfo frameTitle="EDASample – ProducerService.cs" opened="true" projectWorkspaceId="2UW04MoiQUhHrBa1lk4cOQLa2JA">
+              <option name="activationTimestamp" value="1693117910754" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="RD-232.9559.61" />
+              <option name="buildTimestamp" value="1692734814975" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="5" y="46" width="1910" height="1029" />
+              <option name="productionCode" value="RD" />
+              <option name="projectOpenTimestamp" value="1693103227720" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="$USER_HOME$/Documents/github_repos/personal/EDASample/EDASample.sln" />
+  </component>
+</application>

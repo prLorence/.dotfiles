@@ -1,0 +1,308 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-search>
+        <entry encoding="base64">dXNlck1hbmFnZXI=</entry>
+        <entry encoding="base64">SU1hcHBlcg==</entry>
+        <entry encoding="base64">RW1haWw=</entry>
+        <entry encoding="base64">a3Nlcm5hbWU=</entry>
+        <entry encoding="base64">QXN5bmM=</entry>
+        <entry encoding="base64">UHJvZHVjZUFzeW5j</entry>
+      </history-search>
+      <history-cmd>
+        <entry encoding="base64">c291cmNlIH4vLmNvbmZpZy9pZGV2aW0vLmlkZWF2aW1yYw==</entry>
+        <entry encoding="base64">d3E=</entry>
+        <entry encoding="base64">cw==</entry>
+        <entry encoding="base64">ZQ==</entry>
+        <entry encoding="base64">c291cmNlIH4vLmNvbmZpZy9pZGVhdmltLy5pZGVhdmltcmM=</entry>
+        <entry encoding="base64">c291cmNlIH4vLmlkZWF2cmltcmM=</entry>
+        <entry encoding="base64">JzwsJz5zL0VtYWlsL1VzZXJOYW1l</entry>
+        <entry encoding="base64">JzwsJz4reSI=</entry>
+        <entry encoding="base64">JzwsJz55KyI=</entry>
+        <entry encoding="base64">c291cmNlIH4vLmlkZWF2aW1yYw==</entry>
+        <entry encoding="base64">JzwsJz55Kw==</entry>
+        <entry encoding="base64">JzwsJz4iK3k=</entry>
+        <entry encoding="base64">JzwsJz4=</entry>
+        <entry encoding="base64">JzwsJz53</entry>
+        <entry encoding="base64">Vw==</entry>
+        <entry encoding="base64">MTE=</entry>
+        <entry encoding="base64">MTM=</entry>
+        <entry encoding="base64">MTU=</entry>
+        <entry encoding="base64" />
+        <entry encoding="base64">MzE=</entry>
+        <entry encoding="base64">cQ==</entry>
+        <entry encoding="base64">dw==</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+  <component name="VimJumpsSettings">
+    <jump line="3" column="0" filename="$USER_HOME$/Documents/github_repos/personal/dsa_csharp/Program.cs" />
+    <jump line="11" column="0" filename="$USER_HOME$/Documents/github_repos/personal/dsa_csharp/Program.cs" />
+    <jump line="4" column="19" filename="$USER_HOME$/Documents/github_repos/personal/dsa_csharp/Program.cs" />
+    <jump line="10" column="39" filename="$USER_HOME$/Documents/github_repos/personal/dsa_csharp/Program.cs" />
+    <jump line="12" column="0" filename="$USER_HOME$/Documents/github_repos/personal/dsa_csharp/Program.cs" />
+    <jump line="6" column="28" filename="$USER_HOME$/Documents/github_repos/personal/dsa_csharp/Program.cs" />
+    <jump line="16" column="0" filename="$USER_HOME$/Documents/github_repos/personal/dsa_csharp/Program.cs" />
+    <jump line="15" column="0" filename="$USER_HOME$/Documents/github_repos/personal/dsa_csharp/Program.cs" />
+    <jump line="77" column="16" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/DependencyInjection.cs" />
+    <jump line="63" column="3" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="76" column="16" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/DependencyInjection.cs" />
+    <jump line="81" column="43" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/DependencyInjection.cs" />
+    <jump line="52" column="8" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="25" column="8" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="43" column="8" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="44" column="0" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="37" column="38" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="45" column="17" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="29" column="25" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="31" column="0" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="28" column="0" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="34" column="0" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="33" column="52" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="30" column="4" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="57" column="8" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="53" column="65" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="26" column="19" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="61" column="39" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="58" column="36" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="49" column="8" filename="$USER_HOME$/Documents/github_repos/personal/InvSys/src/InvSys.Application/Features/Admin/UserRoles/CreateRole.cs" />
+    <jump line="7" column="42" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="4" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" />
+    <jump line="5" column="44" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" />
+    <jump line="20" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" />
+    <jump line="6" column="3" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/appsettings.json" />
+    <jump line="2" column="30" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="24" column="4" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" />
+    <jump line="23" column="4" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="2" column="65" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="13" column="4" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="0" column="30" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/EDASample.Consumer.csproj" />
+    <jump line="12" column="35" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="18" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/EDASample.Consumer.csproj" />
+    <jump line="0" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/EDASample.Producer.csproj" />
+    <jump line="3" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="13" column="4" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/EDASample.Consumer.csproj" />
+    <jump line="2" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="17" column="89" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="27" column="57" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="36" column="9" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="6" column="4" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/appsettings.json" />
+    <jump line="0" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/appsettings.json" />
+    <jump line="2" column="4" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/EDASample.Consumer.csproj" />
+    <jump line="11" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="10" column="27" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" />
+    <jump line="0" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="8" column="34" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="0" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="9" column="44" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" />
+    <jump line="14" column="39" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="4" column="1" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/appsettings.json" />
+    <jump line="3" column="36" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/appsettings.json" />
+    <jump line="14" column="53" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="14" column="14" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/EDASample.Consumer.csproj" />
+    <jump line="31" column="16" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="14" column="42" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="21" column="27" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="5" column="8" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="33" column="11" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="6" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="33" column="47" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="25" column="18" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="36" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="43" column="43" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" />
+    <jump line="3" column="1" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/appsettings.json" />
+    <jump line="11" column="10" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/MessageReceivedEventHandler.cs" />
+    <jump line="30" column="12" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="17" column="35" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" />
+    <jump line="23" column="43" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Properties/launchSettings.json" />
+    <jump line="49" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="18" column="8" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="12" column="29" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" />
+    <jump line="6" column="21" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="24" column="35" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="4" column="30" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="19" column="8" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="21" column="8" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="28" column="14" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" />
+    <jump line="26" column="16" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="28" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="22" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" />
+    <jump line="38" column="0" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+    <jump line="31" column="16" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="35" column="22" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="18" column="19" filename="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ad848ebb9c34dd39327e28804f790c45be00/1e/ebcdcbb6/IProducer`2.cs" />
+    <jump line="127" column="6" filename="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ad848ebb9c34dd39327e28804f790c45be00/4e/b8a25072/Producer`2.cs" />
+    <jump line="648" column="6" filename="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ad848ebb9c34dd39327e28804f790c45be00/4e/b8a25072/Producer`2.cs" />
+    <jump line="29" column="11" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" />
+    <jump line="0" column="16" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" />
+    <jump line="1" column="16" filename="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" />
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <localmarks>
+      <file name="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/appsettings.json" timestamp="1693046404956">
+        <mark key="&quot;" line="3" column="36" />
+        <mark key="[" line="3" column="36" />
+        <mark key="]" line="3" column="37" />
+        <mark key="^" line="3" column="37" />
+        <mark key="." line="3" column="36" />
+      </file>
+      <file name="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/e4d3ae3a0fad4af7820b2da9b92cfbff15400/5c/b513ab05/Microsoft.AspNetCore.Components.Server.cs" timestamp="1693042809710">
+        <mark key="&quot;" line="64" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Properties/launchSettings.json" timestamp="1693048160554">
+        <mark key="&quot;" line="23" column="43" />
+      </file>
+      <file name="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Program.cs" timestamp="1693104828044">
+        <mark key="&quot;" line="38" column="0" />
+        <mark key="'" line="36" column="0" />
+        <mark key="[" line="37" column="32" />
+        <mark key="]" line="37" column="33" />
+        <mark key="." line="37" column="32" />
+        <mark key="^" line="37" column="33" />
+      </file>
+      <file name="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/ConsumerService.cs" timestamp="1693104825209">
+        <mark key="&quot;" line="22" column="0" />
+        <mark key="[" line="30" column="0" />
+        <mark key="]" line="30" column="0" />
+        <mark key="." line="30" column="0" />
+        <mark key="^" line="29" column="71" />
+      </file>
+      <file name="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/appsettings.json" timestamp="1693047760976">
+        <mark key="&quot;" line="3" column="1" />
+        <mark key="'" line="0" column="0" />
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="1" column="2" />
+        <mark key="." line="1" column="1" />
+        <mark key="^" line="1" column="2" />
+      </file>
+      <file name="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/ProducerService.cs" timestamp="1693105963870">
+        <mark key="&quot;" line="29" column="9" />
+        <mark key="'" line="33" column="22" />
+        <mark key="[" line="33" column="0" />
+        <mark key="]" line="33" column="7" />
+        <mark key="." line="33" column="8" />
+        <mark key="^" line="29" column="17" />
+      </file>
+      <file name="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ad848ebb9c34dd39327e28804f790c45be00/1e/ebcdcbb6/IProducer`2.cs" timestamp="1693105442549">
+        <mark key="&quot;" line="18" column="19" />
+      </file>
+      <file name="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/EDASample.Consumer.csproj" timestamp="1693046233991">
+        <mark key="&quot;" line="14" column="14" />
+        <mark key="[" line="2" column="19" />
+        <mark key="]" line="3" column="23" />
+        <mark key="." line="3" column="22" />
+        <mark key="^" line="3" column="23" />
+      </file>
+      <file name="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ad848ebb9c34dd39327e28804f790c45be00/76/1c46fe4d/ProducerConfig.cs" timestamp="1693103453667">
+        <mark key="&quot;" line="197" column="4" />
+      </file>
+      <file name="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19873f1fda1a442c9cb8ac0ebf06e619a400/80/2765de31/BackgroundService.cs" timestamp="1693104588447">
+        <mark key="&quot;" line="7" column="0" />
+      </file>
+      <file name="/" timestamp="1693103415716">
+        <mark key="&quot;" line="0" column="0" />
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ad848ebb9c34dd39327e28804f790c45be00/4e/b8a25072/Producer`2.cs" timestamp="1693105441794">
+        <mark key="&quot;" line="127" column="6" />
+        <mark key="'" line="127" column="6" />
+      </file>
+      <file name="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/MessageReceivedEventHandler.cs" timestamp="1693104549452">
+        <mark key="&quot;" line="6" column="17" />
+        <mark key="[" line="11" column="10" />
+        <mark key="]" line="11" column="11" />
+        <mark key="^" line="11" column="11" />
+        <mark key="." line="11" column="10" />
+      </file>
+      <file name="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/Program.cs" timestamp="1693114266379">
+        <mark key="&quot;" line="0" column="16" />
+        <mark key="e" line="22" column="7" />
+        <mark key="'" line="28" column="14" />
+        <mark key="[" line="37" column="14" />
+        <mark key="]" line="37" column="14" />
+        <mark key="." line="37" column="14" />
+        <mark key="^" line="37" column="15" />
+      </file>
+      <file name="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ad848ebb9c34dd39327e28804f790c45be00/51/6055f3f9/IClient.cs" timestamp="1693105233730">
+        <mark key="&quot;" line="13" column="2" />
+      </file>
+      <file name="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Producer/EDASample.Producer.csproj" timestamp="1693043747853">
+        <mark key="&quot;" line="0" column="0" />
+      </file>
+      <file name="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19873f1fda1a442c9cb8ac0ebf06e619a400/47/2ef0da9b/IHostedService.cs" timestamp="1693040204555">
+        <mark key="&quot;" line="17" column="19" />
+      </file>
+      <file name="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/0ad848ebb9c34dd39327e28804f790c45be00/6d/64ed9a7b/0200003F.il" timestamp="1693105221999">
+        <mark key="&quot;" line="6" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/github_repos/personal/EDASample/src/EDASample.Consumer/Properties/launchSettings.json" timestamp="1693044347626">
+        <mark key="&quot;" line="0" column="0" />
+      </file>
+    </localmarks>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="&quot;" type="4">
+        <text encoding="base64">aw==</text>
+      </register>
+      <register name="+" type="2">
+        <text encoding="base64">ICAgIHB1YmxpYyBUYXNrIFNlbmQoc3RyaW5nIG1lc3NhZ2UpCiAgICB7CiAgICAgICAgcmV0dXJuIFRhc2suUnVuKGFzeW5jICgpID0+CiAgICAgICAgewogICAgICAgICAgICAvLyBfbG9nZ2VyLkxvZ0luZm9ybWF0aW9uKCQiU2VuZGluZyB7bWVzc2FnZX0iKTsKICAgICAgICAgICAgdmFyIG1lc3NhZ2VQYWNrZXQgPSBuZXcgTWVzc2FnZTxpbnQsIHN0cmluZz4oKSB7IEtleSA9IDEsIFZhbHVlID0gbWVzc2FnZSB9OwogICAgICAgICAgICBhd2FpdCBfcHJvZHVjZXIuUHJvZHVjZUFzeW5jKFRvcGljLCBtZXNzYWdlUGFja2V0LCBDYW5jZWxsYXRpb25Ub2tlbi5Ob25lKTsKICAgICAgICB9KTsKICAgIH0K</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">aw==</text>
+      </register>
+      <register name="." type="4">
+        <text encoding="base64">YXdhaXQgaw==</text>
+      </register>
+      <register name="/" type="4">
+        <text encoding="base64">UHJvZHVjZUFzeW5j</text>
+      </register>
+      <register name="0" type="4">
+        <text encoding="base64">NzI1Ng==</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">ICAgICAgICB9KTsK</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">ICAgICAgICByZXR1cm4gVGFzay5SdW4oYXN5bmMgKCkgPT4KICAgICAgICB7Cg==</text>
+      </register>
+      <register name="3" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="4" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgICAgIENvbnNvbGUuV3JpdGVMaW5lKHJlc3VsdC5NZXNzYWdlLlZhbHVlKTsK</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">ICAgIHB1YmxpYyBhc3luYyBUYXNrIFJlY2VpdmUoKQogICAgewogICAgICAgIGF3YWl0IChFeGVjdXRlQXN5bmMoQ2FuY2VsbGF0aW9uVG9rZW4uTm9uZSkpOwogICAgfQo=</text>
+      </register>
+      <register name="6" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="7" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="8" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgX2NvbnN1bWVyQ29uZmlnLgo=</text>
+      </register>
+      <register name="9" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgX2NvbnN1bWVyQ29uZmlnID0gbmV3IENvbnN1bWVyQ29uZmlnKCkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgQm9vdHN0cmFwU2VydmVycyA9IGNvbmZpZy5HZXRWYWx1ZTxzdHJpbmc+KCJLYWZrYVNlcnZlciIpLAogICAgICAgICAgICAgICAgR3JvdXBJZCA9IGNvbmZpZy5HZXRWYWx1ZTxzdHJpbmc+KCJEZWZhdWx0R3JvdXBJZCIpLAogICAgICAgICAgICAgICAgQWxsb3dBdXRvQ3JlYXRlVG9waWNzID0gdHJ1ZSwKICAgICAgICAgICAgfTsK</text>
+      </register>
+      <register name=":" type="4">
+        <text encoding="base64">dw==</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-search encoding="base64">UHJvZHVjZUFzeW5j</last-search>
+      <last-substitute encoding="base64">RW1haWw=</last-substitute>
+      <last-replace encoding="base64">VXNlck5hbWU=</last-replace>
+      <last-pattern encoding="base64">UHJvZHVjZUFzeW5j</last-pattern>
+      <last-dir encoding="base64">MQ==</last-dir>
+      <show-last encoding="base64">ZmFsc2U=</show-last>
+    </search>
+  </component>
+</application>

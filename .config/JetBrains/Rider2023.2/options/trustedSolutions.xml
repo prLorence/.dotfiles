@@ -1,0 +1,12 @@
+<application>
+  <component name="TrustedSolutionStore">
+    <option name="trustedLocations">
+      <set>
+        <option value="$USER_HOME$/Documents/github_repos/personal/EDASample/.idea/.idea.EDASample" />
+        <option value="$USER_HOME$/Documents/github_repos/personal/InvSys/.idea/.idea.InvSys" />
+        <option value="$USER_HOME$/Documents/github_repos/personal/dsa_csharp/.idea/.idea.dsa_csharp.dir" />
+        <option value="$USER_HOME$/Documents/github_repos/personal/eShopOnWeb/.idea/.idea.Everything" />
+      </set>
+    </option>
+  </component>
+</application>

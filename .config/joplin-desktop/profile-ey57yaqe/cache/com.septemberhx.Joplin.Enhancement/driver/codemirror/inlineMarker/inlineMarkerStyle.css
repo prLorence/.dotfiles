@@ -1,0 +1,30 @@
+.cm-editor-marker-colons,
+.cm-editor-marker-keyword {
+    color: orangered !important;
+    font-weight: bold;
+}
+
+.cm-editor-marker-left-open,
+.cm-editor-marker-keyword,
+.cm-editor-marker-colons {
+    background-color: #f5f6f8;
+}
+
+.cm-editor-marker-left-open {
+    border-radius: 1em 0 0 1em;
+    color: transparent !important;
+}
+
+.cm-editor-marker-right-close {
+    border-radius: 0 1em 1em 0;
+    color: transparent !important;
+}
+
+.cm-editor-marker-right-close,
+.cm-editor-marker-text {
+    background-color: deepskyblue;
+}
+
+.cm-editor-marker-text {
+    color: white !important;
+}

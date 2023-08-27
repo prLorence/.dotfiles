@@ -1,0 +1,809 @@
+{
+    "Attribute using recommended pattern": {
+        "prefix": "attributes",
+        "body": [
+            "[System.AttributeUsage(System.AttributeTargets.${1:All}, Inherited = ${2:false}, AllowMultiple = ${3:true})]",
+            "sealed class ${4:My}Attribute : System.Attribute",
+            "{",
+            "    // See the attribute guidelines at",
+            "    //  http://go.microsoft.com/fwlink/?LinkId=85236",
+            "    readonly string positionalString;",
+            "    ",
+            "    // This is a positional argument",
+            "    public ${4:My}Attribute(string positionalString)",
+            "    {",
+            "        this.positionalString = positionalString;",
+            "        ",
+            "        // TODO: Implement code here",
+            "        ${5:throw new System.NotImplementedException();}",
+            "    }",
+            "    ",
+            "    public string PositionalString",
+            "    {",
+            "        get { return positionalString; }",
+            "    }",
+            "    ",
+            "    // This is a named argument",
+            "    public int NamedInt { get; set; }",
+            "}"
+        ],
+        "description": "Attribute using recommended pattern"
+    },
+    "Error Handling Filter Attribute using recommended pattern": {
+        "prefix": "error_filter",
+        "body": [
+            "using Microsoft.AspNetCore.Mvc;",
+            "using Microsoft.AspNetCore.Mvc.Filters;",
+            "",
+            "namespace ${1:MyNamespace};",
+            "",
+            "public sealed class $TM_FILENAME_BASE : ExceptionFilterAttribute",
+            "{",
+            "    public override void OnException(ExceptionContext context)",
+            "    {",
+            "        // TODO: Implement code here",
+            "    }",
+            "    ",
+            "}"
+        ],
+        "description": "Attribute using recommended pattern"
+    },
+    "Creates a HelloWorld sample": {
+        "prefix": "#helloworld",
+        "body": [
+            "using System;",
+            "",
+            "namespace ConsoleApp",
+            "{",
+            "\tpublic class Program",
+            "\t{",
+            "\t\tpublic static void Main(string[] args)",
+            "\t\t{",
+            "\t\t\tConsole.WriteLine(\"Hello World!\");",
+            "\t\t}",
+            "\t}",
+            "}"
+        ],
+        "description": "Creates a HelloWorld sample"
+    },
+    "Creates a destructor for the containing class": {
+        "prefix": "~",
+        "body": [
+            "~${1:Program}()",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a destructor for the containing class"
+    },
+    "Creates a call to Clear": {
+        "prefix": "cclear",
+        "body": [
+            "Console.Clear();",
+            "$0"
+        ],
+        "description": "Creates a call to Clear"
+    },
+    "General output to console": {
+        "prefix": "cgo",
+        "body": [
+            "Console.WriteLine(\"Console app started\");",
+            "",
+            "$0",
+            "Console.WriteLine(\"Press any key to exit...\");",
+            "Console.ReadKey(true);"
+        ],
+        "description": "General output to console"
+    },
+    "Creates a class": {
+        "prefix": "class",
+        "body": [
+            "public class $TM_FILENAME_BASE",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a class"
+    },
+    "Creates static a class": {
+        "prefix": "classs",
+        "body": [
+            "public static class $TM_FILENAME_BASE",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a class"
+    },
+    "Creates sealed a class": {
+        "prefix": "classS",
+        "body": [
+            "public sealed class $TM_FILENAME_BASE",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates sealed a class"
+    },
+    "Creates an inherited class": {
+        "prefix": "classi",
+        "body": [
+            "public class $TM_FILENAME_BASE: ${1:BaseClass}",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates sealed a class"
+    },
+    "Creates an abstract class declaration": {
+        "prefix": "classa",
+        "body": [
+            "public abstract class $TM_FILENAME_BASE",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates an abstract class declaration"
+    },
+    "Creates a disposable class": {
+        "prefix": "classd",
+        "body": [
+            "public class $TM_FILENAME_BASE : IDisposable",
+            "{",
+            "",
+            "\tpublic void Dispose()",
+            "\t{",
+            "\t\tGC.SuppressFinalize(this);",
+            "\t}",
+            "",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a disposable class"
+    },
+    "Creates a constant": {
+        "prefix": "const",
+        "body": [
+            "${1:public} const ${2:string} ${3:CONSTANT_NAME} = \"${4:value}\";",
+            "$0"
+        ],
+        "description": "Creates a constant"
+    },
+    "Creates a call to ReadLine": {
+        "prefix": "cr",
+        "body": [
+            "Console.ReadLine();",
+            "$0"
+        ],
+        "description": "Creates a call to ReadLine"
+    },
+    "Creates a call to ReadKey": {
+        "prefix": "crk",
+        "body": [
+            "Console.ReadKey();",
+            "$0"
+        ],
+        "description": "Creates a call to ReadKey"
+    },
+    "Creates a call to WriteLine": {
+        "prefix": "cwl",
+        "body": [
+            "Console.WriteLine($\"${1:Text}\");",
+            "$0"
+        ],
+        "description": "Creates a call to WriteLine"
+    },
+    "Creates a do while loop": {
+        "prefix": "dowhile",
+        "body": [
+            "do",
+            "{",
+            "\t$0",
+            "} while (${1:true})"
+        ],
+        "description": "Creates a do while loop"
+    },
+    "Creates an else statement": {
+        "prefix": "else",
+        "body": [
+            "else",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates an else statement"
+    },
+    "Creates an enum type": {
+        "prefix": "enum",
+        "body": [
+            "public enum ${1:MyEnumType}",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates an enum type"
+    },
+    "Creates an exception class": {
+        "prefix": "exception",
+        "body": [
+            "public class $TM_FILENAME_BASE : Exception",
+            "{",
+            "\tpublic $TM_FILENAME_BASE() {}",
+            "\tpublic $TM_FILENAME_BASE(string message) : base(message) {}",
+            "\tpublic $TM_FILENAME_BASE(string message, System.Exception inner) : base(message, inner) {}",
+            "\tpublic $TM_FILENAME_BASE(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) : base(info, context) {}",
+            "}"
+        ],
+        "description": "Creates an exception class"
+    },
+    "constructor": {
+        "prefix": "ctor",
+        "body": [
+            "${1:public} ${2:$TM_FILENAME_BASE}(${3:Parameters})",
+            "{",
+            "    $0",
+            "}"
+        ],
+        "description": "constructor"
+    },
+    "Creates a for loop": {
+        "prefix": "for",
+        "body": [
+            "for (var ${1:i} = 0; $1 < ${2:length}; $1++)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a for loop"
+    },
+    "Creates a foreach statement": {
+        "prefix": "foreach",
+        "body": [
+            "foreach (var ${1:item} in ${2:collection})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a foreach statement"
+    },
+    "Creates a new instance of the Guid structure": {
+        "prefix": "guid",
+        "body": [
+            "Guid ${1:guid} = Guid.NewGuid();",
+            "$0"
+        ],
+        "description": "Creates a new instance of the Guid structure"
+    },
+    "Creates as string, a new instance of the Guid structure without hyphens": {
+        "prefix": "guidn",
+        "body": [
+            "string ${1:guid} = Guid.NewGuid().ToString(\"N\");",
+            "$0"
+        ],
+        "description": "Creates as string, a new instance of the Guid structure without hyphens"
+    },
+    "Creates an if statement": {
+        "prefix": "if",
+        "body": [
+            "if (${1:true})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates an if statement"
+    },
+    "Creates an if else statement": {
+        "prefix": "ifelse",
+        "body": [
+            "if (${1:true})",
+            "{",
+            "\t$0",
+            "}",
+            "else",
+            "{",
+            "\t",
+            "}"
+        ],
+        "description": "Creates an if else statement"
+    },
+    "Creates a conditional operator": {
+        "prefix": "iif",
+        "body": [
+            "var ${1:value} = ${2:true};",
+            "var ${3:result} = (${1} ? ${4:true} : ${5:false});",
+            "$0"
+        ],
+        "description": "Creates a conditional operator"
+    },
+    "Creates an immutable object": {
+        "prefix": "immutable",
+        "body": [
+            "${1:public} class $TM_FILENAME_BASE",
+            "{",
+            "\tprivate readonly ${3:string} ${4:_name};",
+            "\tpublic $3 ${5:Name} => $4",
+            "",
+            "\tpublic $2($3 ${6:name})",
+            "\t{",
+            "\t\t$4 = $6;",
+            "\t}",
+            "}"
+        ],
+        "description": "Creates an immutable object"
+    },
+    "Creates an interface": {
+        "prefix": "interface",
+        "body": [
+            "public interface $TM_FILENAME_BASE",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates an interface"
+    },
+    "Interface member": {
+        "prefix": "interface_member",
+        "body": [
+            "${1:Type} ${2:Name}(${3:Parameters});"
+        ],
+        "description": "Interface method member"
+    },
+    "Dependency member": {
+        "prefix": "dependency",
+        "body": [
+            "private readonly ${1:Type} ${2:Name};"
+        ],
+        "description": "Dependency member"
+    },
+    "FileScopedNamespace": {
+        "prefix": "fsnamespace",
+        "body": [
+            "namespace ${1:Name};"
+        ],
+        "description": "File-scoped namespace"
+    },
+    "record": {
+        "prefix": "record",
+        "body": [
+            "${1:public} record ${2:$TM_FILENAME_BASE}",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Create new record"
+    },
+    "Create record": {
+        "prefix": "record_immutable",
+        "body": [
+            "${1:public} record ${2:$TM_FILENAME_BASE}(${3:Parameters})"
+        ],
+        "description": "Create new immutable record"
+    },
+    "Creates a LINQ Distinct sentence": {
+        "prefix": "linq_distinct",
+        "body": [
+            "${1:var} ${2:data} = (from ${3:item} in ${4:collection}",
+            "\t\t\tselect $3).Distinct()"
+        ],
+        "description": "Creates a LINQ Distinct sentence"
+    },
+    "Creates a LINQ Where sentence": {
+        "prefix": "linq_where",
+        "body": [
+            "${1:var} ${2:data} = from ${3:item} in ${4:collection}",
+            "\t\t\twhere $3.${5:FieldName}.${6:Contains}(\"${7:Text}\")",
+            "\t\t\tselect $3;"
+        ],
+        "description": "Creates a LINQ Where sentence"
+    },
+    "Creates a lock statement": {
+        "prefix": "lock",
+        "body": [
+            "lock (${1:true})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a lock statement"
+    },
+    "Creates a Console Main structure": {
+        "prefix": "main",
+        "body": [
+            "public static void Main(string[] args)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a Console Main structure"
+    },
+    "Creates a Method structure": {
+        "prefix": "method",
+        "body": [
+            "${1:public} ${2:void} ${3:MyMethod}(${4:string} ${5:parameter})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a Method structure"
+    },
+    "Creates an Async Method structure": {
+        "prefix": "method_async",
+        "body": [
+            "${1:public} async ${2:Task}<${3:object}> ${4:MyMethodAsync}(${5:string} ${6:parameter})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates an async Method structure"
+    },
+    "Creates a Windows Message Box": {
+        "prefix": "msgbox",
+        "body": [
+            "System.Windows.Forms.MessageBox.Show(\"${1:Hello}\");",
+            "$0"
+        ],
+        "description": "Creates a Windows Message Box"
+    },
+    "Creates a Namespace": {
+        "prefix": "namespace",
+        "body": [
+            "namespace ${1:MyNamespace}",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a Namespace"
+    },
+    "Creates a property": {
+        "prefix": "prop",
+        "body": [
+            "${1:public} ${2:string} ${3:Name} { get; set; }"
+        ],
+        "description": "Creates a property"
+    },
+    "Creates an immutable property": {
+        "prefix": "propi",
+        "body": [
+            "private readonly ${1:string} ${2:_name};",
+            "",
+            "public $1 ${3:Name} => $2;",
+            "$0"
+        ],
+        "description": "Creates an immutable property"
+    },
+    "Creates an init property": {
+        "prefix": "propinit",
+        "body": [
+            "public ${1:string} ${2:Name} { get; init; }",
+            "",
+            "$0"
+        ],
+        "description": "Creates an init property"
+    },
+    "Creates a property read-only": {
+        "prefix": "propr",
+        "body": [
+            "public ${1:string} ${2:Name} { get; private set; }",
+            "",
+            "$0"
+        ],
+        "description": "Creates a property read-only"
+    },
+    "Creates a public string method declaration": {
+        "prefix": "pum",
+        "body": [
+            "public ${1:string} ${2:Method}(${3:string} ${4:parameter})",
+            "{",
+            "\t$0",
+            "\treturn System.NotImplementedException;",
+            "}"
+        ],
+        "description": "Creates a public string method declaration"
+    },
+    "Creates a public void method declaration": {
+        "prefix": "pvm",
+        "body": [
+            "public void ${1:Method}(${2:string} ${3:parameter})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a public void method declaration"
+    },
+    "Creates a public static method declaration": {
+        "prefix": "psm",
+        "body": [
+            "public static ${1:Type} ${2:Method}(${3:string} ${4:parameter})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a public static method declaration"
+    },
+    "Creates a record type with deconstructor": {
+        "prefix": "recordd",
+        "body": [
+            "public record Person",
+            "{",
+            "\tpublic Person(${1:string} ${2:name}, ${3:int} ${4:age}) => (${5:Name}, ${6:Age}) = ($2, $4);",
+            "",
+            "\tpublic $1 $5 { get; set; }",
+            "\tpublic $3 $6 { get; set; }",
+            "",
+            "public void Deconstructor(out $1 $2, out $3 $4) => ($2, $4) = ($5, $6);",
+            "}"
+        ],
+        "description": "Creates a record type with deconstructor"
+    },
+    "Creates a singleton class": {
+        "prefix": "singleton",
+        "body": [
+            "public sealed class ${1:MyClass}",
+            "{",
+            "\tprivate static volatile I${2:MyObject} instance;",
+            "\tprivate static Object syncRootObject = new Object();",
+            "",
+            "\tpublic static I${2} Instance",
+            "\t{",
+            "\t\tget",
+            "\t\t{",
+            "\t\t\tif (instance == null)",
+            "\t\t\t{",
+            "\t\t\t\tlock (syncRootObject)",
+            "\t\t\t\t{",
+            "\t\t\t\t\tif (instance == null)",
+            "\t\t\t\t\t{",
+            "\t\t\t\t\t\tinstance = new $0${3:MyObject}();",
+            "\t\t\t\t\t}",
+            "\t\t\t\t}",
+            "\t\t\t}",
+            "\t\t\treturn instance;",
+            "\t\t}",
+            "\t}",
+            "}"
+        ],
+        "description": "Creates a singleton class"
+    },
+    "Creates a singleton class with System.Lazy<T>": {
+        "prefix": "singletonl",
+        "body": [
+            "public sealed class ${1:MyClass} : I${2:MyObject}",
+            "{",
+            "\tprivate static readonly Lazy<I${2}> _instance = new Lazy<I${2}>(() => new ${1}());",
+            "",
+            "\tpublic static I${2} Instance { get { return _instance.Value; } }",
+            "\t",
+            "\tprivate ${1}()",
+            "\t{",
+            "\t}",
+            "}"
+        ],
+        "description": "Creates a singleton class with System.Lazy<T>"
+    },
+    "Creates a singleton class as thread-safe without using locks": {
+        "prefix": "singletonts",
+        "body": [
+            "public sealed class ${1:MyClass} : I${2:MyObject}",
+            "{",
+            "\tprivate static readonly I${2} _instance = new ${1}();",
+            "",
+            "\tstatic ${1}() {}",
+            "",
+            "\tprivate ${1}() {}",
+            "",
+            "\tpublic static I${2} Instance { get { return _instance; } }",
+            "\t",
+            "}"
+        ],
+        "description": "Creates a singleton class as thread-safe without using locks"
+    },
+    "Creates a struct": {
+        "prefix": "struct",
+        "body": [
+            "public struct ${1:MyStruct}",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a struct"
+    },
+    "Creates a switch statement": {
+        "prefix": "switch",
+        "body": [
+            "switch (${1:value})",
+            "{",
+            "\tcase ${2:value1}:",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\tbreak;",
+            "}",
+            "$0"
+        ],
+        "description": "Creates a switch statement"
+    },
+    "Switch Expression": {
+        "prefix": "switche",
+        "body": [
+            "${1:value} switch",
+            "{",
+            "\t${2:value1} => ${3:value2}",
+            "\t$0",
+            "\t_ => default",
+            "}"
+        ],
+        "description": "Create a swtich expression"
+    },
+    "Creates a C# 9 top-level statement": {
+        "prefix": "tls",
+        "body": [
+            "System.Console.WriteLine(\"${1:Hello World!}\");"
+        ],
+        "description": "Creates a C# 9 top-level statement"
+    },
+    "Creates a TODO comment": {
+        "prefix": "todo",
+        "body": [
+            "// TODO: $0"
+        ],
+        "description": "Creates a TODO comment"
+    },
+    "Creates a try catch": {
+        "prefix": "try",
+        "body": [
+            "try",
+            "{",
+            "\t$0",
+            "}",
+            "catch (${1:System.Exception} ex)",
+            "{",
+            "\t // TODO",
+            "}"
+        ],
+        "description": "Creates a try catch"
+    },
+    "Creates a try catch finally": {
+        "prefix": "tryf",
+        "body": [
+            "try",
+            "{",
+            "\t$0",
+            "}",
+            "catch (${1:System.Exception} ex)",
+            "{",
+            "\t // TODO",
+            "}",
+            "finally",
+            "{",
+            "\t",
+            "}"
+        ],
+        "description": "Creates a try catch finally"
+    },
+    "Creates an using": {
+        "prefix": "using",
+        "body": [
+            "using ${1:System}$0;"
+        ],
+        "description": "Creates an using"
+    },
+    "Creates a while loop": {
+        "prefix": "while",
+        "body": [
+            "while (${1:true})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a while loop"
+    },
+    "csproj Generator for .NET Core 1.0": {
+        "prefix": "csproj_1.0",
+        "body": [
+            "<Project Sdk=\"Microsoft.NET.Sdk\">",
+            "\t<PropertyGroup>",
+            "\t\t<OutputType>Exe</OutputType>",
+            "\t\t<TargetFramework>netcoreapp1.0</TargetFramework>",
+            "\t</PropertyGroup>",
+            "</Project>"
+        ],
+        "description": "csproj Generator for .NET Core 1.0"
+    },
+    "csproj Generator for .NET Core 1.1": {
+        "prefix": "csproj_1.1",
+        "body": [
+            "<Project Sdk=\"Microsoft.NET.Sdk\">",
+            "\t<PropertyGroup>",
+            "\t\t<OutputType>Exe</OutputType>",
+            "\t\t<TargetFramework>netcoreapp1.1</TargetFramework>",
+            "\t</PropertyGroup>",
+            "</Project>"
+        ],
+        "description": "csproj Generator for .NET Core 1.1"
+    },
+    "csproj Generator for .NET Core 2.0": {
+        "prefix": "csproj_2.0",
+        "body": [
+            "<Project Sdk=\"Microsoft.NET.Sdk\">",
+            "\t<PropertyGroup>",
+            "\t\t<OutputType>Exe</OutputType>",
+            "\t\t<TargetFramework>netcoreapp2.0</TargetFramework>",
+            "\t</PropertyGroup>",
+            "</Project>"
+        ],
+        "description": "csproj Generator for .NET Core 2.0"
+    },
+    "csproj Generator for .NET Core 3.1": {
+        "prefix": "csproj_3.1",
+        "body": [
+            "<Project Sdk=\"Microsoft.NET.Sdk\">",
+            "\t<PropertyGroup>",
+            "\t\t<OutputType>Exe</OutputType>",
+            "\t\t<TargetFramework>netcoreapp3.1</TargetFramework>",
+            "\t</PropertyGroup>",
+            "</Project>"
+        ],
+        "description": "csproj Generator for .NET Core 3.1"
+    },
+    "csproj Generator for .NET 5": {
+        "prefix": "csproj_5",
+        "body": [
+            "<Project Sdk=\"Microsoft.NET.Sdk\">",
+            "\t<PropertyGroup>",
+            "\t\t<OutputType>Exe</OutputType>",
+            "\t\t<TargetFramework>net5.0</TargetFramework>",
+            "\t</PropertyGroup>",
+            "</Project>"
+        ],
+        "description": "csproj Generator for .NET 5"
+    },
+    "sln Generator for Visual Studio 2017 (.NET Core and ASP.NET Core)": {
+        "prefix": "sln_2017",
+        "body": [
+            "Microsoft Visual Studio Solution File, Format Version 12.00",
+            "# Visual Studio 15",
+            "VisualStudioVersion = 15.0.26124.0",
+            "MinimumVisualStudioVersion = 15.0.26124.0",
+            "Project(\"{${1:FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}}\") = \"${2:SolutionName}\", \"$2\\\\${3:ProjectName}.csproj\", \"{${4:3E6CAA7F-C72A-428D-91C8-74ADBD56D3CA}}\"",
+            "EndProject",
+            "Global",
+            "\tGlobalSection(SolutionConfigurationPlatforms) = preSolution",
+            "\t\tDebug|Any CPU = Debug|Any CPU",
+            "\t\tDebug|x64 = Debug|x64",
+            "\t\tDebug|x86 = Debug|x86",
+            "\t\tRelease|Any CPU = Release|Any CPU",
+            "\t\tRelease|x64 = Release|x64",
+            "\t\tRelease|x86 = Release|x86",
+            "\tEndGlobalSection",
+            "\tGlobalSection(SolutionProperties) = preSolution",
+            "\t\tHideSolutionNode = FALSE",
+            "\tEndGlobalSection",
+            "EndGlobal"
+        ],
+        "description": "sln Generator for Visual Studio 2017 (.NET Core and ASP.NET Core)"
+    },
+    "sln Generator for Visual Studio 2019 (.NET Core and ASP.NET Core)": {
+        "prefix": "sln_2019",
+        "body": [
+            "Microsoft Visual Studio Solution File, Format Version 12.00",
+            "# Visual Studio Version 16",
+            "VisualStudioVersion = 16.0.30711.63",
+            "MinimumVisualStudioVersion = 10.0.40219.1",
+            "Project(\"{${1:FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}}\") = \"${2:SolutionName}\", \"$2\\\\${3:ProjectName}.csproj\", \"{${4:3E6CAA7F-C72A-428D-91C8-74ADBD56D3CA}}\"",
+            "EndProject",
+            "Global",
+            "\tGlobalSection(SolutionConfigurationPlatforms) = preSolution",
+            "\t\tDebug|Any CPU = Debug|Any CPU",
+            "\t\tDebug|x64 = Debug|x64",
+            "\t\tDebug|x86 = Debug|x86",
+            "\t\tRelease|Any CPU = Release|Any CPU",
+            "\t\tRelease|x64 = Release|x64",
+            "\t\tRelease|x86 = Release|x86",
+            "\tEndGlobalSection",
+            "\tGlobalSection(SolutionProperties) = preSolution",
+            "\t\tHideSolutionNode = FALSE",
+            "\tEndGlobalSection",
+            "EndGlobal"
+        ],
+        "description": "sln Generator for Visual Studio 2019 (.NET Core and ASP.NET Core)"
+    }
+}

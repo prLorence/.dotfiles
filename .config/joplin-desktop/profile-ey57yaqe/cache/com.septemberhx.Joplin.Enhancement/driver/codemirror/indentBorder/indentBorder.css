@@ -1,0 +1,45 @@
+/* from Obsidian */
+
+.cm-tab::before, .cm-null.cm-overlay.cm-rm-list-token::before {
+    content: "\200B";
+    width: 1px;
+    border-right: 1px solid lightgray;
+    color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+/* Add a vertical bar to the left side of quote blocks so they match the viewer */
+pre.cm-rm-blockquote.CodeMirror-line {
+    border-left: 4px solid var(--joplin-code-border-color);
+    opacity: 0.7;
+    background-color: var(--joplin-background-color3);
+
+}
+
+pre.cm-rm-blockquote span.cm-quote + span.cm-quote {
+    opacity: 1;
+}
+
+pre.cm-jn-code-block.CodeMirror-line {
+    padding-left: 0.4em !important;
+    line-height: initial !important;
+}
+
+/*.CodeMirror-selected {*/
+/*    background-color: transparent !important;*/
+/*}*/
+
+/*.CodeMirror-selectedtext {*/
+/*    background-color: rgba(179, 215, 255, 1) !important;*/
+/*}*/
+
+
+div.CodeMirror-activeline > pre > span > span.cm-rm-blockquote-token {
+    opacity: 0.7 !important;
+}
+
+div:not(.CodeMirror-activeline) > pre > span > span.cm-rm-blockquote-token {
+    opacity: 0 !important;
+}

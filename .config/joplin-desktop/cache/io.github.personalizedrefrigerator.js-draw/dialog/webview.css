@@ -1,0 +1,39 @@
+
+.imageEditorContainer {
+	height: 100vh;
+	width: 100vw;
+}
+
+body, :root {
+	padding: 0;
+	margin: 0;
+	font-size: 11pt;
+}
+
+.exitOptionsDialog {
+	width: 100vw;
+	height: 100vh;
+	font-size: 2em;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.exitOptionsDialog button {
+	font-size: 2em;
+}
+
+.exitOptionsDialog input[type="radio"] {
+	min-width: 20px;
+}
+
+:root .imageEditorContainer {
+	--primary-background-color: var(--joplin-background-color);
+	--primary-background-color-transparent: var(--joplin-background-color-transparent);
+	--secondary-background-color: var(--joplin-background-color2);
+	--primary-foreground-color: var(--joplin-color);
+	--secondary-foreground-color: var(--joplin-color2);
+	--primary-shadow-color: var(--joplin-background-color2);
+}

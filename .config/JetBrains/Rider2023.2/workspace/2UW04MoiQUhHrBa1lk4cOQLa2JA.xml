@@ -1,0 +1,660 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="EDASample" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file>
+        <entry file="file://$PROJECT_DIR$/src/EDASample.Consumer/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#100#0" expanded="true" />
+                <marker date="1693047375372" expanded="true" signature="308:483" ph="{...}" />
+                <marker date="1693047375372" expanded="true" signature="552:1346" ph="..." />
+                <marker date="1693047375372" expanded="true" signature="655:1345" ph="{...}" />
+                <marker date="1693047375372" expanded="true" signature="1115:1299" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="C#">
+      <summary usageCount="96" lastUsed="1693114266389" />
+    </fileType>
+    <fileType name="Csproj">
+      <summary usageCount="8" lastUsed="1693046232539" />
+    </fileType>
+    <fileType name="JSON">
+      <summary usageCount="12" lastUsed="1693048078638" />
+    </fileType>
+  </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/src/EDASample.Producer/appsettings.json" />
+      <option value="$PROJECT_DIR$/src/EDASample.Consumer/appsettings.json" />
+      <option value="$PROJECT_DIR$/src/EDASample.Consumer/EDASample.Consumer.csproj" />
+      <option value="$PROJECT_DIR$/src/EDASample.Consumer/Program.cs" />
+      <option value="$PROJECT_DIR$/src/EDASample.Consumer/MessageReceivedEventHandler.cs" />
+      <option value="$PROJECT_DIR$/src/EDASample.Consumer/ConsumerService.cs" />
+      <option value="$PROJECT_DIR$/src/EDASample.Producer/ProducerService.cs" />
+      <option value="$PROJECT_DIR$/src/EDASample.Producer/Program.cs" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea/.idea.EDASample/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="C#">
+      <summary usageCount="96" lastUsage="1693114266389" />
+    </language>
+    <language id="JSON">
+      <summary usageCount="12" lastUsage="1693048078638" />
+    </language>
+    <language id="MSBuild">
+      <summary usageCount="8" lastUsage="1693046232539" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="FileSystemExplorer" proportions="0.9" version="1" />
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EDASample" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EDASample" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EDASample" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EDASample.Consumer" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EDASample" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EDASample.Producer" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EDASample" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EDASample.Producer" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EDASample" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EDASample.Producer" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+              <item name=".NET 7.0" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EDASample" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EDASample.Producer" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+              <item name=".NET 7.0" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Assemblies" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EDASample" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EDASample.Producer" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+              <item name=".NET 7.0" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Assemblies" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Implicit" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EDASample" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EDASample.Producer" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+              <item name=".NET 7.0" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Frameworks" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EDASample" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EDASample.Producer" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ProducerService.cs" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </select>
+        </subPane>
+        <option name="show-all-files" value="false" />
+        <option name="show-project-imports" value="true" />
+        <option name="autoscroll-all" value="false" />
+        <option name="show-scratches" value="true" />
+        <option name="search-dependencies" value="false" />
+        <option name="show-unreal-project-files" value="true" />
+      </pane>
+      <pane id="AssemblyExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="5427d58d:AssemblyExplorerRootNode" />
+              <item name="Microsoft.AspNetCore.Components.Server (7.0.0.0, msil, .NETCoreApp v7.0)" type="5e97225f:AssemblyExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="5427d58d:AssemblyExplorerRootNode" />
+              <item name="Microsoft.AspNetCore.Components.Server (7.0.0.0, msil, .NETCoreApp v7.0)" type="5e97225f:AssemblyExplorerNode" />
+              <item name="Microsoft.AspNetCore.Components.Server" type="5e97225f:AssemblyExplorerNode" />
+            </path>
+          </expand>
+          <select>
+            <path>
+              <item name="Project" type="5427d58d:AssemblyExplorerRootNode" />
+              <item name="Microsoft.AspNetCore.Components.Server (7.0.0.0, msil, .NETCoreApp v7.0)" type="5e97225f:AssemblyExplorerNode" />
+            </path>
+          </select>
+        </subPane>
+      </pane>
+      <pane id="FileSystemExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="EDASample" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="EDASample" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="EDASample" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="EDASample.Consumer" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="EDASample" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="EDASample.Producer" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="EDASample" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="EDASample.Producer" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Properties" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+          </expand>
+          <select>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="EDASample" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="EDASample.Consumer" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Program.cs" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+          </select>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="RiderPerAppToolWindowOpenedTWKeeper">
+    <option name="map">
+      <map>
+        <entry key="AIAssistant">
+          <value>
+            <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
+          </value>
+        </entry>
+        <entry key="Bookmarks">
+          <value>
+            <window_info id="Bookmarks" side_tool="true" weight="0.23743455" />
+          </value>
+        </entry>
+        <entry key="Build">
+          <value>
+            <window_info anchor="bottom" id="Build" weight="0.33031458" />
+          </value>
+        </entry>
+        <entry key="Commit">
+          <value>
+            <window_info x="5" y="46" width="1910" height="1029" id="Commit" order="1" weight="0.23743455" />
+          </value>
+        </entry>
+        <entry key="Database">
+          <value>
+            <window_info anchor="right" id="Database" order="2" weight="0.25" />
+          </value>
+        </entry>
+        <entry key="Database Changes">
+          <value>
+            <window_info anchor="bottom" id="Database Changes" />
+          </value>
+        </entry>
+        <entry key="Debug">
+          <value>
+            <window_info anchor="bottom" id="Debug" order="4" weight="0.33031458" />
+          </value>
+        </entry>
+        <entry key="Dynamic Program Analysis">
+          <value>
+            <window_info anchor="bottom" id="Dynamic Program Analysis" weight="0.32993197" />
+          </value>
+        </entry>
+        <entry key="Endpoints">
+          <value>
+            <window_info anchor="right" id="Endpoints" weight="0.3301047" />
+          </value>
+        </entry>
+        <entry key="File Transfer">
+          <value>
+            <window_info anchor="bottom" id="File Transfer" />
+          </value>
+        </entry>
+        <entry key="Find">
+          <value>
+            <window_info anchor="bottom" id="Find" weight="0.33984745" />
+          </value>
+        </entry>
+        <entry key="Gradle">
+          <value>
+            <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
+          </value>
+        </entry>
+        <entry key="IL Viewer">
+          <value>
+            <window_info anchor="right" id="IL Viewer" weight="0.3301047" />
+          </value>
+        </entry>
+        <entry key="Learn">
+          <value>
+            <window_info id="Learn" weight="0.13900524" />
+          </value>
+        </entry>
+        <entry key="Maven">
+          <value>
+            <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+          </value>
+        </entry>
+        <entry key="Meet New UI">
+          <value>
+            <window_info anchor="right" id="Meet New UI" show_stripe_button="false" side_tool="true" weight="0.3301047" />
+          </value>
+        </entry>
+        <entry key="Merge Requests">
+          <value>
+            <window_info id="Merge Requests" />
+          </value>
+        </entry>
+        <entry key="Notifications">
+          <value>
+            <window_info anchor="right" id="Notifications" order="0" weight="0.18664922" />
+          </value>
+        </entry>
+        <entry key="NuGet">
+          <value>
+            <window_info anchor="bottom" id="NuGet" weight="0.32993197" />
+          </value>
+        </entry>
+        <entry key="Problems">
+          <value>
+            <window_info anchor="bottom" id="Problems" order="1" />
+          </value>
+        </entry>
+        <entry key="Problems View">
+          <value>
+            <window_info anchor="bottom" id="Problems View" order="2" weight="0.32993197" />
+          </value>
+        </entry>
+        <entry key="Project">
+          <value>
+            <window_info anchor="right" auto_hide="true" content_ui="combo" x="782" y="75" width="356" height="971" id="Project" order="5" weight="0.18664922" />
+          </value>
+        </entry>
+        <entry key="Pull Requests">
+          <value>
+            <window_info id="Pull Requests" weight="0.23743455" />
+          </value>
+        </entry>
+        <entry key="Run">
+          <value>
+            <window_info anchor="bottom" id="Run" order="4" weight="0.33031458" />
+          </value>
+        </entry>
+        <entry key="Services">
+          <value>
+            <window_info anchor="bottom" id="Services" order="4" />
+          </value>
+        </entry>
+        <entry key="Space Code Reviews">
+          <value>
+            <window_info id="Space Code Reviews" />
+          </value>
+        </entry>
+        <entry key="Stacktrace">
+          <value>
+            <window_info anchor="bottom" id="Stacktrace" order="4" weight="0.32993197" />
+          </value>
+        </entry>
+        <entry key="Structure">
+          <value>
+            <window_info id="Structure" order="2" side_tool="true" weight="0.13900524" />
+          </value>
+        </entry>
+        <entry key="TODO">
+          <value>
+            <window_info anchor="bottom" id="TODO" />
+          </value>
+        </entry>
+        <entry key="Terminal">
+          <value>
+            <window_info anchor="bottom" id="Terminal" order="3" />
+          </value>
+        </entry>
+        <entry key="TypeScript">
+          <value>
+            <window_info anchor="bottom" id="TypeScript" />
+          </value>
+        </entry>
+        <entry key="Unit Tests">
+          <value>
+            <window_info anchor="bottom" id="Unit Tests" />
+          </value>
+        </entry>
+        <entry key="Unit Tests Coverage">
+          <value>
+            <window_info anchor="right" id="Unit Tests Coverage" />
+          </value>
+        </entry>
+        <entry key="Version Control">
+          <value>
+            <window_info anchor="bottom" id="Version Control" order="0" weight="0.32993197" />
+          </value>
+        </entry>
+        <entry key="dotMemory Profiler">
+          <value>
+            <window_info anchor="bottom" id="dotMemory Profiler" weight="0.32993197" />
+          </value>
+        </entry>
+        <entry key="dotTrace Profiler">
+          <value>
+            <window_info anchor="bottom" id="dotTrace Profiler" />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="14592000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <layoutV2>
+      <window_info id="Space Code Reviews" />
+      <window_info id="Bookmarks" side_tool="true" weight="0.23743455" />
+      <window_info id="Merge Requests" />
+      <window_info id="Pull Requests" weight="0.23743455" />
+      <window_info id="Learn" weight="0.13900524" />
+      <window_info x="5" y="46" width="1910" height="1029" id="Commit" order="1" weight="0.23743455" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.13900524" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Build" weight="0.33031458" />
+      <window_info anchor="bottom" id="Dynamic Program Analysis" weight="0.32993197" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="dotTrace Profiler" />
+      <window_info anchor="bottom" id="File Transfer" />
+      <window_info anchor="bottom" id="NuGet" weight="0.32993197" />
+      <window_info anchor="bottom" id="Find" weight="0.33984745" />
+      <window_info anchor="bottom" id="dotMemory Profiler" weight="0.32993197" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32993197" />
+      <window_info anchor="bottom" id="Problems" order="1" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.32993197" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Stacktrace" order="4" weight="0.32993197" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.33031458" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.33031458" />
+      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Endpoints" weight="0.3301047" />
+      <window_info anchor="right" id="IL Viewer" weight="0.3301047" />
+      <window_info anchor="right" id="Meet New UI" show_stripe_button="false" side_tool="true" weight="0.3301047" />
+      <window_info anchor="right" id="Notifications" order="0" weight="0.18664922" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+      <window_info anchor="right" auto_hide="true" content_ui="combo" x="782" y="75" width="356" height="971" id="Project" order="5" weight="0.18664922" />
+      <unified_weights bottom="0.32993197" left="0.23743455" right="0.18664922" />
+    </layoutV2>
+    <recentWindows>
+      <value>Project</value>
+      <value>IL Viewer</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="718" y="318" key="FileChooserDialogImpl" timestamp="1693042816028">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="718" y="318" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1693042816028" />
+    <state x="555" y="295" width="806" height="523" key="Rider.ProjectTemplateDialog.Size" timestamp="1693041645105">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="555" y="295" width="806" height="523" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1080@0.0.1920.1080" timestamp="1693041645105" />
+    <state x="728" y="245" width="460" height="624" key="RiderGenerateDialog" timestamp="1693042892510">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="728" y="245" width="460" height="624" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1693042892510" />
+    <state x="464" y="195" key="SettingsEditor" timestamp="1693103415718">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="464" y="195" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1693103415718" />
+    <state x="624" y="262" key="run.anything.popup" timestamp="1693042115763">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="624" y="262" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1693042115763" />
+    <state x="623" y="267" width="672" height="695" key="search.everywhere.popup" timestamp="1693105019257">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="267" width="672" height="695" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1693105019257" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Producer/obj/Debug/net7.0/EDASample.Producer.GlobalUsings.g.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#21#752#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19873f1fda1a442c9cb8ac0ebf06e619a400/47/2ef0da9b/IHostedService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/e4d3ae3a0fad4af7820b2da9b92cfbff15400/5c/b513ab05/Microsoft.AspNetCore.Components.Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <marker date="1693042797536" expanded="false" signature="6:204" ph="..." />
+            <marker date="1693042797536" expanded="true" signature="206:3378" ph="/* Assembly Microsoft.AspNetCore.Components.Server, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829dd ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Producer/EDASample.Producer.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Consumer/Properties/launchSettings.json" />
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Consumer/EDASample.Consumer.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Producer/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Consumer/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Producer/Properties/launchSettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ad848ebb9c34dd39327e28804f790c45be00/76/1c46fe4d/ProducerConfig.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="197" column="4" selection-start-line="197" selection-start-column="4" selection-end-line="197" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Consumer/MessageReceivedEventHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <marker date="1693047915686" expanded="true" signature="163:279" ph="{...}" />
+            <marker date="1693047915686" expanded="true" signature="207:271" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19873f1fda1a442c9cb8ac0ebf06e619a400/80/2765de31/BackgroundService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Consumer/ConsumerService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <marker date="1693047953422" expanded="true" signature="159:966" ph="{...}" />
+            <marker date="1693047953422" expanded="true" signature="457:587" ph="{...}" />
+            <marker date="1693047953422" expanded="true" signature="672:963" ph="{...}" />
+            <marker date="1693047953422" expanded="true" signature="741:953" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ad848ebb9c34dd39327e28804f790c45be00/51/6055f3f9/IClient.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ad848ebb9c34dd39327e28804f790c45be00/4e/b8a25072/Producer`2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="127" column="6" selection-start-line="127" selection-start-column="6" selection-end-line="127" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ad848ebb9c34dd39327e28804f790c45be00/1e/ebcdcbb6/IProducer`2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Producer/ProducerService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <marker date="1693105951162" expanded="true" signature="121:1246" ph="{...}" />
+            <marker date="1693105951162" expanded="true" signature="502:710" ph="{...}" />
+            <marker date="1693105951162" expanded="true" signature="785:842" ph="{...}" />
+            <marker date="1693105951162" expanded="true" signature="886:1128" ph="{...}" />
+            <marker date="1693105951162" expanded="true" signature="893:1123" ph="{...}" />
+            <marker date="1693105951162" expanded="true" signature="1178:1244" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Producer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+          <folding>
+            <marker date="1693105974814" expanded="true" signature="541:1249" ph="{...}" />
+            <marker date="1693105974814" expanded="true" signature="626:678" ph="{...}" />
+            <marker date="1693105974814" expanded="true" signature="803:976" ph="{...}" />
+            <marker date="1693105974814" expanded="true" signature="838:936" ph="{...}" />
+            <marker date="1693105974814" expanded="true" signature="1001:1190" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EDASample.Consumer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#100#0" expanded="true" />
+            <marker date="1693047375372" expanded="true" signature="308:483" ph="{...}" />
+            <marker date="1693047375372" expanded="true" signature="552:1346" ph="..." />
+            <marker date="1693047375372" expanded="true" signature="655:1345" ph="{...}" />
+            <marker date="1693047375372" expanded="true" signature="1115:1299" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

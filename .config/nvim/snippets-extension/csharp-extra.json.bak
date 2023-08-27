@@ -1,0 +1,25 @@
+{
+    "Better Console Write": {
+        "prefix": "cw",
+        "body": [
+            "Console.WriteLine(${TM_SELECTED_TEXT}$0)"
+        ]
+    },
+    "Create new interface": {
+        "prefix": "pint",
+        "body": [
+            "${1:public} interface ${2:$TM_FILENAME_BASE}",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Create new interface"
+    },
+    "test": {
+        "prefix": "test",
+        "body": [
+            "$WORKSPACE_FOLDER",
+            "$RELATIVE_FILEPATH"
+        ]
+    }
+}

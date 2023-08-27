@@ -1,0 +1,214 @@
+[
+  {
+    "command": "newTodo",
+    "accelerator": null
+  },
+  {
+    "command": "textLink",
+    "accelerator": "Ctrl+M"
+  },
+  {
+    "command": "focusElementSideBar",
+    "accelerator": "Alt+Shift+\\"
+  },
+  {
+    "command": "focusElementNoteList",
+    "accelerator": "Alt+\\"
+  },
+  {
+    "command": "focusElementNoteTitle",
+    "accelerator": null
+  },
+  {
+    "command": "focusElementNoteBody",
+    "accelerator": "Alt+Shift+E"
+  },
+  {
+    "command": "toggleSideBar",
+    "accelerator": "F1"
+  },
+  {
+    "command": "toggleNoteList",
+    "accelerator": "F2"
+  },
+  {
+    "command": "toggleExternalEditing",
+    "accelerator": null
+  },
+  {
+    "command": "setTags",
+    "accelerator": "Ctrl+T"
+  },
+  {
+    "command": "gotoAnything",
+    "accelerator": "Ctrl+Shift+P"
+  },
+  {
+    "command": "commandPalette",
+    "accelerator": null
+  },
+  {
+    "command": "help",
+    "accelerator": "F12"
+  },
+  {
+    "command": "editor.swapLineUp",
+    "accelerator": "Alt+Shift+K"
+  },
+  {
+    "command": "editor.swapLineDown",
+    "accelerator": "Alt+Shift+J"
+  },
+  {
+    "command": "newFolder",
+    "accelerator": "Ctrl+Alt+Shift+N"
+  },
+  {
+    "command": "newSubFolder",
+    "accelerator": "Alt+Shift+S"
+  },
+  {
+    "command": "copyFolderID",
+    "accelerator": null
+  },
+  {
+    "command": "CreateBackup",
+    "accelerator": null
+  },
+  {
+    "command": "createNoteFromDefaultTemplate",
+    "accelerator": "Alt+Shift+N"
+  },
+  {
+    "command": "createNoteFromTemplate",
+    "accelerator": "Alt+I"
+  },
+  {
+    "command": "createTodoFromDefaultTemplate",
+    "accelerator": "Alt+Shift+T"
+  },
+  {
+    "command": "createTodoFromTemplate",
+    "accelerator": "Alt+Ctrl+Shift+T"
+  },
+  {
+    "command": "formatNote",
+    "accelerator": null
+  },
+  {
+    "command": "formatTable",
+    "accelerator": "Alt+S"
+  },
+  {
+    "command": "insertBackReferences",
+    "accelerator": "Ctrl+Alt+B"
+  },
+  {
+    "command": "insertTemplate",
+    "accelerator": "Alt+Shift+I"
+  },
+  {
+    "command": "editor.richMarkdown.clickAtCursor",
+    "accelerator": "Ctrl+Enter"
+  },
+  {
+    "command": "tabsPinNote",
+    "accelerator": "Alt+W"
+  },
+  {
+    "command": "quickMove1",
+    "accelerator": null
+  },
+  {
+    "command": "quickMove2",
+    "accelerator": null
+  },
+  {
+    "command": "quickMove3",
+    "accelerator": null
+  },
+  {
+    "command": "quickMove4",
+    "accelerator": null
+  },
+  {
+    "command": "quickMove5",
+    "accelerator": null
+  },
+  {
+    "command": "quickMove6",
+    "accelerator": null
+  },
+  {
+    "command": "quickMove7",
+    "accelerator": "Alt+7"
+  },
+  {
+    "command": "quickMove8",
+    "accelerator": "Alt+8"
+  },
+  {
+    "command": "quickMove9",
+    "accelerator": "Alt+9"
+  },
+  {
+    "command": "tabsClear",
+    "accelerator": "Ctrl+Shift+C"
+  },
+  {
+    "command": "restoreColor",
+    "accelerator": "Ctrl+Shift+R"
+  },
+  {
+    "command": "showHideGraphUI",
+    "accelerator": "F8"
+  },
+  {
+    "command": "tabsSwitchLeft",
+    "accelerator": "Ctrl+Shift+Tab"
+  },
+  {
+    "command": "tabsSwitchRight",
+    "accelerator": "Ctrl+Tab"
+  },
+  {
+    "command": "colorPick",
+    "accelerator": null
+  },
+  {
+    "command": "backlinksIgnoreListToggleCurrent",
+    "accelerator": "Ctrl+Alt+T"
+  },
+  {
+    "command": "richMarkdown.inlineImages",
+    "accelerator": "Ctrl+Alt+I"
+  },
+  {
+    "command": "tabsUnpinNote",
+    "accelerator": "Ctrl+W"
+  },
+  {
+    "command": "backlinksIgnoreListOpen",
+    "accelerator": null
+  },
+  {
+    "command": "richMarkdown.focusMode",
+    "accelerator": null
+  },
+  {
+    "command": "CopyAllTags",
+    "accelerator": null
+  },
+  {
+    "command": "TaggingDialog",
+    "accelerator": null
+  },
+  {
+    "command": "resolveConflictsCommand",
+    "accelerator": null
+  },
+  {
+    "command": "toggleOutline",
+    "accelerator": null
+  }
+]
