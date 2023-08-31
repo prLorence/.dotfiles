@@ -1,0 +1,28 @@
+let g:mapleader = " "
+
+nnoremap <leader>si :source ~/.ideavimrc<CR>
+
+inoremap kj <Esc>:w<CR>
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+xnoremap <leader>p "_dP
+
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+Y
+
+xnoremap <leader>d [["_d]]
+
+nnoremap Q <nop>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+set relativenumber
+set number
