@@ -1,0 +1,64 @@
+" General 
+set scrolloff=10
+set showmode
+set showcmd
+set visualbell
+
+" Search improvements
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" Plugins 
+set nerdtree
+set highlightedyank
+set surround
+
+vnoremap < <gv
+vnoremap > >gv
+
+" Popup navigation
+inoremap <A-j> <down>
+inoremap <A-k> <up>
+
+let g:mapleader = " "
+
+nnoremap <leader>si :source ~/.ideavimrc<CR>
+
+inoremap kj <Esc>:w<CR>
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+xnoremap <leader>p "_dP
+
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+Y
+
+xnoremap <leader>d [["_d]]
+
+nnoremap Q <nop>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+map <leader>\ :NERDTreeToggle<CR>
+
+map gc <action>(CommentByLineComment)
+
+map <leader>zc :action CollapseAllRegions<CR>
+map <leader>zo :action ExpandAllRegions<CR>
+
+nnoremap gu :action ShowUsages<CR>
+
+" Refactoring
+map <leader>rn <Action>(RenameElement)
+
+set relativenumber
+set number
