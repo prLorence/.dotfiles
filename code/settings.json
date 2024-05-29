@@ -1,0 +1,107 @@
+{
+    // editor settings
+    "workbench.colorTheme": "Default Dark Modern",
+    "editor.fontFamily": "'JetBrainsMonoNL Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.tabSize": 2,
+    "editor.lineNumbers": "relative",
+    "vim.incsearch": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "editor.cursorSurroundingLines": 10,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 1,
+    "workbench.editor.limit.perEditorGroup": true,
+    "terminal.integrated.tabs.enableAnimation": false,
+    "editor.cursorBlinking": "solid",
+    "workbench.reduceMotion": "on",
+    "editor.fontSize": 13.5,
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.minimap.enabled": false,
+    "workbench.editor.showTabs": "none",
+    "files.autoSave": "onWindowChange",
+
+    // vscode vim keybindings
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["k", "j"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "y"],
+        "after": ["\"", "+", "y"]
+      },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+      },
+      {
+        "before": ["<C-d>"],
+        "after": ["<C-d>", "z", "z"]
+      },
+      {
+        "before": ["<leader>", "y"],
+        "after": ["\"", "+", "y"]
+      },
+      {
+        "before": ["<leader>", "Y"],
+        "after": ["\"", "+", "y"]
+      },
+      {
+        "before": ["<C-u>"],
+        "after": ["<C-u>", "z", "z"]
+      },
+      {
+        "before": ["n"],
+        "after": ["n", "z", "z", "z", "v"]
+      },
+      {
+        "before": ["N"],
+        "after": ["N", "z", "z", "z", "v"]
+      },
+      {
+        "before": ["<C-n>"],
+        "commands": [":nohl"]
+      },
+      // commands
+      {
+        "before": ["<leader>", "\\"],
+        "commands": [
+          "workbench.view.explorer"
+        ]
+      },
+      {
+        "before": ["<S-k>"],
+        "commands": [
+          "editor.action.showHover"
+        ],
+        "when": [
+          "editorTextFocus"
+        ]
+      },
+      {
+        "before": ["<C-p>"],
+        "commands": [
+          "workbench.action.quickOpen"
+        ]
+      },
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false
+    },
+
+    "extensions.experimental.affinity": {
+      "vscodevim.vim": 1
+    },
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "remote.SSH.remotePlatform": {
+      "newprod-scic": "linux"
+    },
+}
