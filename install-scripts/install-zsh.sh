@@ -1,6 +1,9 @@
+#!/bin/sh
 # install zsh
+sudo apt install zsh
+
+# remove empty zshrc file
+rm /home/$USER/.zshrc
 
 # pull config file and symlink to root directory
-
-# test this on docker containers
-
+sudo ln -sf ../zsh/.zshrc /home/$USER/.zshrc

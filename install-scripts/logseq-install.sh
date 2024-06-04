@@ -19,4 +19,6 @@ Type=Application
 Categories=Note-Taking
 Path=/usr/bin
 EOF
-sudo cp ./temp /usr/share/applications/discord.desktop;rm ./temp
+sudo cp ./temp /usr/share/applications/logseq.desktop;rm ./temp
+
+# TODO: git clone logseq to Documents

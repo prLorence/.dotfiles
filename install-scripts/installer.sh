@@ -30,3 +30,5 @@ echo "installing neovim..."
 
 echo "installing spotify..."
 /bin/bash ./spotify.sh
+
+# TODO: symlinks for the configs
