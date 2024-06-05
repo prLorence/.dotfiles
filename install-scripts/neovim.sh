@@ -1,6 +1,6 @@
 #!/bin/bash
 #Build prerequisites
-sudo apt install ninja-build gettext cmake unzip curl -y
+sudo apt install file ninja-build gettext cmake unzip curl -y
 
 BASE_DIR=$(dirname $(pwd))
 
@@ -18,4 +18,4 @@ make CMAKE_BUILD_TYPE=RelWithDebInfo
 cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 
 # link to config path
-sudo ln -sf $(BASE_DIR)/nvim /home/$USER/.config/nvim
+sudo ln -sf $BASE_DIR/nvim $HOME/.config/nvim

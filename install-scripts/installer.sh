@@ -1,6 +1,7 @@
 #!/bin/sh
-
 sudo apt upgrade && sudo apt update -y
+
+sudo apt install curl -y
 
 # some apps im using live in this directory
 mkdir -p $HOME/Dekstop/Applications
@@ -11,27 +12,27 @@ chmod +x *.sh
 # TODO: implement some sort of looping for all scripts present in the directory
 
 echo "installing discord..."
-/bin/bash ./discord.sh
+/bin/bash discord.sh
 
 echo "installing logseq..."
-/bin/bash ./logseq.sh
+/bin/bash logseq.sh
 
 echo "installing neovim..."
-/bin/bash ./neeovim.sh
+/bin/bash neeovim.sh
 
 echo "installing spotify..."
-/bin/bash ./spotify.sh
+/bin/bash spotify.sh
 
 echo "installing zsh..."
-/bin/bash ./zsh.sh
+/bin/bash zsh.sh
 
 echo "installing zplug..."
-/bin/bash ./zplug.sh
+/bin/bash zplug.sh
 
 echo "installing solaar..."
-/bin/bash ./solaar.sh
+/bin/bash solaar.sh
 
 echo "installing starship..."
-/bin/bash ./starship.sh
+/bin/bash starship.sh
 
 # TODO: symlinks for the configs
