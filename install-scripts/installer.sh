@@ -2,33 +2,36 @@
 
 sudo apt upgrade && sudo apt update -y
 
-mkdir -p /home/$USER/Dekstop/Applications
+# some apps im using live in this directory
+mkdir -p $HOME/Dekstop/Applications
 
-echo "setting executable permissions to discord-install.sh"
-chmod +x ./discord-install.sh
+echo "setting executable permissions to all scripts"
+chmod +x *.sh
 
-echo "setting executable permissions to discord-update.sh"
-chmod +x ./discord-update.sh
-
-echo "setting executable permissions to logseq-install.sh"
-chmod +x ./logseq-install.sh
-
-echo "setting executable permissions to neovim.sh"
-chmod +x ./neovim.sh
-
-echo "setting executable permissions to spotify-install.sh"
-chmod +x ./spotify-install.sh
+# TODO: implement some sort of looping for all scripts present in the directory
 
 echo "installing discord..."
-/bin/bash ./disord-install.sh
+/bin/bash ./discord.sh
 
 echo "installing logseq..."
-/bin/bash ./logseq-install.sh
+/bin/bash ./logseq.sh
 
 echo "installing neovim..."
 /bin/bash ./neeovim.sh
 
 echo "installing spotify..."
 /bin/bash ./spotify.sh
+
+echo "installing zsh..."
+/bin/bash ./zsh.sh
+
+echo "installing zplug..."
+/bin/bash ./zplug.sh
+
+echo "installing solaar..."
+/bin/bash ./solaar.sh
+
+echo "installing starship..."
+/bin/bash ./starship.sh
 
 # TODO: symlinks for the configs
