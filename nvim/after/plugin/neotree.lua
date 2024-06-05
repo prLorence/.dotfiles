@@ -64,7 +64,7 @@ require("neo-tree").setup({
     commands = {},
     window = {
         position = "float",
-        width = 25,
+        width = 50,
         popup = {             -- settings that apply to float position only
             size = { height = "30", width = "50" },
             position = "50%", -- 50% means center it
@@ -203,7 +203,7 @@ require("neo-tree").setup({
 })
 
 
-vim.keymap.set("n", "|", function()
+vim.keymap.set("n", "<leader>\\", function()
     vim.cmd("Neotree reveal")
 end, { noremap = true, silent = true })
 

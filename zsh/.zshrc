@@ -10,9 +10,13 @@ setopt histignorealldups sharehistory
 autoload -Uz compinit
 compinit
 
+# zsh plugins through zplug
 zplug "jeffreytse/zsh-vi-mode"
 zplug "agkozak/zsh-z"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "plugins/git",   from:oh-my-zsh
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions"
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -48,3 +52,4 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
+
