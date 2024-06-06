@@ -1,7 +1,7 @@
 BUILD_PATH=$HOME/Desktop/Applications
 BASE_DIR=$(dirname $(pwd))
 # install depedencies
-sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 -y
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 scdoc -y
 
 # clone git repo
 git clone https://github.com/alacritty/alacritty.git $BUILD_PATH

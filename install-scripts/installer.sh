@@ -15,8 +15,8 @@ chmod +x *.sh
 echo "installing discord..."
 /bin/bash discord.sh
 
-echo "installing logseq..."
-/bin/bash logseq.sh
+# echo "installing logseq..."
+# /bin/bash logseq.sh
 
 echo "installing neovim..."
 /bin/bash neovim.sh
@@ -36,4 +36,5 @@ echo "installing starship..."
 echo "installing alacritty..."
 /bin/bash alacritty.sh
 
-# TODO: symlinks for the configs
+echo "installing tmux..."
+/bin/bash tmux.sh
