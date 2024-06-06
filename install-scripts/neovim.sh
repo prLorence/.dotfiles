@@ -7,9 +7,9 @@ BASE_DIR=$(dirname $(pwd))
 BUILD_PATH=$HOME/Desktop/Applications
 
 # clone
-git clone https://github.com/neovim/neovim $BUILD_PATH
+git clone https://github.com/neovim/neovim.git $BUILD_PATH/neovim
 
-cd $BUILD_PATH
+cd $BUILD_PATH/neovim
 
 git checkout stable
 

@@ -1,7 +1,7 @@
 #!/bin/sh
-sudo apt upgrade && sudo apt update -y
+sudo apt upgrade && sudo sudo apt update -y
 
-sudo apt install curl -y
+sudo apt install curl build-essential -y
 
 # create required directories
 mkdir -p $HOME/Desktop/Applications
