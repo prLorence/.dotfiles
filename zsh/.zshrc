@@ -7,8 +7,8 @@ source ~/.zplug/init.zsh
 
 setopt histignorealldups sharehistory
 
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 
 # zsh plugins through zplug
 zplug "jeffreytse/zsh-vi-mode"
@@ -26,6 +26,8 @@ HISTFILE=~/.zsh_history
 # Use modern completion system
 
 ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
+
+bindkey '^ ' autosuggest-accept
 
 alias kubectl="minikube kubectl --"
 
