@@ -4,7 +4,7 @@ sudo apt upgrade && sudo apt update -y
 sudo apt install curl -y
 
 # create required directories
-mkdir -p $HOME/Dekstop/Applications
+mkdir -p $HOME/Desktop/Applications
 mkdir -p $HOME/.config
 
 echo "setting executable permissions to all scripts"

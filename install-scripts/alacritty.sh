@@ -1,10 +1,10 @@
 BUILD_PATH=$HOME/Desktop/Applications
 BASE_DIR=$(dirname $(pwd))
 # install depedencies
-sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 scdoc -y
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 scdoc g++ -y
 
 # clone git repo
-git clone https://github.com/alacritty/alacritty.git $BUILD_PATH
+git clone https://github.com/alacritty/alacritty.git $BUILD_PATH/alacritty
 
 cd $BUILD_PATH/alacritty
 
@@ -15,8 +15,11 @@ rustup override set stable
 rustup update stable
 
 # install alacritty
-cargo build --release
+# cargo build --release
 
+# Force support for only Wayland
+# cargo build --release --no-default-features --features=wayland
+#
 # Force support for only X11
 cargo build --release --no-default-features --features=x11
 

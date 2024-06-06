@@ -4,7 +4,7 @@ sudo apt install file ninja-build gettext cmake unzip curl -y
 
 BASE_DIR=$(dirname $(pwd))
 
-BUILD_PATH=$HOME/Desktop/Application
+BUILD_PATH=$HOME/Desktop/Applications
 
 # clone
 git clone https://github.com/neovim/neovim $BUILD_PATH
