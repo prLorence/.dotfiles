@@ -3,8 +3,9 @@ sudo apt upgrade && sudo apt update -y
 
 sudo apt install curl -y
 
-# some apps im using live in this directory
+# create required directories
 mkdir -p $HOME/Dekstop/Applications
+mkdir -p $HOME/.config
 
 echo "setting executable permissions to all scripts"
 chmod +x *.sh
