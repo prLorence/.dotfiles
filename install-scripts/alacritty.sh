@@ -34,7 +34,7 @@ infocmp alacritty
 sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
 
 # create desktop entry
-sudo cp $BUILD_PATH/target/release/alacritty /usr/local/bin # or anywhere else in $PATH
+sudo cp $BUILD_PATH/alacritty/target/release/alacritty /usr/local/bin # or anywhere else in $PATH
 sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
 sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
