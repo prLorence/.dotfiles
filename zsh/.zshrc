@@ -42,6 +42,10 @@ export NVM_DIR="$HOME/.nvm"
 
 export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 
+if [[ -e $HOME/.cargo/env ]] then
+    . $HOME/.cargo/env
+fi
+
 eval "$(starship init zsh)"
 
 # Install plugins if there are plugins that have not been installed
