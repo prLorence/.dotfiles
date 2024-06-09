@@ -41,3 +41,14 @@ echo "installing solaar..."
 
 echo "installing tmux..."
 /bin/bash tmux.sh
+
+echo "executing kde plasma installer"
+/bin/bash kde.sh
+
+echo "executing i3 installer..."
+/bin/bash i3.sh
+
+echo "executing configuration for i3-plasma workspace"
+/bin/bash i3-kde.sh
+
+
