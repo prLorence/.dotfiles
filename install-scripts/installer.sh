@@ -44,8 +44,8 @@ echo "installing solaar..."
 echo "installing tmux..."
 /bin/bash tmux.sh
 
-echo "executing kde plasma installer"
-/bin/bash kde.sh
+# echo "executing kde plasma installer"
+# /bin/bash kde.sh
 
 echo "executing i3 installer..."
 /bin/bash i3.sh
@@ -53,11 +53,11 @@ echo "executing i3 installer..."
 echo "executing configuration for i3-plasma workspace"
 /bin/bash i3-kde.sh
 
-echo "installing docker..."
-/bin/bash docker.sh
+# echo "installing docker..."
+# /bin/bash docker.sh
 
-echo "migrating personal finance..."
-/bin/bash finance.sh
+# echo "migrating personal finance..."
+# /bin/bash finance.sh
 
 echo "installing minikube(k8s)..."
 /bin/bash minikube.sh
