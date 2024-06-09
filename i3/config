@@ -246,7 +246,10 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 # for_window [class="firefox"] border none
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
+# for kde < 5.27
+# for_window [title="Desktop — Plasma"] kill; floating enable; border none
+# for kde >= 5.27
+for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
 for_window [class="yakuake"] floating enable
 for_window [class="systemsettings"] floating enable
 for_window [class="plasmashell"] floating enable;
