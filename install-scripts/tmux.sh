@@ -1,3 +1,4 @@
+#!/bin/sh
 # install tmux
 BASE_DIR=$(dirname $(pwd))
 

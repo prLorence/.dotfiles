@@ -1,3 +1,5 @@
+#!/bin/sh 
+
 BUILD_PATH=$HOME/Desktop/Applications
 BASE_DIR=$(dirname $(pwd))
 # install depedencies

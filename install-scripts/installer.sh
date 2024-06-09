@@ -1,7 +1,8 @@
 #!/bin/sh
+
 sudo apt upgrade && sudo sudo apt update -y
 
-sudo apt install curl build-essential -y
+sudo apt install curl wget build-essential -y
 
 # create required directories
 mkdir -p $HOME/Desktop/Applications
@@ -10,7 +11,8 @@ mkdir -p $HOME/.config
 echo "setting executable permissions to all scripts"
 chmod +x *.sh
 
-# TODO: implement some sort of looping for all scripts present in the directory
+echo "installing firefox"
+/bin/bash firefox.sh
 
 echo "installing discord..."
 /bin/bash discord.sh
@@ -51,4 +53,11 @@ echo "executing i3 installer..."
 echo "executing configuration for i3-plasma workspace"
 /bin/bash i3-kde.sh
 
+echo "installing docker..."
+/bin/bash docker.sh
 
+echo "migrating personal finance..."
+/bin/bash finance.sh
+
+echo "installing minikube(k8s)..."
+/bin/bash minikube.sh
