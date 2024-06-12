@@ -40,7 +40,6 @@ local plugins = {
     { "folke/neodev.nvim" },
 
     -- TREESITTER PLUGINS
-    { 'windwp/nvim-ts-autotag' },
     { 'numToStr/Comment.nvim' },
     { 'nvim-treesitter/nvim-treesitter-context' },
     {
@@ -49,7 +48,7 @@ local plugins = {
     },
 
     -- EDITOR PLUGINS
-    { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts={} },
+    { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },
     { 'jinh0/eyeliner.nvim' },
     { 'windwp/nvim-autopairs' },
     { 'tpope/vim-surround' },
@@ -153,11 +152,10 @@ require("lazy").setup(plugins, opts)
 
 require("nvim-autopairs").setup()
 
-require("nvim-ts-autotag").setup()
+-- require('nvim-ts-autotag').setup()
 
 -- require('lsp_signature').setup()
 
 -- some indent guides config
 -- vim.opt.list = true
 -- vim.opt.listchars:append "eol:↴"
-

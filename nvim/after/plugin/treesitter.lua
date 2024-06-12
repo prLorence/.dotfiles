@@ -1,6 +1,14 @@
 require 'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
-    ensure_installed = { "c_sharp", "lua", "vim", "javascript", "typescript", "python" },
+    ensure_installed = {
+        "c_sharp",
+        "lua",
+        "vim",
+        "javascript",
+        "typescript",
+        "python",
+        "terraform"
+    },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = true,
@@ -39,11 +47,11 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics,
     {
         underline = {
-            severity_limit = 'Warning'
+            min = 'Warning'
         },
         virtual_text = {
             spacing = 5,
-            severity_limit = 'Error',
+            min = 'Error'
         },
         update_in_insert = false,
     }

@@ -10,6 +10,7 @@ lsp.nvim_workspace();
 lsp.ensure_installed({
     'tsserver',
     'omnisharp',
+    'terraformls'
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
