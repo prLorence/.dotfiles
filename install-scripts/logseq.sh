@@ -17,12 +17,5 @@ GenericName=Outliner Note Taking App
 Exec=/usr/bin/Logseq
 Type=Application
 Categories=Note-Taking
-Path=/usr/bin
 EOF
-sudo cp ./temp /usr/share/applications/logseq.desktop;rm ./temp
-
-# TODO: git clone logseq to Documents, create PAT for cloning it with the following format
-GITHUB_USERNAME=prlorence
-GITHUB_PAT=changethis
-
-git clone "https://$GITHUB_USERNAME:$GITHUB_PAT@github.com/$GITHUB_USERNAME/logseq.git" $HOME/Desktop/Applications
+sudo cp ./temp /usr/share/applications/Logseq.desktop;rm ./temp
