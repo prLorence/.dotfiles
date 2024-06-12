@@ -59,3 +59,6 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
+alias ls='exa'
+
+alias tf='terraform'
