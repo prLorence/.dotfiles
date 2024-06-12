@@ -102,6 +102,7 @@
     },
     "remote.SSH.remoteServerListenOnSocket": true,
     "remote.SSH.remotePlatform": {
-      "newprod-scic": "linux"
+      "newprod-scic": "linux",
+      "sandbox-scic": "linux"
     },
 }
