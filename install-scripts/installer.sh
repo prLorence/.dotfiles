@@ -12,6 +12,7 @@ sudo apt install curl \
     wget \
     build-essential \
     feh \
+    ripgrep \
     exa \
     fzf \
     -y

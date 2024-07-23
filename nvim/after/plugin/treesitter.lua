@@ -7,7 +7,15 @@ require 'nvim-treesitter.configs'.setup {
         "javascript",
         "typescript",
         "python",
-        "terraform"
+        "terraform",
+        "go",
+        "sql",
+        "html",
+        "css",
+        "regex",
+        "bash",
+        "markdown",
+        "markdown_inline"
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -16,10 +24,8 @@ require 'nvim-treesitter.configs'.setup {
     -- Automatically install missing parsers when entering buffer
     -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
     auto_install = true,
-
-    highlight = {
-        enable = true,
-    },
+    highlight = { enable = true, },
+    indent = { enable = true },
     textobjects = {
         select = {
             enable = true,
@@ -41,6 +47,7 @@ require 'nvim-treesitter.configs'.setup {
         enable = true,
     }
 }
+
 
 -- https://github.com/windwp/nvim-ts-autotag/issues/19
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(

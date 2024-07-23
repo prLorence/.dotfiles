@@ -32,15 +32,9 @@ bindkey '^ ' autosuggest-accept
 alias kubectl="minikube kubectl --"
 
 # Add .NET Core SDK tools
-export PATH="$PATH:/home/phetoush/.dotnet/tools"
-export DOTNET_ROOT="/usr/share/dotnet"
-
-export NVM_DIR="$HOME/.nvm"
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export STARSHIP_CONFIG="~/.config/starship/starship.toml"
+
 
 if [[ -e $HOME/.cargo/env ]] then
     . $HOME/.cargo/env
@@ -60,5 +54,18 @@ fi
 zplug load
 
 alias ls='exa'
-
 alias tf='terraform'
+
+# programming tools
+export PATH="$PATH:/home/phetoush/.dotnet/tools"
+export DOTNET_ROOT="/usr/share/dotnet"
+
+export NVM_DIR="$HOME/.nvm"
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export GOPATH="$HOME/go"
+
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$PATH:/usr/local/go/bin"

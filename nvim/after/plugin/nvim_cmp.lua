@@ -32,7 +32,10 @@ cmp.setup({
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<Tab>'] = cmp.mapping.confirm({ select = false }),
+        ['<TAB>'] = cmp.mapping.confirm({
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true,
+        }),
         ["<M-j>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item(cmp_select)

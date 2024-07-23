@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     -- THEMES
-    { "bluz71/vim-moonfly-colors",              name = "moonfly", lazy = false, priority = 1000 },
+    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
     {
         "folke/tokyonight.nvim",
         lazy = false,
@@ -38,6 +38,19 @@ local plugins = {
 
     -- CONFIG QOL
     { "folke/neodev.nvim" },
+    {
+        "folke/noice.nvim",
+        opts = {
+        },
+        dependencies = {
+            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+            "MunifTanjim/nui.nvim",
+            -- OPTIONAL:
+            --   `nvim-notify` is only needed, if you want to use the notification view.
+            --   If not available, we use `mini` as the fallback
+            "rcarriga/nvim-notify",
+        }
+    },
 
     -- TREESITTER PLUGINS
     { 'numToStr/Comment.nvim' },
@@ -61,24 +74,9 @@ local plugins = {
             "MunifTanjim/nui.nvim",
         }
     },
-    {
-        "folke/which-key.nvim",
-        event = "VeryLazy",
-        init = function()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 500
-        end,
-    },
 
     -- GIT PLUGINS
     { 'tpope/vim-fugitive' },
-    {
-        'NeogitOrg/neogit',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            'nvim-telescope/telescope.nvim'
-        }
-    },
     { 'lewis6991/gitsigns.nvim' },
 
     -- AUTOCOMPLETION STUFF
@@ -107,14 +105,25 @@ local plugins = {
         'folke/trouble.nvim',
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
-    { 'Hoffs/omnisharp-extended-lsp.nvim' },
-    { 'Issafalcon/lsp-overloads.nvim' },
-    { 'nvim-treesitter/nvim-treesitter',  cmd = "TSUpdate" },
+    -- { 'Hoffs/omnisharp-extended-lsp.nvim' },
+    -- { 'Issafalcon/lsp-overloads.nvim' },
+    { 'nvim-treesitter/nvim-treesitter', cmd = "TSUpdate" },
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.2',
         -- or                              , branch = '0.1.1',
-        dependencies = { 'nvim-lua/plenary.nvim' }
+        dependencies = { 'nvim-lua/plenary.nvim'}
+    },
+    {
+        "ray-x/go.nvim",
+        dependencies = { -- optional packages
+            "ray-x/guihua.lua",
+            "neovim/nvim-lspconfig",
+            "nvim-treesitter/nvim-treesitter",
+        },
+        event = { "CmdlineEnter" },
+        ft = { "go", 'gomod' },
+        build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
     },
     {
         'VonHeikemen/lsp-zero.nvim',
