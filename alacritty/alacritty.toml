@@ -16,15 +16,15 @@ family = "JetBrainsMono NFM"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMono NFM"
+family = "Hack"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMono NFM"
+family = "Hack"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono NFM Medium"
+family = "Hack"
 style = "Regular"
 
 [scrolling]
