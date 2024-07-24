@@ -5,6 +5,7 @@ vim.keymap.set('i', 'kj', '<Esc>:w<CR>')
 vim.keymap.set("v", "<M-S-j>", ":m '>+1<CR>gv=gv", {silent = true})
 vim.keymap.set("v", "<M-S-k>", ":m '<-2<CR>gv=gv", {silent = true})
 
+
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
@@ -30,6 +31,11 @@ vim.keymap.set("n", "<M-h>", "<C-w>h", {})
 vim.keymap.set("n", "<M-l>", "<C-w>l", {})
 vim.keymap.set("n", "<M-j>", "<C-w>j", {})
 vim.keymap.set("n", "<M-k>", "<C-w>k", {})
+
+vim.keymap.set("n", "<M-=>", ":vertical resize +20<CR>", {silent = true})
+vim.keymap.set("n", "<M-->", ":vertical resize -20<CR>", {silent = true})
+vim.keymap.set("n", "<C-M-=>", ":resize -20<CR>", {silent = true})
+vim.keymap.set("n", "<C-M-->", ":resize +20<CR>", {silent = true})
 
 
 vim.keymap.set("n", "<leader><leader>", function()
