@@ -10,10 +10,6 @@ end
 
 local luasnip = require('luasnip')
 
-require("luasnip.loaders.from_vscode").lazy_load({ exclude = { "cs" } });
-
-require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets-extension" } })
-
 cmp.setup({
     snippet = {
         expand = function(args)

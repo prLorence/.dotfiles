@@ -31,7 +31,6 @@ vim.opt.updatetime = 50
 vim.opt.autoread = true
 vim.opt.autowrite = true
 
-
 vim.opt.fillchars = { eob = ' ' }
 
 vim.cmd('set splitright')
