@@ -5,44 +5,33 @@ local lsp = require('lsp-zero').preset({
     suggest_lsp_servers = true,
 });
 
-lsp.nvim_workspace();
+lsp.nvim_workspace()
 
 lsp.ensure_installed({
     'tsserver',
     "pyright",
     'terraformls',
-    'gopls'
+    'gopls',
+    "tflint",
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
+
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
-
-    --- Guard against servers without the signatureHelper capability
-    -- if client.server_capabilities.signatureHelpProvider then
-    --     require('lsp-overloads').setup(client, {
-    --         keymaps = {
-    --             next_signature = "<A-n>",
-    --             previous_signature = "<A-p>",
-    --             next_parameter = "<A-l>",
-    --             previous_parameter = "<A-h>",
-    --             close_signature = "<A-s>"
-    --         },
-    --     })
-    -- end
+    capabilities = capabilities
 
     -- lsp keybindings
     vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-    vim.keymap.set('n', '<leader>td', vim.lsp.buf.type_definition, opts)
-    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-
     vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', '<leader>td', vim.lsp.buf.type_definition, opts)
     vim.keymap.set("n", "E", vim.diagnostic.open_float, opts)
-    -- vim.keymap.set({ "i", "n" }, "<M-s>", function() vim.cmd("LspOverloadsSignature") end,
-    --     { noremap = true, silent = true })
+    vim.keymap.set({ "i", "n" }, "<A-s>", function() vim.cmd("LspOverloadsSignature") end,
+        { noremap = true, silent = true })
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 
     vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, opts)
     vim.keymap.set('n', 'gi', require('telescope.builtin').lsp_implementations, opts)
@@ -55,8 +44,26 @@ end)
 local lspconfig = require("lspconfig")
 lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
 
+-- TF SETUP
+lspconfig.terraformls.setup({
+    capabilities = capabilities
+})
+
+lspconfig.tflint.setup({
+    capabilities = capabilities
+})
+
 -- GOLANG SETUP
 require('go').setup()
--- local cfg = require 'go.lsp'.config() -- config() return the go.nvim gopls setup
---
--- lspconfig.gopls.setup()
+
+local format_sync_grp = vim.api.nvim_create_augroup("goimports", {})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*.go",
+    callback = function()
+        require('go.format').goimports()
+    end,
+    group = format_sync_grp,
+})
+
+lsp.setup()
