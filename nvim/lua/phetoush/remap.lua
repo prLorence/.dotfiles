@@ -31,9 +31,6 @@ vim.keymap.set("n", "<M-l>", "<C-w>l", {})
 vim.keymap.set("n", "<M-j>", "<C-w>j", {})
 vim.keymap.set("n", "<M-k>", "<C-w>k", {})
 
-vim.keymap.set("n", "<leader>gc", function()
-    vim.cmd("Git commit")
-end)
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("edit")
