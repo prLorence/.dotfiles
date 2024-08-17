@@ -52,10 +52,10 @@ set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod
 
 # start a terminal with a tmux session attached
-bindsym $mod+Return exec alacritty -e tmux
+bindsym $mod+Return exec kitty -e tmux
 
 # start a normal terminal
-bindsym $mod+Shift+Return exec alacritty
+bindsym $mod+Shift+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
