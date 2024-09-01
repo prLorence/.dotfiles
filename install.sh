@@ -377,3 +377,5 @@ main() {
   discord
   solaar
 }
+
+main
