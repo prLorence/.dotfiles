@@ -36,7 +36,7 @@ discord() {
 
     rm discord.deb
   else
-    pacman -S discord
+    pacman -S discord -y
   fi
 }
 
@@ -66,7 +66,7 @@ docker() {
 
     docker run hello-world
   else
-    pacman -S docker
+    pacman -S docker -y
   fi
 
 }
@@ -87,7 +87,7 @@ firefox() {
 
     apt-get install firefox
   else
-    pacman -S firefox
+    pacman -S firefox -y
   fi
 }
 # if i'm on arch
@@ -168,7 +168,7 @@ minikube() {
 
     rm minikube_latest_amd64.deb
   else
-    pacman -S minikube
+    pacman -S minikube -y
   fi
 }
 
@@ -199,7 +199,7 @@ solaar() {
   if [ "$OS" == "debian" ]; then
     apt install solaar -y
   else
-    pacman -S solaar
+    pacman -S solaar -y
   fi
 }
 
@@ -215,7 +215,7 @@ spotify() {
     # installing spotify
     apt-get update && sudo apt-get install spotify-client -y
   else
-    pacman -S spotify-launcher
+    pacman -S spotify-launcher -y
   fi
 }
 
@@ -223,7 +223,7 @@ starship() {
   if [ "$OS" == "debian" ]; then
     curl -sS https://starship.rs/install.sh | sh
   else
-    pacman -S starship
+    pacman -S starship -y
   fi
 
   # symlink the config path to ~/.config/starship/starship.toml
@@ -239,7 +239,7 @@ zsh() {
   if [ "$OS" == "debian" ]; then
     apt install zsh -y
   else
-    pacman -S zsh
+    pacman -S zsh -y
   fi
 
   # remove empty zshrc file
@@ -261,7 +261,7 @@ terraform() {
 
     apt update && sudo apt install terraform
   else
-    pacman -S terraform
+    pacman -S terraform -y
   fi
 }
 
@@ -269,7 +269,7 @@ tmux() {
   if [ "$OS" == "debian" ]; then
     apt install tmux -y
   else
-    pacman -S tmux
+    pacman -S tmux -y
   fi
 
   # link tmux config
@@ -293,7 +293,7 @@ obsidian() {
 
     rm obisidan.deb
   else
-    pacman -S tmux
+    pacman -S obsidian -y
   fi
 }
 
@@ -306,7 +306,7 @@ go() {
     wget https://go.dev/dl/
     rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.0.linux-amd64.tar.gz
   else
-    pacman -S go
+    pacman -S go -y
   fi
 }
 
@@ -318,7 +318,7 @@ dotnet() {
     apt-get update &&
       apt-get install -y dotnet-sdk-8.0
   else
-    pacman -S dotnet-sdk
+    pacman -S dotnet-sdk -y
   fi
 }
 
