@@ -148,23 +148,27 @@ EOF
 }
 
 kitty() {
-  curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+  if [ "$OS" == "debian" ]; then
+    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
-  # Create symbolic links to add kitty and kitten to PATH (assuming ~/.local/bin is in
-  # your system-wide PATH)
-  ln -sf ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten ~/.local/bin/
+    # Create symbolic links to add kitty and kitten to PATH (assuming ~/.local/bin is in
+    # your system-wide PATH)
+    ln -sf ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten ~/.local/bin/
 
-  # make it runnable anywhere
-  ln -sf ~/.local/kitty.app/bin/kitty /usr/local/bin/kitty
-  # Place the kitty.desktop file somewhere it can be found by the OS
-  cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
-  # If you want to open text files and images in kitty via your file manager also add the kitty-open.desktop file
-  cp ~/.local/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applications/
-  # Update the paths to the kitty and its icon in the kitty desktop file(s)
-  sed -i "s|Icon=kitty|Icon=$(readlink -f ~)/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
-  sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
-  # Make xdg-terminal-exec (and hence desktop environments that support it use kitty)
-  echo 'kitty.desktop' >~/.config/xdg-terminals.list
+    # make it runnable anywhere
+    ln -sf ~/.local/kitty.app/bin/kitty /usr/local/bin/kitty
+    # Place the kitty.desktop file somewhere it can be found by the OS
+    cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
+    # If you want to open text files and images in kitty via your file manager also add the kitty-open.desktop file
+    cp ~/.local/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applications/
+    # Update the paths to the kitty and its icon in the kitty desktop file(s)
+    sed -i "s|Icon=kitty|Icon=$(readlink -f ~)/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
+    sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
+    # Make xdg-terminal-exec (and hence desktop environments that support it use kitty)
+    echo 'kitty.desktop' >~/.config/xdg-terminals.list
+  else
+    pacman -S kitty -y
+  fi
 
   # link to config path
   ln -sf ./kitty "$HOME"/.config/kitty
@@ -185,20 +189,20 @@ minikube() {
 nvim() {
   if [ "$OS" == "debian" ]; then
     apt install file ninja-build gettext cmake unzip curl -y
+    git clone https://github.com/neovim/neovim.git "$APP_PATH"/neovim
+
+    cd "$APP_PATH"/neovim || exit
+
+    git checkout stable
+
+    make CMAKE_BUILD_TYPE=RelWithDebInfo
+
+    cd build && cpack -G DEB && dpkg -i nvim-linux64.deb
   else
-    pacman -S file ninja gettext cmake unzip curl -y
+    pacman -S neovim -y
   fi
 
   # clone
-  git clone https://github.com/neovim/neovim.git "$APP_PATH"/neovim
-
-  cd "$APP_PATH"/neovim || exit
-
-  git checkout stable
-
-  make CMAKE_BUILD_TYPE=RelWithDebInfo
-
-  cd build && cpack -G DEB && dpkg -i nvim-linux64.deb
 
   # link to config path
   ln -sf ./nvim "$HOME"/.config/nvim
@@ -356,6 +360,7 @@ main() {
   zsh
   neovim
   tmux
+  nvim
 
   echo "Installing development kits"
   terraform
