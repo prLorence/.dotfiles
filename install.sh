@@ -1,19 +1,5 @@
 #!/bin/bash
 
-# the plan:
-# TODO: 1. create functions for each package
-# TODO: 2. a main function that let's you decide which
-# - terminal
-# - firefox
-# - set the right alt as backspace keymap dynamically (xorg or wayland)
-# - should install i3 + kde (if in debian system), should check the /etc/os-release file
-# - detect the package manager, store that as a variable
-# - nvm
-# - dotnet
-# - golang
-# - might need a helper function for logging
-# NOTE: this script should be ran as root/
-
 APP_PATH="$HOME/Desktop/Applications"
 OS=""
 
@@ -171,7 +157,7 @@ kitty() {
   fi
 
   # link to config path
-  ln -sf ./kitty "$HOME"/.config/kitty
+  ln -sf "$(pwd)"/kitty "$HOME"/.config/kitty
 }
 
 minikube() {
@@ -205,7 +191,7 @@ nvim() {
   # clone
 
   # link to config path
-  ln -sf ./nvim "$HOME"/.config/nvim
+  ln -sf "$(pwd)"/nvim "$HOME"/.config/nvim
 }
 
 # for logitech devices
@@ -241,7 +227,7 @@ starship() {
   fi
 
   # symlink the config path to ~/.config/starship/starship.toml
-  ln -sf ./starship "$HOME"/.config/starship
+  ln -sf "$(pwd)"/starship "$HOME"/.config/starship
 }
 
 zplug() {
@@ -260,7 +246,7 @@ zsh() {
   rm "$HOME"/.zshrc
 
   # pull config file and symlink to root directory
-  ln -sf ./zsh/.zshrc "$HOME"/.zshrc
+  ln -sf "$(pwd)"/zsh/.zshrc "$HOME"/.zshrc
 
   # set zsh as default shell
   chsh -s "$(which zsh)"
@@ -287,11 +273,11 @@ tmux() {
   fi
 
   # link tmux config
-  ln -sf ./tmux "$HOME"/.config/tmux
+  ln -sf "$(pwd)"/tmux "$HOME"/.config/tmux
 }
 
 wallpapers() {
-  cp .wallpapers/* "$HOME"/Pictures/Wallpapers
+  cp ./wallpapers/* "$HOME"/Pictures/Wallpapers
 }
 
 xmodmap() {
@@ -351,7 +337,6 @@ installde() {
 
 main() {
   detectdistro
-  installde
 
   echo "Installing terminal emulator dependencies"
   kitty
