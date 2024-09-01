@@ -294,16 +294,81 @@ xmodmap() {
   ln -sf ./xmodmapc/.Xmodmap "$HOME"
 }
 
-obisidan() {
+obsidian() {
   if [ "$OS" == "debian" ]; then
     # TODO: clone my notes using secret key from github
-    wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.7/obsidian_1.6.7_amd64.deb -O obisidan.deb
+    wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.7/obsidian_1.6.7_amd64.deb -O "$XDG_CONFIG_HOME"/Downloads/obisidan.deb
 
-    dpkg -i obisidan.deb
+    dpkg -i "$XDG_CONFIG_HOME"/Downloads/obisidan.deb
 
     rm obisidan.deb
   else
     pacman -S tmux
   fi
 }
-#
+
+nvm() {
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+}
+
+go() {
+  if [ "$OS" == "debian" ]; then
+    wget https://go.dev/dl/
+    rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.0.linux-amd64.tar.gz
+  else
+    pacman -S go
+  fi
+}
+
+dotnet() {
+  if [ "$OS" == "debian" ]; then
+    wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+    sudo dpkg -i packages-microsoft-prod.deb
+    rm packages-microsoft-prod.deb
+    apt-get update &&
+      apt-get install -y dotnet-sdk-8.0
+  else
+    pacman -S dotnet-sdk
+  fi
+}
+
+hyprland() {
+  git clone https://github.com/end-4/dots-hyprland.git
+  sh ./dots-hyprland/install.sh --skip-fish
+}
+
+installde() {
+  if [ "$OS" == "debian" ]; then
+    i3kde
+  else
+    hyprland
+  fi
+}
+
+main() {
+  detectdistro
+  installde
+
+  echo "Installing terminal emulator dependencies"
+  kitty
+  starship
+  zplug
+  zsh
+  neovim
+  tmux
+
+  echo "Installing development kits"
+  terraform
+  dotnet
+  go
+  nvm
+  minikube
+  docker
+
+  echo "Installing applications"
+  obsidian
+  spotify
+  wallpaper
+  discord
+  solaar
+}
