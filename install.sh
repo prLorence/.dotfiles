@@ -143,9 +143,14 @@ zsh() {
     sudo pacman -S zsh -y
   fi
 
+  # Backup existing .zshrc if it exists
   [ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
 
-  ln -sf "$(pwd)"/zsh/.zshrc "$HOME"
+  # Create a new .zshrc file with the correct shebang
+  echo '#!/bin/zsh' >"$HOME/.zshrc"
+
+  # Append your custom zsh configurations
+  cat "$(pwd)/zsh/.zshrc" >>"$HOME/.zshrc"
 
   echo "To change your default shell to zsh, run: chsh -s $(which zsh)"
 }
@@ -252,7 +257,7 @@ main() {
   solaar
 
   echo "Linking config files"
-  for i in kitty starship zsh nvim tmux; do
+  for i in kitty starship nvim tmux; do
     ln -sf "$(pwd)/$i" "$HOME/.config/$i"
   done
 }
