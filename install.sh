@@ -240,8 +240,11 @@ zsh() {
   # remove empty zshrc file
   rm "$HOME"/.zshrc
 
+  ln -sf "$(pwd)"/zsh/.zshrc "$HOME"
+
   # set zsh as default shell
   chsh -s "$(which zsh)"
+
 }
 
 terraform() {
@@ -351,8 +354,8 @@ main() {
   solaar
 
   echo "Linking config files"
-  for i in "kitty" "starship" "zplug" "zsh" "nvim" "tmux" "nvim"; do
-    ln -sf "$(pwd)/$i" "$XDG_CONFIG_HOME/$i"
+  for i in kitty starship zplug zsh nvim tmux nvim; do
+    ln -sf "$(pwd)/$i" "$HOME"/$i
   done
 
 }
