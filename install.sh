@@ -354,7 +354,7 @@ main() {
   solaar
 
   echo "Linking config files"
-  for i in kitty starship zplug zsh nvim tmux; do
+  for i in kitty starship zsh nvim tmux; do
     sudo ln -sf "$(pwd)/$i" "$HOME"/.config/$i
   done
 
