@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 APP_PATH="$HOME/Desktop/Applications"
 OS=""
@@ -103,7 +103,7 @@ i3kde() {
   apt install kde-stander plasma-nm
 
   echo "linking i3 config..."
-  ln -sf ./i3 "$HOME"/.config/i3
+  ln -sf "$(pwd)/i3" "$HOME"/.config/i3
 
   echo "configuring kde plasma to use i3 as the window manager..."
 
@@ -155,9 +155,6 @@ kitty() {
   else
     pacman -S kitty -y
   fi
-
-  # link to config path
-  ln -sf "$(pwd)"/kitty "$HOME"/.config/kitty
 }
 
 minikube() {
@@ -190,8 +187,6 @@ nvim() {
 
   # clone
 
-  # link to config path
-  ln -sf "$(pwd)"/nvim "$HOME"/.config/nvim
 }
 
 # for logitech devices
@@ -226,12 +221,10 @@ starship() {
     pacman -S starship -y
   fi
 
-  # symlink the config path to ~/.config/starship/starship.toml
-  ln -sf "$(pwd)"/starship "$HOME"/.config/starship
 }
 
 zplug() {
-  git clone https://github.com/zplug/zplug "$HOME/.zplug"
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 }
 
 zsh() {
@@ -244,9 +237,6 @@ zsh() {
 
   # remove empty zshrc file
   rm "$HOME"/.zshrc
-
-  # pull config file and symlink to root directory
-  ln -sf "$(pwd)"/zsh/.zshrc "$HOME"/.zshrc
 
   # set zsh as default shell
   chsh -s "$(which zsh)"
@@ -271,9 +261,6 @@ tmux() {
   else
     pacman -S tmux -y
   fi
-
-  # link tmux config
-  ln -sf "$(pwd)"/tmux "$HOME"/.config/tmux
 }
 
 wallpapers() {
@@ -343,7 +330,6 @@ main() {
   starship
   zplug
   zsh
-  neovim
   tmux
   nvim
 
@@ -361,6 +347,12 @@ main() {
   wallpaper
   discord
   solaar
+
+  echo "Linking config files"
+  for i in "kitty" "starship" "zplug" "zsh" "nvim" "tmux" "nvim"; do
+    ln -sf "$(pwd)/$i" "$XDG_CONFIG_HOME/$i"
+  done
+
 }
 
 main
