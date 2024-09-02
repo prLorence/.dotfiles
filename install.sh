@@ -140,7 +140,7 @@ zsh() {
   if [ "$OS" == "debian" ]; then
     sudo apt install zsh -y
   else
-    sudo pacman -S zsh -y
+    sudo pacman -S zsh --no-confirm
   fi
 
   # Backup existing .zshrc if it exists
