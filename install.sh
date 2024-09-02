@@ -1,4 +1,6 @@
-!/bin/bash
+#!/bin/bash
+
+# TODO: add config checks
 
 APP_PATH="$HOME/Desktop/Applications"
 OS=""
