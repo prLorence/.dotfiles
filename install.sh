@@ -146,11 +146,8 @@ zsh() {
   # Backup existing .zshrc if it exists
   [ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
 
-  # Create a new .zshrc file with the correct shebang
-  echo '#!/bin/zsh' >"$HOME/.zshrc"
-
   # Append your custom zsh configurations
-  cat "$(pwd)/zsh/.zshrc" >>"$HOME/.zshrc"
+  ln -sf "$(pwd)/zsh/.zshrc" "$HOME/.zshrc"
 
   echo "To change your default shell to zsh, run: chsh -s $(which zsh)"
 }
@@ -170,6 +167,8 @@ tmux() {
   else
     sudo pacman -S tmux -y
   fi
+
+  ln -sf "$(pwd)/tmux/tmux.conf" "$HOME/.config"
 }
 
 wallpapers() {
@@ -257,7 +256,7 @@ main() {
   solaar
 
   echo "Linking config files"
-  for i in kitty starship nvim tmux; do
+  for i in kitty starship nvim; do
     ln -sf "$(pwd)/$i" "$HOME/.config/$i"
   done
 }
