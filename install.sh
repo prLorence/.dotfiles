@@ -355,7 +355,7 @@ main() {
 
   echo "Linking config files"
   for i in kitty starship zplug zsh nvim tmux nvim; do
-    ln -sf "$(pwd)/$i" "$HOME"/$i
+    ln -sf "$(pwd)/$i" "$HOME"/.config/$i
   done
 
 }
