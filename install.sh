@@ -142,8 +142,11 @@ zsh() {
   else
     sudo pacman -S zsh -y
   fi
+
   [ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
+
   ln -sf "$(pwd)"/zsh/.zshrc "$HOME"
+
   echo "To change your default shell to zsh, run: chsh -s $(which zsh)"
 }
 
