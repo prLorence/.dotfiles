@@ -6,8 +6,9 @@ set -e
 APP_PATH="$HOME/Desktop/Applications"
 OS=""
 
-mkappdir() {
+mkdepdirs() {
   mkdir -p "$APP_PATH"
+  sudo mkdir -p /etc/kmonad
 }
 
 detectdistro() {
@@ -178,6 +179,35 @@ xmodmap() {
   ln -sf ./xmodmapc/.Xmodmap "$HOME"
 }
 
+kmonad() {
+  if [ "$OS" == "debian" ]; then
+    sudo apt install haskell-stack -y
+    git clone https://github.com/kmonad/kmonad.git kmonad && cd kmonad && stack install && sudo cp "$HOME"/.local/bin/kmoand /usr/bin
+  else
+    yay -S --noconfirm kmonad-bin
+  fi
+
+  sudo ln -sf "$(pwd)/kmonad/laptop-kb.kbd" /etc/kmonad/
+  sudo ln -sf "$(pwd)/kmonad/logitech-k380.kbd" /etc/kmonad/
+
+  sudo cp ./kmonad/40-kmonad.rules ./kmonad/logitech-k380.rules /etc/udev/rules.d
+  sudo cp "$(pwd)/kmonad/kmonad@.service" /etc/systemd/system/
+
+  sudo udevadm trigger --action=change
+
+  sudo systemctl enable kmonad@
+  sudo systemctl enable kmonad@logitech-k380 && sudo systemctl start kmonad@logitech-k380
+  sudo systemctl enable kmonad@laptop-kb && sudo systemctl start kmonad@laptop-kb
+}
+
+exa() {
+  if [ "$OS" == "debian" ]; then
+    sudo apt install exa -y
+  else
+    sudo pacman --noconfirm -S exa
+  fi
+}
+
 obsidian() {
   if [ "$OS" == "debian" ]; then
     wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.7/obsidian_1.6.7_amd64.deb -O "$HOME/Downloads/obsidian.deb"
@@ -245,6 +275,7 @@ main() {
   nvm
   minikube
   docker
+  kmonad
 
   echo "Installing applications"
   obsidian

@@ -1,0 +1,13 @@
+[Unit]
+Description=kmonad
+
+[Service]
+ExecStart=/usr/bin/kmonad %E/kmonad/%i.kbd
+Restart=always
+RestartSec=5
+StandardOutput=null
+StandardError=null
+
+[Install]
+DefaultInstance=config
+WantedBy=default.target

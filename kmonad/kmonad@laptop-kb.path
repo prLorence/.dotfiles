@@ -1,0 +1,8 @@
+[Unit]
+Description=start kmonad for laptop keyboard
+StartLimitIntervalSec=400
+StartLimitBurst=3
+
+[Install]
+DefaultInstance=config
+WantedBy=default.target

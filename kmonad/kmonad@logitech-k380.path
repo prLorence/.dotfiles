@@ -1,0 +1,11 @@
+[Unit]
+Description=start kmonad for logitech k380
+StartLimitIntervalSec=400
+StartLimitBurst=3
+
+[Path]
+PathExists=/dev/logitech-k380
+
+[Install]
+DefaultInstance=config
+WantedBy=default.target

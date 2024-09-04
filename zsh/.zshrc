@@ -14,7 +14,7 @@ setopt histignorealldups sharehistory
 zplug "jeffreytse/zsh-vi-mode"
 zplug "agkozak/zsh-z"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "plugins/git",   from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-autosuggestions"
 
@@ -35,8 +35,7 @@ alias kubectl="minikube kubectl --"
 
 export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 
-
-if [[ -e $HOME/.cargo/env ]] then
+if [[ -e $HOME/.cargo/env ]]; then
     . $HOME/.cargo/env
 fi
 
@@ -46,7 +45,8 @@ eval "$(starship init zsh)"
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
-        echo; zplug install
+        echo
+        zplug install
     fi
 fi
 
@@ -62,10 +62,19 @@ export DOTNET_ROOT="/usr/share/dotnet"
 
 export NVM_DIR="$HOME/.nvm"
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 export GOPATH="$HOME/go"
 
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
+
+#!/bin/bash
+
+# Check if kmonad with the specific configuration is already running
+# if pgrep -f "kmonad $HOME/.config/phetoush.kbd" >/dev/null; then
+#     exit 0
+# else
+#     kmonad "$HOME"/.config/phetoush.kbd >/dev/null 2>&1 &
+# fi
