@@ -1,6 +1,0 @@
-services:
-  vm:
-    image: ubuntu:ansible
-    container_name: test-vm
-    stdin_open: true
-    tty: true
