@@ -174,17 +174,25 @@ return {
       yamlls = {},
       terraformls = {},
       tflint = {},
-      bashls = {},
+      bashls = {
+        filetypes = {
+          'sh',
+          'zsh',
+          'zshrc',
+        },
+      },
       shellcheck = {
         filetypes = {
           'sh',
           'zsh',
+          'zshrc',
         },
       },
       shfmt = {
         filetypes = {
           'sh',
           'zsh',
+          'zshrc',
         },
       },
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
