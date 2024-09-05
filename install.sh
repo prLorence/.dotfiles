@@ -38,7 +38,7 @@ discord() {
     sudo apt install ./discord.deb -y
     rm discord.deb
   else
-    sudo pacman --noconfirm -S discord -y
+    yay --noconfirm -S discord -y
   fi
 }
 
@@ -47,7 +47,7 @@ docker() {
     echo "Docker installation requires root privileges. Please run the Docker installation manually."
     echo "Visit https://docs.docker.com/engine/install/debian/ for instructions."
   else
-    sudo pacman --noconfirm -S docker -y
+    yay --noconfirm -S docker -y
   fi
 }
 
@@ -60,7 +60,7 @@ firefox() {
     echo "echo 'Package: *\nPin: origin packages.mozilla.org\nPin-Priority: 1000' | sudo tee /etc/apt/preferences.d/mozilla"
     echo "sudo apt-get update && sudo apt-get install firefox"
   else
-    sudo pacman --noconfirm -S firefox -y
+    yay --noconfirm -S firefox -y
   fi
 }
 
@@ -83,7 +83,7 @@ kitty() {
     sed -i "s|Exec=kitty|Exec=$HOME/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
     echo 'kitty.desktop' >~/.config/xdg-terminals.list
   else
-    sudo pacman --noconfirm -S kitty -y
+    yay --noconfirm -S kitty -y
   fi
 }
 
@@ -93,7 +93,7 @@ minikube() {
     sudo dpkg -i minikube_latest_amd64.deb
     rm minikube_latest_amd64.deb
   else
-    sudo pacman --noconfirm -S minikube -y
+    yay --noconfirm -S minikube -y
   fi
 }
 
@@ -106,7 +106,7 @@ nvim() {
     make CMAKE_BUILD_TYPE=RelWithDebInfo
     cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
   else
-    sudo pacman --noconfirm -S neovim -y
+    yay --noconfirm -S neovim -y
   fi
 }
 
@@ -114,7 +114,7 @@ solaar() {
   if [ "$OS" == "debian" ]; then
     sudo apt install solaar -y
   else
-    sudo pacman --noconfirm -S solaar -y
+    yay --noconfirm -S solaar -y
   fi
 }
 
@@ -125,7 +125,7 @@ spotify() {
     echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
     sudo apt-get update && sudo apt-get install spotify-client -y
   else
-    sudo pacman --noconfirm -S spotify-launcher -y
+    yay --noconfirm -S spotify-launcher -y
   fi
 }
 
@@ -141,7 +141,7 @@ zsh() {
   if [ "$OS" == "debian" ]; then
     sudo apt install zsh -y
   else
-    yes | sudo pacman --noconfirm -S zsh
+    yay --noconfirm -S zsh
   fi
 
   # Backup existing .zshrc if it exists
@@ -158,7 +158,7 @@ terraform() {
     echo "Terraform installation requires root privileges. Please run the installation manually."
     echo "Visit https://developer.hashicorp.com/terraform/downloads for instructions."
   else
-    sudo pacman --noconfirm -S terraform -y
+    yay --noconfirm -S terraform -y
   fi
 }
 
@@ -166,7 +166,7 @@ tmux() {
   if [ "$OS" == "debian" ]; then
     sudo apt install tmux -y
   else
-    sudo pacman --noconfirm -S tmux -y
+    yay --noconfirm -S tmux -y
   fi
 }
 
@@ -204,7 +204,7 @@ exa() {
   if [ "$OS" == "debian" ]; then
     sudo apt install exa -y
   else
-    sudo pacman --noconfirm -S exa
+    yay --noconfirm -S exa
   fi
 }
 
@@ -214,7 +214,7 @@ obsidian() {
     sudo dpkg -i "$HOME/Downloads/obsidian.deb"
     rm "$HOME/Downloads/obsidian.deb"
   else
-    sudo pacman --noconfirm -S obsidian -y
+    yay --noconfirm -S obsidian -y
   fi
 }
 
@@ -229,7 +229,7 @@ go() {
     rm go1.23.0.linux-amd64.tar.gz
     echo 'export PATH=$PATH:/usr/local/go/bin' >>"$HOME/.profile"
   else
-    sudo pacman --noconfirm -S go -y
+    yay --noconfirm -S go -y
   fi
 }
 
@@ -240,7 +240,7 @@ dotnet() {
     rm packages-microsoft-prod.deb
     sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0
   else
-    sudo pacman --noconfirm -S dotnet-sdk -y
+    yay --noconfirm -S dotnet-sdk -y
   fi
 }
 
