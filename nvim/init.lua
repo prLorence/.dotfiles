@@ -48,7 +48,7 @@ require('lazy').setup({
   require 'kickstart.plugins.todo-comments',
   require 'kickstart.plugins.markview',
   -- require 'kickstart.plugins.navigator',
-  require 'kickstart.plugins.typescript-tools',
+  -- require 'kickstart.plugins.typescript-tools',
 
   require 'kickstart.coloschemes.tokyonight',
 
