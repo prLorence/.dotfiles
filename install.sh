@@ -9,6 +9,7 @@ OS=""
 mkdepdirs() {
   mkdir -p "$APP_PATH"
   sudo mkdir -p /etc/kmonad
+  sudo mkdir -p "$HOME/.config/kmonad"
 }
 
 detectdistro() {
@@ -187,17 +188,20 @@ kmonad() {
     yay -S --noconfirm kmonad-bin
   fi
 
-  sudo ln -sf "$(pwd)/kmonad/laptop-kb.kbd" /etc/kmonad/
-  sudo ln -sf "$(pwd)/kmonad/logitech-k380.kbd" /etc/kmonad/
+  # sudo ln -sf "$(pwd)/kmonad/laptop-kb.kbd" /etc/kmonad/
+  # sudo ln -sf "$(pwd)/kmonad/logitech-k380.kbd" /etc/kmonad/
+
+  ln -sf "$(pwd)/kmonad/laptop-kb.kbd" "$HOME/.config/kmonad"
+  ln -sf "$(pwd)/kmonad/logitect-k380.kbd" "$HOME/.config/kmonad"
+
+  cp "$(pwd)/kmonad/kmonad@.service" "$HOME/.config/systemd/user"
 
   sudo cp ./kmonad/40-kmonad.rules ./kmonad/logitech-k380.rules /etc/udev/rules.d
-  sudo cp "$(pwd)/kmonad/kmonad@.service" /etc/systemd/system/
-
   sudo udevadm trigger --action=change
 
-  sudo systemctl enable kmonad@
-  sudo systemctl enable kmonad@logitech-k380 && sudo systemctl start kmonad@logitech-k380
-  sudo systemctl enable kmonad@laptop-kb && sudo systemctl start kmonad@laptop-kb
+  systemctl --user enable kmonad@
+  systemctl --user enable kmonad@logitech-k380 && systemctl --user start kmonad@logitech-k380
+  systemctl --user enable kmonad@laptop-kb && sudo --user systemctl start kmonad@laptop-kb
 }
 
 exa() {
@@ -259,6 +263,7 @@ installde() {
 
 main() {
   detectdistro
+  mkdepdirs
 
   echo "Installing terminal emulator dependencies"
   kitty

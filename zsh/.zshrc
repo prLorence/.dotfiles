@@ -69,12 +69,3 @@ export GOPATH="$HOME/go"
 
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
-
-#!/bin/bash
-
-# Check if kmonad with the specific configuration is already running
-# if pgrep -f "kmonad $HOME/.config/phetoush.kbd" >/dev/null; then
-#     exit 0
-# else
-#     kmonad "$HOME"/.config/phetoush.kbd >/dev/null 2>&1 &
-# fi
