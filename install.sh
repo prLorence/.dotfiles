@@ -261,6 +261,12 @@ installde() {
   fi
 }
 
+sshagent() {
+  cp ./services/ssh-agent.service "$HOME/.config/systemd/user/"
+  systemctl --user enable ssh-agent
+  systemctl --user start ssh-agent
+}
+
 main() {
   detectdistro
   mkdepdirs
@@ -281,6 +287,8 @@ main() {
   minikube
   docker
   kmonad
+  exa
+  sshagent
 
   echo "Installing applications"
   obsidian
