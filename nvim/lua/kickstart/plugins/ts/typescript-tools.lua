@@ -4,6 +4,9 @@ return {
   opts = {},
   config = function()
     require('typescript-tools').setup {
+      on_attach = function(client, bufnr)
+        require('workspace-diagnostics').populate_workspace_diagnostics(client, bufnr)
+      end,
       settings = {
         -- spawn additional tsserver instance to calculate diagnostics on it
         separate_diagnostic_server = true,
@@ -13,7 +16,7 @@ return {
         -- "remove_unused_imports"|"organize_imports") -- or string "all"
         -- to include all supported code actions
         -- specify commands exposed as code_actions
-        expose_as_code_action = {},
+        expose_as_code_action = 'all',
         -- string|nil - specify a custom path to `tsserver.js` file, if this is nil or file under path
         -- not exists then standard path resolution strategy is applied
         tsserver_path = nil,
@@ -24,8 +27,18 @@ return {
         -- memory limit in megabytes or "auto"(basically no limit)
         tsserver_max_memory = 'auto',
         -- described below
-        tsserver_format_options = {},
-        tsserver_file_preferences = {},
+        tsserver_format_options = {
+          insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = true,
+          semicolons = 'inert',
+        },
+        tsserver_file_preferences = {
+          includeInlayParameterNameHints = 'all',
+          includeCompletionsForModuleExports = true,
+          quotePreference = 'auto',
+          includeCompletionsForImportStatements = true,
+          includeCompletionsWithClassMemberSnippets = true,
+          importModuleSpecifierEnding = 'auto',
+        },
         -- locale of all tsserver messages, supported locales you can find here:
         -- https://github.com/microsoft/TypeScript/blob/3c221fc086be52b19801f6e8d82596d04607ede6/src/compiler/utilitiesPublic.ts#L620
         tsserver_locale = 'en',
@@ -43,7 +56,7 @@ return {
         -- WARNING: it is disabled by default (maybe you configuration or distro already uses nvim-ts-autotag,
         -- that maybe have a conflict if enable this feature. )
         jsx_close_tag = {
-          enable = false,
+          enable = true,
           filetypes = { 'javascriptreact', 'typescriptreact' },
         },
       },

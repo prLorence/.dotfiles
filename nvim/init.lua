@@ -15,16 +15,6 @@ if not vim.uv.fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
--- [[ Configure and install plugins ]]
---
---  To check the current status of your plugins, run
---    :Lazy
---
---  You can press `?` in this menu for help. Use `:q` to close the window
---
---  To update plugins you can run
---    :Lazy update
---
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
@@ -47,9 +37,12 @@ require('lazy').setup({
   require 'kickstart.plugins.luvit-meta',
   require 'kickstart.plugins.todo-comments',
   require 'kickstart.plugins.markview',
-  -- require 'kickstart.plugins.navigator',
-  -- require 'kickstart.plugins.typescript-tools',
+  require 'kickstart.plugins.ts.typescript-tools',
+  require 'kickstart.plugins.ts.ts-error-translator',
+  require 'kickstart.plugins.ts.workspace-diagnostics',
+  require 'kickstart.plugins.nvim-lint',
 
+  -- COLORSCHEMES
   require 'kickstart.coloschemes.tokyonight',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`

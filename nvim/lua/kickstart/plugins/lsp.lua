@@ -35,33 +35,6 @@ local goSettings = {
   },
 }
 
-local tsSettings = {
-  settings = {
-    typescript = {
-      inlayHints = {
-        includeInlayParameterNameHints = 'literal',
-        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-        includeInlayFunctionParameterTypeHints = true,
-        includeInlayVariableTypeHints = false,
-        includeInlayPropertyDeclarationTypeHints = true,
-        includeInlayFunctionLikeReturnTypeHints = true,
-        includeInlayEnumMemberValueHints = true,
-      },
-    },
-    javascript = {
-      inlayHints = {
-        includeInlayParameterNameHints = 'all',
-        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-        includeInlayFunctionParameterTypeHints = true,
-        includeInlayVariableTypeHints = true,
-        includeInlayPropertyDeclarationTypeHints = true,
-        includeInlayFunctionLikeReturnTypeHints = true,
-        includeInlayEnumMemberValueHints = true,
-      },
-    },
-  },
-}
-
 return {
   -- Main LSP Configuration
   'neovim/nvim-lspconfig',
@@ -222,16 +195,21 @@ return {
           'zshrc',
         },
       },
+      html = {},
+      jq = {},
+      jqls = {},
+      prettierd = {},
+      prettier = {},
+      markdownlint = {},
+      cbfmt = {},
+      buf = {},
+      eslint_d = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
       -- Some languages (like typescript) have entire language plugins that can be useful:
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      tsserver = {
-        settings = tsSettings,
-      },
-      --
 
       lua_ls = {
         -- cmd = {...},
