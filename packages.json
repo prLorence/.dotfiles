@@ -1,0 +1,32 @@
+{
+  "packages": [
+    "kitty",
+    "starship",
+    "zplug",
+    "zsh",
+    "tmux",
+    "nvim",
+    "terraform",
+    "dotnet",
+    "go",
+    "nvm",
+    "minikube",
+    "docker",
+    "kmonad",
+    "exa",
+    "obsidian",
+    "spotify",
+    "discord",
+    "solaar",
+    "easyeffects",
+    "htop",
+    "jq",
+    "webcord-git",
+    "mongodb-compass",
+    "obs-studio",
+    "lsof",
+    "postman",
+    "tlp",
+    "qbittorrent-enhanced"
+  ]
+}
