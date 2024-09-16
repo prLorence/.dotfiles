@@ -37,10 +37,15 @@ require('lazy').setup({
   require 'kickstart.plugins.luvit-meta',
   require 'kickstart.plugins.todo-comments',
   require 'kickstart.plugins.markview',
+
+  -- TYPESCRIPT PLUGINS
   require 'kickstart.plugins.ts.typescript-tools',
   require 'kickstart.plugins.ts.ts-error-translator',
   require 'kickstart.plugins.ts.workspace-diagnostics',
-  require 'kickstart.plugins.nvim-lint',
+  require 'kickstart.plugins.ts.nvim-lint',
+
+  -- CSHARP PLUGINS
+  require 'kickstart.plugins.roslyn',
 
   -- COLORSCHEMES
   require 'kickstart.coloschemes.tokyonight',
