@@ -37,6 +37,7 @@ require('lazy').setup({
   require 'kickstart.plugins.luvit-meta',
   require 'kickstart.plugins.todo-comments',
   require 'kickstart.plugins.markview',
+  require 'kickstart.plugins.zen',
 
   -- TYPESCRIPT PLUGINS
   require 'kickstart.plugins.ts.typescript-tools',

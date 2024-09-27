@@ -20,6 +20,7 @@ return {
     -- Installs the debug adapters for you
     'williamboman/mason.nvim',
     'jay-babu/mason-nvim-dap.nvim',
+    'mxsdev/nvim-dap-vscode-js',
 
     -- Add your own debuggers here
     'leoluz/nvim-dap-go',
@@ -50,24 +51,57 @@ return {
     local dap = require 'dap'
     local dapui = require 'dapui'
 
+    local js_ls_debugger = vim.fn.exepath 'js-debug-adapter'
+    local firefox_debugger = vim.fn.exepath 'firefox-debug-adapter'
+
     require('mason-nvim-dap').setup {
-      -- Makes a best effort to setup the various debuggers with
-      -- reasonable debug configurations
       automatic_installation = true,
       automatic_setup = true,
+      handlers = {
+             js = function(config)
+          config.name = 'pwa-node'
 
-      -- You can provide additional configuration to the handlers,
-      -- see mason-nvim-dap README for more information
-      handlers = {},
+          config.adapters = {
+            type = 'server',
+            host = 'localhost',
+            port = '${port}',
+            executable = {
+              command = 'sh',
+              args = { vim.fn.exepath 'js-debug-adapter', '${port}' },
+            },
+          }
 
-      -- You'll need to check that you have the required things installed
-      -- online, please don't ask me how to install them :)
+          config.configurations = {
+            {
+              type = 'pwa-node',
+              request = 'launch',
+              name = 'Launch file',
+              program = '${file}',
+              cwd = '${workspaceFolder}',
+            },
+            {
+              type = 'pwa-node',
+              request = 'attach',
+              name = 'Attach',
+              processId = require('dap.utils').pick_process,
+              cwd = '${workspaceFolder}',
+              skipFiles = { '<node_internals>/**' },
+              sourceMaps = true,
+            },
+          }
+
+          config.filetypes = require('mason-nvim-dap.mappings.filetypes').node2
+          require('mason-nvim-dap').default_setup(config)
+        end,
+      }
+
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
         'delve',
+        'js',
+        'firefox',
       },
     }
-
     -- Dap UI setup
     -- For more information, see |:help nvim-dap-ui|
     dapui.setup {
@@ -89,12 +123,6 @@ return {
         },
       },
     }
-
-    dap.listeners.after.event_initialized['dapui_config'] = dapui.open
-    dap.listeners.before.event_terminated['dapui_config'] = dapui.close
-    dap.listeners.before.event_exited['dapui_config'] = dapui.close
-
-    -- Install golang specific config
     require('dap-go').setup {
       delve = {
         -- On Windows delve must be run attached or it crashes.
@@ -102,5 +130,12 @@ return {
         detached = vim.fn.has 'win32' == 0,
       },
     }
+
+    dap.listeners.after.event_initialized['dapui_config'] = dapui.open
+    dap.listeners.before.event_terminated['dapui_config'] = dapui.close
+    dap.listeners.before.event_exited['dapui_config'] = dapui.close
+    dap.set_log_level 'INFO'
+
+    -- Install golang specific config
   end,
 }
