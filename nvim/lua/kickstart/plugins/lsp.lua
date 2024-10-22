@@ -35,6 +35,17 @@ local goSettings = {
   },
 }
 
+local tsSettings = {
+  settings = {
+    includeInlayParameterNameHints = 'all',
+    includeCompletionsForModuleExports = true,
+    quotePreference = 'auto',
+    includeCompletionsForImportStatements = true,
+    includeCompletionsWithClassMemberSnippets = true,
+    importModuleSpecifierEnding = 'auto',
+  },
+}
+
 return {
   -- Main LSP Configuration
   'neovim/nvim-lspconfig',
@@ -204,6 +215,16 @@ return {
       cbfmt = {},
       buf = {},
       eslint_d = {},
+      ts_ls = {
+        settings = tsSettings,
+        filetypes = {
+          'typescript',
+          'javascript',
+          'javascriptreact',
+          'typescriptreact',
+        },
+      },
+      -- vtsls = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
       -- Some languages (like typescript) have entire language plugins that can be useful:

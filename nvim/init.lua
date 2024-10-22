@@ -2,6 +2,7 @@
 
 require 'phetoush.set'
 require 'phetoush.remap'
+require 'phetoush.autocmd'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
@@ -37,10 +38,10 @@ require('lazy').setup({
   require 'kickstart.plugins.luvit-meta',
   require 'kickstart.plugins.todo-comments',
   require 'kickstart.plugins.markview',
-  require 'kickstart.plugins.zen',
+  require 'kickstart.plugins.noneckpain',
 
   -- TYPESCRIPT PLUGINS
-  require 'kickstart.plugins.ts.typescript-tools',
+  -- require 'kickstart.plugins.ts.typescript-tools',
   require 'kickstart.plugins.ts.ts-error-translator',
   require 'kickstart.plugins.ts.workspace-diagnostics',
   require 'kickstart.plugins.ts.nvim-lint',

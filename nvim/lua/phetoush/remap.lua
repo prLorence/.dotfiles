@@ -77,4 +77,4 @@ vim.keymap.set('n', '<leader>gc', function()
   vim.cmd 'Git commit'
 end)
 
-vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+vim.keymap.set('n', '-', '<CMD>Oil --float<CR>', { desc = 'Open parent directory' })

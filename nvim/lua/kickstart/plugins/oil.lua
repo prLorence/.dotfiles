@@ -10,10 +10,10 @@ return {
       -- Id is automatically added at the beginning, and name at the end
       -- See :help oil-columns
       columns = {
+        'mtime',
+        -- 'permissions',
+        'size',
         'icon',
-        -- "permissions",
-        -- "size",
-        -- "mtime",
       },
       -- Buffer-local options to use for oil buffers
       buf_options = {
@@ -63,8 +63,8 @@ return {
       keymaps = {
         ['g?'] = 'actions.show_help',
         ['<CR>'] = 'actions.select',
-        ['<C-s>'] = { 'actions.select', opts = { vertical = true }, desc = 'Open the entry in a vertical split' },
-        ['<C-h>'] = { 'actions.select', opts = { horizontal = true }, desc = 'Open the entry in a horizontal split' },
+        ['<C-v>'] = { 'actions.select', opts = { vertical = true }, desc = 'Open the entry in a vertical split' },
+        ['<C-x>'] = { 'actions.select', opts = { horizontal = true }, desc = 'Open the entry in a horizontal split' },
         ['<C-t>'] = { 'actions.select', opts = { tab = true }, desc = 'Open the entry in new tab' },
         ['<C-p>'] = 'actions.preview',
         ['<C-c>'] = 'actions.close',
