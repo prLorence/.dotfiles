@@ -28,6 +28,8 @@ vim.opt.autowrite = true
 vim.opt.fillchars = { eob = ' ' }
 vim.g.have_nerd_font = true
 
+vim.opt.colorcolumn = '84'
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -94,3 +96,5 @@ vim.opt.scrolloff = 10
 
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
+
+vim.opt.colorcolumn = '84'

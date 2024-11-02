@@ -38,6 +38,10 @@ require('lazy').setup({
   require 'kickstart.plugins.todo-comments',
   require 'kickstart.plugins.markview',
   require 'kickstart.plugins.noneckpain',
+  require 'kickstart.plugins.better-escape',
+  require 'kickstart.plugins.early-retirement',
+  require 'kickstart.plugins.supermaven',
+  require 'kickstart.plugins.noneckpain',
 
   -- TYPESCRIPT PLUGINS
   -- require 'kickstart.plugins.ts.typescript-tools',
@@ -46,7 +50,7 @@ require('lazy').setup({
   require 'kickstart.plugins.ts.nvim-lint',
 
   -- CSHARP PLUGINS
-  require 'kickstart.plugins.roslyn',
+  -- require 'kickstart.plugins.roslyn',
 
   -- COLORSCHEMES
   require 'kickstart.coloschemes.tokyonight',

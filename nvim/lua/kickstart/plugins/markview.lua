@@ -12,8 +12,9 @@ return {
     'nvim-tree/nvim-web-devicons',
   },
   config = function()
+    local presets = require 'markview.presets'
     require('markview').setup {
-      modes = { 'n', 'no', 'c' }, -- Change these modes
+      -- modes = { 'n', 'no', 'c' }, -- Change these modes
       -- to what you need
 
       hybrid_modes = { 'n' }, -- Uses this feature on
@@ -31,6 +32,8 @@ return {
           vim.wo[win].concealcursor = 'c'
         end,
       },
+      checkboxes = presets.checkboxes.nerd,
+      headings = presets.headings.marker,
       list_items = {
         enable = true,
         shift_width = 2,

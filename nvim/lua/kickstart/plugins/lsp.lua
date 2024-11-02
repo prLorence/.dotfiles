@@ -36,13 +36,22 @@ local goSettings = {
 }
 
 local tsSettings = {
-  settings = {
-    includeInlayParameterNameHints = 'all',
-    includeCompletionsForModuleExports = true,
-    quotePreference = 'auto',
-    includeCompletionsForImportStatements = true,
-    includeCompletionsWithClassMemberSnippets = true,
-    importModuleSpecifierEnding = 'auto',
+  updateImportsOnFileMove = { enabled = 'always' },
+  format = {
+    enable = false,
+    insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
+    insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
+  },
+  -- preferences = {
+  --   importModuleSpecifier = os.getenv 'LSP_TS_IMPORT_MODULE_SPECIFIER_PROJECT_RELATIVE' and 'project-relative' or 'auto',
+  -- },
+  inlayHints = {
+    parameterNames = { enabled = 'literals' },
+    parameterTypes = { enabled = true },
+    variableTypes = { enabled = true },
+    propertyDeclarationTypes = { enabled = true },
+    functionLikeReturnTypes = { enabled = true },
+    enumMemberValues = { enabled = true },
   },
 }
 
@@ -215,16 +224,34 @@ return {
       cbfmt = {},
       buf = {},
       eslint_d = {},
-      ts_ls = {
-        settings = tsSettings,
-        filetypes = {
-          'typescript',
-          'javascript',
-          'javascriptreact',
-          'typescriptreact',
+      -- ts_ls = {
+      --   settings = {
+      --     javascript = tsSettings,
+      --     typescript = tsSettings,
+      --   },
+      --   filetypes = {
+      --     'typescript',
+      --     'javascript',
+      --     'javascriptreact',
+      --     'typescriptreact',
+      --   },
+      -- },
+      vtsls = {
+        settings = {
+          complete_function_calls = true,
+          vtsls = {
+            enableMoveToFileCodeAction = true,
+            autoUseWorkspaceTsdk = true,
+            experimental = {
+              completion = {
+                enableServerSideFuzzyMatch = true,
+              },
+            },
+          },
+          javascript = tsSettings,
+          typescript = tsSettings,
         },
       },
-      -- vtsls = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
       -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -238,11 +265,13 @@ return {
         -- capabilities = {},
         settings = {
           Lua = {
-            completion = {
-              callSnippet = 'Replace',
+            hint = { enable = true },
+            workspace = { checkThirdParty = false },
+            telemetry = { enable = false },
+            completion = { callSnippet = 'Replace' },
+            diagnostics = {
+              globals = { 'vim' },
             },
-            -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-            -- diagnostics = { disable = { 'missing-fields' } },
           },
         },
       },
