@@ -104,7 +104,7 @@ main() {
   done
 
   log "Linking config files"
-  for config in kitty starship nvim tmux; do
+  for config in kitty starship nvim tmux sway waybar kanshi; do
     ln -sf "$(pwd)/$config" "$HOME/.config/$config"
   done
 

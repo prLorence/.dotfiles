@@ -1,0 +1,48 @@
+* {
+  font-family: 'JetBrainsMono Nerd Font Mono';
+  font-size: 11pt;
+  color: white;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  transition-duration: 0s;
+}
+
+window#waybar {
+  background: #1b182c;
+}
+
+#window,
+#memory,
+#disk,
+#pulseaudio,
+#custom-weather,
+#cpu,
+#bluetooth,
+#network, 
+#battery,
+#upower {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#custom-weather {
+  padding-left: 2rem;
+  font-weight: bold;
+}
+
+#workspaces {
+  background: #1b182c;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 1rem 1rem 0;
+}
+#workspaces button {
+  background: transparent;
+}
+
+#workspaces button.focused {
+  background: grey;
+  border-radius: 1rem;
+}
