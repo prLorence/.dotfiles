@@ -24,15 +24,9 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 # Use modern completion system
-
-ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
+export ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
 
 bindkey '^ ' autosuggest-accept
-
-alias kubectl="minikube kubectl --"
-
-# Add .NET Core SDK tools
-
 export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 
 if [[ -e $HOME/.cargo/env ]]; then
@@ -84,3 +78,4 @@ alias ls='exa'
 alias tf='terraform'
 alias dk='docker'
 alias dkc='docker compose'
+alias k='kubectl'
