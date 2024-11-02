@@ -53,9 +53,6 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-alias ls='exa'
-alias tf='terraform'
-
 # programming tools
 export PATH="$PATH:/home/phetoush/.dotnet/tools"
 export DOTNET_ROOT="/usr/share/dotnet"
@@ -69,3 +66,21 @@ export GOPATH="$HOME/go"
 
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
+
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    if [ "$DESKTOP_SESSION" = "sway" ]; then
+        export XDG_CURRENT_DESKTOP="sway"
+        export BEMENU_BACKEND="wayland"
+        export MOZ_ENABLE_WAYLAND=1
+    fi
+fi
+
+if [[ -z "${SSH_CONNECTION}" ]]; then
+    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+fi
+
+# aliases for common commands
+alias ls='exa'
+alias tf='terraform'
+alias dk='docker'
+alias dkc='docker compose'
