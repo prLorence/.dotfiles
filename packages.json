@@ -12,6 +12,8 @@
     "nvm",
     "minikube",
     "docker",
+    "docker-buildx",
+    "docker-compose",
     "kmonad",
     "exa",
     "obsidian",
@@ -21,12 +23,22 @@
     "easyeffects",
     "htop",
     "jq",
-    "webcord-git",
     "mongodb-compass",
     "obs-studio",
     "lsof",
     "postman",
     "tlp",
-    "qbittorrent-enhanced"
+    "qbittorrent-enhanced",
+    "blueberry",
+    "polybar"
+  ],
+  "wayland_packags": [
+    "sway",
+    "webcord-git",
+    "swaylock-effects",
+    "waybar",
+    "fuzzel",
+    "swayidle",
+    "kanshi"
   ]
 }
