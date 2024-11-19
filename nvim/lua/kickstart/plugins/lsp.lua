@@ -36,22 +36,26 @@ local goSettings = {
 }
 
 local tsSettings = {
-  updateImportsOnFileMove = { enabled = 'always' },
-  format = {
-    enable = false,
-    insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
-    insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
-  },
-  -- preferences = {
-  --   importModuleSpecifier = os.getenv 'LSP_TS_IMPORT_MODULE_SPECIFIER_PROJECT_RELATIVE' and 'project-relative' or 'auto',
-  -- },
-  inlayHints = {
-    parameterNames = { enabled = 'literals' },
-    parameterTypes = { enabled = true },
-    variableTypes = { enabled = true },
-    propertyDeclarationTypes = { enabled = true },
-    functionLikeReturnTypes = { enabled = true },
-    enumMemberValues = { enabled = true },
+  tsserver = {
+    maxTsServerMemory = 4096,
+    updateImportsOnFileMove = { enabled = 'always' },
+    format = {
+      enable = false,
+      insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
+      insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
+    },
+    preferences = {
+      -- importModuleSpecifier = os.getenv 'LSP_TS_IMPORT_MODULE_SPECIFIER_PROJECT_RELATIVE' and 'project-relative' or 'auto',
+      -- includePackageJsonAutoImports = 'off',
+    },
+    inlayHints = {
+      parameterNames = { enabled = 'literals' },
+      parameterTypes = { enabled = true },
+      variableTypes = { enabled = true },
+      propertyDeclarationTypes = { enabled = true },
+      functionLikeReturnTypes = { enabled = true },
+      enumMemberValues = { enabled = true },
+    },
   },
 }
 
@@ -160,11 +164,11 @@ return {
         -- code, if the language server you are using supports them
         --
         -- This may be unwanted, since they displace some of your code
-        if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
-          map('<leader>th', function()
-            vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
-          end, '[T]oggle Inlay [H]ints')
-        end
+        -- if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
+        --   map('<leader>th', function()
+        --     vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
+        --   end, '[T]oggle Inlay [H]ints')
+        -- end
       end,
     })
 
@@ -245,6 +249,7 @@ return {
             experimental = {
               completion = {
                 enableServerSideFuzzyMatch = true,
+                entriesLimit = 20,
               },
             },
           },

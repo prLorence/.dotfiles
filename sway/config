@@ -240,7 +240,7 @@ bar {
 }
 
 # Application Shortcuts
-bindsym $mod+b exec firefoz
+bindsym $mod+b exec firefox
 bindsym $mod+m exec "spotify-launcher --skip-update"
 bindsym $mod+d exec webcord
 bindsym $mod+n exec "SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket obsidian"

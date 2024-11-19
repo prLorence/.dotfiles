@@ -79,3 +79,6 @@ alias tf='terraform'
 alias dk='docker'
 alias dkc='docker compose'
 alias k='kubectl'
+
+# Created by `pipx` on 2024-11-08 07:34:29
+export PATH="$PATH:/home/phetoush/.local/bin"
