@@ -42,6 +42,7 @@ require('lazy').setup({
   require 'kickstart.plugins.early-retirement',
   require 'kickstart.plugins.supermaven',
   require 'kickstart.plugins.noneckpain',
+  require 'kickstart.plugins.nvim-vtsls',
 
   -- TYPESCRIPT PLUGINS
   -- require 'kickstart.plugins.ts.typescript-tools',

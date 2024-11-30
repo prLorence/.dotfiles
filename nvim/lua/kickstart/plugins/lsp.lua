@@ -36,25 +36,43 @@ local goSettings = {
 }
 
 local tsSettings = {
+  updateImportsOnFileMove = {
+    enabled = 'always',
+  },
+  format = {
+    enable = true,
+    semicolons = 'insert',
+    insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
+    insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
+  },
+  inlayHints = {
+    parameterNames = { enabled = 'literals' },
+    parameterTypes = { enabled = true },
+    variableTypes = { enabled = true },
+    propertyDeclarationTypes = { enabled = true },
+    functionLikeReturnTypes = { enabled = true },
+    enumMemberValues = { enabled = true },
+  },
+  implementationsCodeLens = {
+    enabled = true,
+    showOnInterfaceMethods = true,
+  },
+  referenceCodeLens = {
+    enabled = true,
+    showOnAllFunctions = true,
+  },
   tsserver = {
-    maxTsServerMemory = 4096,
-    updateImportsOnFileMove = { enabled = 'always' },
-    format = {
-      enable = false,
-      insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
-      insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
+    experimental = {
+      enableProjectDiagnostics = true,
     },
+    useSyntaxServer = 'auto',
+    maxTsServerMemory = 8192,
     preferences = {
-      -- importModuleSpecifier = os.getenv 'LSP_TS_IMPORT_MODULE_SPECIFIER_PROJECT_RELATIVE' and 'project-relative' or 'auto',
+      importModuleSpecifier = os.getenv 'LSP_TS_IMPORT_MODULE_SPECIFIER_PROJECT_RELATIVE' and 'project-relative' or 'auto',
       -- includePackageJsonAutoImports = 'off',
     },
-    inlayHints = {
-      parameterNames = { enabled = 'literals' },
-      parameterTypes = { enabled = true },
-      variableTypes = { enabled = true },
-      propertyDeclarationTypes = { enabled = true },
-      functionLikeReturnTypes = { enabled = true },
-      enumMemberValues = { enabled = true },
+    workspaceSymbols = {
+      scope = 'currentProject',
     },
   },
 }
@@ -164,11 +182,11 @@ return {
         -- code, if the language server you are using supports them
         --
         -- This may be unwanted, since they displace some of your code
-        -- if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
-        --   map('<leader>th', function()
-        --     vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
-        --   end, '[T]oggle Inlay [H]ints')
-        -- end
+        if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
+          vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
+          -- map('<leader>th', function()
+          -- end, '[T]oggle Inlay [H]ints')
+        end
       end,
     })
 
@@ -229,20 +247,35 @@ return {
       buf = {},
       eslint_d = {},
       -- ts_ls = {
+      --   single_file_support = false,
+      --   init_options = {
+      --     hostInfo = 'neovim',
+      --   },
       --   settings = {
-      --     javascript = tsSettings,
-      --     typescript = tsSettings,
+      --     tsserver = {
+      --       useSyntaxServer = 'always',
+      --     },
+      --     maxTsServerMemory = 8192,
+      --     updateImportsOnFileMove = { enabled = 'always' },
+      --     experimental = {
+      --       enableProjectDiagnostics = true,
+      --     },
+      --     javascript = tslsSettings.languageSettings,
+      --     typescript = tslsSettings.languageSettings,
       --   },
       --   filetypes = {
-      --     'typescript',
       --     'javascript',
       --     'javascriptreact',
+      --     'javascript.jsx',
+      --     'typescript',
       --     'typescriptreact',
+      --     'typescript.tsx',
       --   },
       -- },
       vtsls = {
         settings = {
-          complete_function_calls = true,
+          typescript = tsSettings,
+          javascript = tsSettings,
           vtsls = {
             enableMoveToFileCodeAction = true,
             autoUseWorkspaceTsdk = true,
@@ -253,8 +286,6 @@ return {
               },
             },
           },
-          javascript = tsSettings,
-          typescript = tsSettings,
         },
       },
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
