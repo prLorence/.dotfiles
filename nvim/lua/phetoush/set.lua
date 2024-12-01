@@ -99,8 +99,8 @@ vim.opt.spell = true
 
 vim.opt.colorcolumn = '84'
 
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-vim.opt.foldcolumn = '0'
-vim.opt.foldtext = ''
-vim.opt.foldlevelstart = 2
+vim.o.fillchars = [[eob: ,fold: ,foldopen:▼,foldsep: ,foldclose:⏵]]
+vim.o.foldcolumn = '1'
+vim.o.foldenable = true
+vim.o.foldlevelstart = 99
+vim.o.foldlevel = 99

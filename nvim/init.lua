@@ -43,6 +43,8 @@ require('lazy').setup({
   require 'kickstart.plugins.supermaven',
   require 'kickstart.plugins.noneckpain',
   require 'kickstart.plugins.nvim-vtsls',
+  require 'kickstart.plugins.ufo',
+  require 'kickstart.plugins.statuscol',
 
   -- TYPESCRIPT PLUGINS
   -- require 'kickstart.plugins.ts.typescript-tools',
