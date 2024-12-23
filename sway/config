@@ -241,8 +241,9 @@ bar {
 
 # Application Shortcuts
 bindsym $mod+b exec firefox
+bindsym $mod+Shift+b exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+m exec "spotify-launcher --skip-update"
-bindsym $mod+d exec webcord
+bindsym $mod+d exec webcord --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+n exec "SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket obsidian"
 bindsym $mod+i exec XDG_CURRENT_DESKTOP="gnome" gnome-control-center
 

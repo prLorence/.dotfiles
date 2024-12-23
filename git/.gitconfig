@@ -1,0 +1,7 @@
+[user]
+    name = prLorence
+    email = paulorencereyes@gmail.com
+
+# The gitdir: path must end with a trailing slash /
+[includeIf "gitdir:~/Documents/work/contentlab/"]
+    path = "~/.gitconfig.contentlab"

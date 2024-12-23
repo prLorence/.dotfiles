@@ -1,0 +1,5 @@
+[user]
+    name = paul-contentlab
+    email = paul@contentlab.xyz
+[core] 
+    sshCommand = ssh -i ~/.ssh/contentlab
