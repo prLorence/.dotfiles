@@ -22,17 +22,14 @@
     "solaar",
     "easyeffects",
     "htop",
-    "jq",
     "mongodb-compass",
     "obs-studio",
     "lsof",
     "postman",
     "tlp",
-    "qbittorrent-enhanced",
     "blueberry",
-    "polybar"
-  ],
-  "wayland_packags": [
+    "polybar",
+    "zoxide",
     "sway",
     "webcord-git",
     "swaylock-effects",
@@ -40,5 +37,6 @@
     "fuzzel",
     "swayidle",
     "kanshi"
-  ]
+  ],
+  "wayland_packags": []
 }

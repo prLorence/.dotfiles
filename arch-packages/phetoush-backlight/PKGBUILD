@@ -1,0 +1,10 @@
+pkgname=phetoush-backlight
+pkgver=1.0
+pkgrel=1
+pkgdesc='My Backlight Dependencies'
+arch=(any)
+license=(None)
+depends=(
+	brightnessctl
+	ddcutil
+)

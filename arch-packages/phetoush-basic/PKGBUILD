@@ -1,0 +1,25 @@
+pkgname=phetoush-basic
+pkgver=1.0
+pkgrel=1
+pkgdesc='My Basic Dependencies'
+arch=(any)
+license=(None)
+depends=(
+	axel
+	bc
+	coreutils
+	cliphist
+	cmake
+	curl
+	fuzzel
+	rsync
+	wget
+	ripgrep
+	jq
+	npm
+	meson
+	typescript
+	gjs
+	xdg-user-dirs
+	wl-clipboard
+)
