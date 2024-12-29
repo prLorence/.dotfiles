@@ -44,6 +44,6 @@ depends=(
 	calibre
 	sioyek
 	vlc
-	pcmanfm-qt
+	nautilus
 	brave
 )

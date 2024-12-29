@@ -22,4 +22,7 @@ depends=(
 	gjs
 	xdg-user-dirs
 	wl-clipboard
+	iwgtk
+	libqrencode
+	gtk4
 )

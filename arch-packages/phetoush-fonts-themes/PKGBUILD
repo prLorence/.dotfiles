@@ -6,6 +6,7 @@ arch=(any)
 license=(None)
 depends=(
 	adw-gtk-theme-git
+	adwaita-icon-theme
 	qt5ct
 	qt5-wayland
 	fontconfig

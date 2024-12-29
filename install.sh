@@ -31,8 +31,8 @@ install_local_pkgbuild() {
   x pushd $location
 
   source ./PKGBUILD
-  echo x yay -S $installflags --asdeps "${depends[@]}"
-  echo x makepkg -si --noconfirm
+  x yay -S $installflags --asdeps "${depends[@]}"
+  x makepkg -si --noconfirm
 
   x popd
 }
@@ -47,6 +47,7 @@ done
 
 main() {
   mkdepdirs
+  cp -r ./wallpapers/ "$HOME/Pictures/Wallpapers/"
 
   log "Linking config files"
   for config in kitty starship nvim tmux sway waybar kanshi; do
