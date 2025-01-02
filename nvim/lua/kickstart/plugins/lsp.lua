@@ -240,7 +240,6 @@ return {
       },
       html = {},
       jq = {},
-      jqls = {},
       prettierd = {},
       prettier = {},
       markdownlint = {},

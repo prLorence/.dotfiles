@@ -35,6 +35,7 @@ depends=(
 	polybar
 	zoxide
 	sway
+	swaybg
 	webcord-git
 	swaylock-effects
 	waybar

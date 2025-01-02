@@ -12,7 +12,7 @@ setopt histignorealldups sharehistory
 
 # zsh plugins through zplug
 zplug "jeffreytse/zsh-vi-mode"
-zplug "agkozak/zsh-z"
+# zplug "agkozak/zsh-z"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "plugins/git", from:oh-my-zsh
 zplug "zsh-users/zsh-history-substring-search"
@@ -61,6 +61,11 @@ export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 
+if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+    exec sway
+    export DESKTOP_SESSION="sway"
+fi
+
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     if [ "$DESKTOP_SESSION" = "sway" ]; then
         export XDG_CURRENT_DESKTOP="sway"
@@ -82,3 +87,5 @@ alias k='kubectl'
 
 # Created by `pipx` on 2024-11-08 07:34:29
 export PATH="$PATH:/home/phetoush/.local/bin"
+
+eval "$(zoxide init zsh)"

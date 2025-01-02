@@ -18,6 +18,7 @@ return { -- Highlight, edit, and navigate code
       'bash',
       'markdown',
       'markdown_inline',
+      'json',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
@@ -70,7 +71,7 @@ return { -- Highlight, edit, and navigate code
     --
     --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-    --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+    --    - Treesitter + textobjects: https://github.com/nvim-treesittr/nvim-treesitter-textobjects
     --    vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
   end,
 }

@@ -31,8 +31,8 @@ install_local_pkgbuild() {
   x pushd $location
 
   source ./PKGBUILD
-  x yay -S $installflags --asdeps "${depends[@]}"
-  x makepkg -si --noconfirm
+  x yay -S $installflags "${depends[@]}"
+  # x makepkg -si --noconfirm
 
   x popd
 }
@@ -49,12 +49,12 @@ main() {
   mkdepdirs
   cp -r ./wallpapers/ "$HOME/Pictures/Wallpapers/"
 
-  log "Linking config files"
+  echo "Linking config files"
   for config in kitty starship nvim tmux sway waybar kanshi; do
-    echo ln -sf "$(pwd)/$config" "$HOME/.config/$config"
+    ln -sf "$(pwd)/$config" "$HOME/.config/$config"
   done
 
-  log "Installation complete!"
+  echo "Installation complete!"
 }
 
 # Run the main function

@@ -7,6 +7,10 @@ license=(None)
 depends=(
 	pavucontrol
 	wireplumber
+	pipewire
+	pipewire-alsa
+	pipewire-jack
+	pipewire-pulse
 	libdbusmenu-gtk3
 	playerctl
 	swww

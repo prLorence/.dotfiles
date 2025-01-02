@@ -25,4 +25,8 @@ depends=(
 	iwgtk
 	libqrencode
 	gtk4
+	fzf
+	openssh
+	fastfetch
+	unzip
 )
