@@ -50,7 +50,7 @@ main() {
   cp -r ./wallpapers/ "$HOME/Pictures/Wallpapers/"
 
   echo "Linking config files"
-  for config in kitty starship nvim tmux sway waybar kanshi; do
+  for config in kitty starship nvim tmux sway waybar kanshi fontconfig; do
     ln -sf "$(pwd)/$config" "$HOME/.config/$config"
   done
 
