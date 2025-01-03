@@ -309,8 +309,3 @@ bindsym $mod+Shift+e mode "$power_control"
 bindswitch --reload --locked lid:on exec swaylock -f -c 000000 & systemctl suspend
 
 exec_always pkill wl-paste; exec wl-paste --watch cliphist store
-exec_always pkill kanshi; exec kanshi -c $HOME/.config/kanshi/config
-# exec --no-startup-id enablescreenshare.sh
-# exec_always pkill ssh-agent; exec eval "$(ssh-agent -s)"
-# exec "/usr/lib/xdg-desktop-portal -r & /usr/lib/xdg-desktop-portal-wlr"
-
