@@ -4,7 +4,9 @@
 
 # Notes
 
-**This environment is "systemd-centric", which simplifies the management of services:**
+This environment is "systemd-centric", which simplifies the management of services
+
+Services used:
 1. `systemd-resolved` - for DNS resolution
 2. `systemd-logind` - for user login sessions
 3. `systemd-boot` - as the UEFI boot manager
@@ -19,9 +21,9 @@
 3. add the user to the `uinput` group, `$ sudo usermod -aG input,uinput username`  
 4. load the newly added udev rules, `$ sudo modprobe uinput`  
 5. reboot  
-6. enable and start the following services with the `--user` flag  
-  - `$ systemctl --user enable kmonad@laptop-kb`  
-  - `$ systemctl --user enable kmonad@logitech-k380`  
+6. enable and start the following services with the `--user` flag
+  - `$ systemctl --user enable kmonad@laptop-kb`
+  - `$ systemctl --user enable kmonad@logitech-k380`
 7. reboot, or start the services right away  
 
 **The audio is not set-up by default, enable the following services**  
