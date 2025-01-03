@@ -13,7 +13,7 @@
 
 ## Additional Setup
 
-**Setting up kmonad for my personal keymaps:**
+**Setting up kmonad for my personal keymaps**
 1. Copy the rules from `./udev/rules.d/` directory to `/etc/udev/rules.d/`  
 2. create a new group called `uinput`, `$ sudo groupadd uinput`  
 3. add the user to the `uinput` group, `$ sudo usermod -aG input,uinput username`  
@@ -33,7 +33,7 @@
 `$ sudo systemctl enable bluetooth`  
 `$ sudo systemctl start bluetooth`  
 
-**Set the `systemd-resolved` to recommended mode:**
+**Set the `systemd-resolved` to recommended mode**
 
 `# ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf`
 
