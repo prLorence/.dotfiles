@@ -20,7 +20,6 @@ APP_PATH="$HOME/Desktop/Applications"
 
 mkdepdirs() {
   mkdir -p "$APP_PATH"
-  mkdir -p "$HOME/.config/kmonad"
   mkdir -p "$HOME/Pictures/Wallpapers"
 }
 
@@ -37,6 +36,11 @@ install_local_pkgbuild() {
   x popd
 }
 
+setup_systemd_services() {
+  mkdir -p "$HOME"/.config/systemd/user/
+  cp ./systemd/* "$HOME"/.config/systemd/user/
+}
+
 metapkgs=(./arch-packages/phetoush-{audio,backlight,basic,fonts-themes,screencapture,environment,portal})
 
 for i in "${metapkgs[@]}"; do
@@ -50,7 +54,7 @@ main() {
   cp -r ./wallpapers/ "$HOME/Pictures/Wallpapers/"
 
   echo "Linking config files"
-  for config in kitty starship nvim tmux sway waybar kanshi fontconfig; do
+  for config in kitty starship nvim tmux sway waybar kanshi fontconfig kmonad; do
     ln -sf "$(pwd)/$config" "$HOME/.config/$config"
   done
 
