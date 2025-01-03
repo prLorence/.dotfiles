@@ -36,7 +36,7 @@ require('lazy').setup({
   require 'kickstart.plugins.snippets',
   require 'kickstart.plugins.luvit-meta',
   require 'kickstart.plugins.todo-comments',
-  require 'kickstart.plugins.markview',
+  require 'kickstart.plugins.render-markdown',
   require 'kickstart.plugins.noneckpain',
   require 'kickstart.plugins.better-escape',
   require 'kickstart.plugins.early-retirement',

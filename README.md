@@ -44,3 +44,5 @@ this mode will provide domain name resolution for software that reads /etc/resol
 **Install additional packages**
 1. nvm - `$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash`
 2. zplug - `$ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh`
+
+
