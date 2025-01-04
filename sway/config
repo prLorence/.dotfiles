@@ -308,4 +308,4 @@ bindsym $mod+Shift+e mode "$power_control"
 # launches swaylock before sleeping
 bindswitch --reload --locked lid:on exec swaylock -f -c 000000 & systemctl suspend
 
-exec_always pkill wl-paste; exec wl-paste --watch cliphist store
+exec wl-paste --watch cliphist store

@@ -28,4 +28,5 @@ depends=(
 	openssh
 	fastfetch
 	unzip
+	mako
 )

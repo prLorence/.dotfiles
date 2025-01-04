@@ -15,6 +15,7 @@ depends=(
 	go
 	nvm
 	minikube
+	kubectl
 	docker
 	docker-buildx
 	docker-compose
