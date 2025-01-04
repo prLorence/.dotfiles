@@ -294,9 +294,9 @@ for_window [shell="xwayland"] title_format "[XWayland] %title"
 set $power_control Power control: [l]ock, [e]xit, [s]uspend, [r]eboot, [p]ower off
 
 mode "$power_control" {
-  bindsym l exec swaylock -f -c 000000, mode default
+  bindsym l exec gtklock -s "$HOME/.config/gtklock/assets/dark.css", mode default
   bindsym e exec swaymsg exit, mode default
-  bindsym s exec swaylock -f -c 000000 && systemctl suspend, mode default
+  bindsym s exec gtklock -s "$HOME/.config/gtklock/assets/dark.css" -d && systemctl suspend, mode default
   bindsym r exec reboot, mode default
   bindsym p exec poweroff, mode default
 
@@ -306,6 +306,6 @@ mode "$power_control" {
 bindsym $mod+Shift+e mode "$power_control"
 
 # launches swaylock before sleeping
-bindswitch --reload --locked lid:on exec swaylock -f -c 000000 & systemctl suspend
+bindswitch --reload --locked lid:on exec gtklock -s "$HOME/.config/gtklock/assets/dark.css" -d && systemctl suspend
 
 exec wl-paste --watch cliphist store

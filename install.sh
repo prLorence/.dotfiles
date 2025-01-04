@@ -53,10 +53,13 @@ main() {
   mkdepdirs
   cp -r ./wallpapers/ "$HOME/Pictures/Wallpapers/"
 
-  echo "Linking config files"
-  for config in kitty starship nvim tmux sway waybar kanshi fontconfig kmonad fuzzel; do
+  echo "Linking config files..."
+  for config in kitty starship nvim tmux sway waybar kanshi fontconfig kmonad fuzzel gtklock mako; do
     ln -sf "$(pwd)/$config" "$HOME/.config/$config"
   done
+
+  echo "Setting the theme for GTK applications to dark..."
+  gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
   echo "Installation complete!"
 }

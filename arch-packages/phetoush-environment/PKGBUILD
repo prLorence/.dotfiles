@@ -38,7 +38,7 @@ depends=(
 	sway
 	swaybg
 	webcord-git
-	swaylock-effects
+	gtklock
 	waybar
 	fuzzel
 	swayidle

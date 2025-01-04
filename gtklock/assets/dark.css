@@ -1,0 +1,11 @@
+window {
+   background-image: url("background.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-color: #201c1c;
+}
+
+#clock-label, #input-label, #body, #window-box {
+   color: white;
+}
