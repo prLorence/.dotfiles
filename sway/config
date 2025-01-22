@@ -85,7 +85,7 @@ exec --no-startup-id nm-applet
 floating_modifier $mod
 
 # start a terminal with a tmux session attached
-bindsym $mod+Return exec kitty -e tmux
+bindsym $mod+Return exec foot -e tmux
 
 # start a normal terminal
 bindsym $mod+Shift+Return exec kitty
@@ -98,7 +98,7 @@ bindsym $mod+q kill
 # A more modernkdmenu replacement is rofi:
 # bindsym $mod+r exec "rofi -show run"
 
-bindsym $mod+r exec fuzzel
+bindsym $mod+r exec ELECTRON_OZONE_PLATFORM_HINT=wayland fuzzel 
 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.

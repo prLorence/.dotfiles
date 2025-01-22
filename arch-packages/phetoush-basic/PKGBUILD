@@ -29,4 +29,6 @@ depends=(
 	fastfetch
 	unzip
 	mako
+	ladspa
+	noise-suppression-for-voice
 )

@@ -19,6 +19,7 @@ return { -- Highlight, edit, and navigate code
       'markdown',
       'markdown_inline',
       'json',
+      'http',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,

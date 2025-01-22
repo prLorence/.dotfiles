@@ -45,6 +45,7 @@ require('lazy').setup({
   require 'kickstart.plugins.nvim-vtsls',
   require 'kickstart.plugins.ufo',
   require 'kickstart.plugins.statuscol',
+  require 'kickstart.plugins.rest',
 
   -- TYPESCRIPT PLUGINS
   -- require 'kickstart.plugins.ts.typescript-tools',

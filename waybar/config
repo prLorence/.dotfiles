@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar"],
     "modules-center": ["clock"],
-    "modules-right": ["bluetooth", "upower#keyboard", "upower#mouse", "pulseaudio", "battery", "network", "memory", "cpu"],
+    "modules-right": ["pulseaudio" ,"bluetooth", "upower#keyboard", "upower#mouse", "battery", "network", "memory", "cpu"],
     "sway/window": {
         "max-length": 50
     },
@@ -79,12 +79,12 @@
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} ",
         "format-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",

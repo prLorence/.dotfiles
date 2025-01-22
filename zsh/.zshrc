@@ -67,6 +67,7 @@ if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; the
 fi
 
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    export ELECTRON_OZONE_PLATFORM_HINT=wayland
     if [ "$DESKTOP_SESSION" = "sway" ]; then
         export XDG_CURRENT_DESKTOP="sway"
         export BEMENU_BACKEND="wayland"
