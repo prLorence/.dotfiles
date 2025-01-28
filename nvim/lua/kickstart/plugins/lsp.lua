@@ -35,6 +35,16 @@ local goSettings = {
   },
 }
 
+local terraformSettings = {
+  indexing = {
+    ignoreDirectoryNames = { '.git', 'terraform.tfstate.d' },
+  },
+  experimentalFeatures = {
+    validateOnSave = true,
+    prefillRequiredFields = true,
+  },
+}
+
 local tsSettings = {
   updateImportsOnFileMove = {
     enabled = 'always',
@@ -196,6 +206,7 @@ return {
     --  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
     --  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
     local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
     -- Enable the following language servers
@@ -215,7 +226,9 @@ return {
       -- pyright = {},
       -- rust_analyzer = {},
       yamlls = {},
-      terraformls = {},
+      terraformls = {
+        init_options = terraformSettings,
+      },
       tflint = {},
       bashls = {
         filetypes = {

@@ -10,6 +10,7 @@ return { -- Highlight, edit, and navigate code
       'typescript',
       'python',
       'terraform',
+      'hcl',
       'go',
       'sql',
       'html',
