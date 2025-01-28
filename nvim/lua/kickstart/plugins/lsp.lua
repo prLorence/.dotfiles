@@ -66,7 +66,7 @@ local tsSettings = {
       enableProjectDiagnostics = true,
     },
     useSyntaxServer = 'auto',
-    maxTsServerMemory = 8192,
+    maxTsServerMemory = 4096,
     preferences = {
       importModuleSpecifier = os.getenv 'LSP_TS_IMPORT_MODULE_SPECIFIER_PROJECT_RELATIVE' and 'project-relative' or 'auto',
       -- includePackageJsonAutoImports = 'off',
