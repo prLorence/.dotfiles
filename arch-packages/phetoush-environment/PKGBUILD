@@ -44,11 +44,14 @@ depends=(
 	swayidle
 	kanshi
 	calibre
-	sioyek
+	sioyek-git
 	vlc
 	nautilus
 	brave
 	foot
 	bitwarden
 	tree
+	zsh-antidote
+	lazygit
+	mongodb-tools
 )

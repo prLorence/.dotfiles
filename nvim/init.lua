@@ -19,12 +19,14 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  require 'kickstart.plugins.indent_line',
+  -- require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.go-nvim',
-  require 'kickstart.plugins.cmp',
-  require 'kickstart.plugins.telescope',
+  -- require 'kickstart.plugins.cmp',
+  require 'kickstart.plugins.blink',
+  require 'kickstart.plugins.snacks',
+  -- require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.treesitter',
   require 'kickstart.plugins.mini-nvim',
   require 'kickstart.plugins.lsp',

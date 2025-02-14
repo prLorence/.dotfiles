@@ -23,18 +23,19 @@ return { -- Autoformat
       local disable_filetypes = { c = true, cpp = true, go = true }
       return {
         timeout_ms = 500,
-        lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
+        -- lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
+        lsp_fallback = true,
       }
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
       tf = { 'tflint' },
-      svelte = { 'prettierd', 'prettier', stop_after_first = true },
-      javascript = { 'prettierd', 'prettier', stop_after_first = true },
-      typescript = { 'prettierd', 'prettier', stop_after_first = true },
-      javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
-      typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
-      json = { 'prettierd', 'prettier', stop_after_first = true },
+      svelte = { 'eslint_d', 'prettierd', stop_after_first = true },
+      javascript = { 'eslint_d', 'prettierd', stop_after_first = true },
+      typescript = { 'eslint_d', 'prettierd', stop_after_first = true },
+      javascriptreact = { 'eslint_d', 'prettierd', stop_after_first = true },
+      typescriptreact = { 'eslint_d', 'prettierd', stop_after_first = true },
+      json = { 'eslint_d', 'prettierd', stop_after_first = true },
       proto = { 'buf' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },

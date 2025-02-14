@@ -1,0 +1,10 @@
+gui:
+  scrollHeight: 10
+os:
+  editPreset: "nvim"
+customCommands:
+  - key: "K"
+    command: "git cz"
+    context: "files"
+    loadingText: "opening commitizen commit tool"
+    subprocess: true

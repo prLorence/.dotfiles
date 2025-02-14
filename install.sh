@@ -31,9 +31,14 @@ install_local_pkgbuild() {
 
   source ./PKGBUILD
   x yay -S $installflags "${depends[@]}"
-  # x makepkg -si --noconfirm
 
   x popd
+}
+
+setup_zsh() {
+  for item in ".zshrc" ".zsh_plugins.txt"; do
+    ln -sf "$(pwd)/zsh/$item" "$HOME"
+  done
 }
 
 setup_systemd_services() {
@@ -54,9 +59,12 @@ main() {
   cp -r ./wallpapers/ "$HOME/Pictures/Wallpapers/"
 
   echo "Linking config files..."
-  for config in foot starship nvim tmux sway waybar kanshi fontconfig kmonad fuzzel gtklock mako pipewire; do
+  for config in foot starship nvim tmux sway waybar kanshi fontconfig kmonad fuzzel gtklock mako pipewire lazygit; do
     ln -sf "$(pwd)/$config" "$HOME/.config/$config"
   done
+
+  echo "Setting up zsh"
+  setup_zsh
 
   echo "Setting the theme for GTK applications to dark..."
   gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
