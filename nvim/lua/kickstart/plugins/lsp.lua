@@ -260,6 +260,8 @@ return {
       cbfmt = {},
       buf = {},
       eslint_d = {},
+      dockerls = {},
+      docker_compose_language_service = {},
       -- biome = {},
       -- ts_ls = {
       --   single_file_support = false,

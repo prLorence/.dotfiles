@@ -15,6 +15,31 @@ return { -- Collection of various small independent plugins/modules
     -- - sd'   - [S]urround [D]elete [']quotes
     -- - sr)'  - [S]urround [R]eplace [)] [']
     require('mini.surround').setup()
+    require('mini.files').setup {
+      mappings = {
+        close = 'q',
+        go_in = 'l',
+        go_in_plus = 'L',
+        go_out = 'h',
+        go_out_plus = 'H',
+        mark_goto = "'",
+        mark_set = 'm',
+        reset = '<BS>',
+        reveal_cwd = '-',
+        show_help = 'g?',
+        synchronize = '=',
+        trim_left = '<',
+        trim_right = '>',
+      },
+      options = {
+        -- Whether to delete permanently or move into module-specific trash
+        permanent_delete = false,
+        -- Whether to use for editing directories
+        use_as_default_explorer = false,
+      },
+    }
+    require('mini.icons').setup()
+    require('mini.trailspace').setup()
 
     -- Simple and easy statusline.
     --  You could remove this setup call if you don't like it,

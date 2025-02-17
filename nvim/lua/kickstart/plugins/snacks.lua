@@ -11,6 +11,8 @@ return {
     bigfile = { enable = true },
     indent = { enable = true },
     scratch = { enable = true },
+    image = { enable = true },
+    statuscolumn = { enable = true },
   },
   keys = {
     -- Top Pickers & Explorer

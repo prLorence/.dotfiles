@@ -85,7 +85,7 @@ exec --no-startup-id nm-applet
 floating_modifier $mod
 
 # start a terminal with a tmux session attached
-bindsym $mod+Return exec foot -e tmux
+bindsym $mod+Return exec kitty -e tmux
 
 # start a normal terminal
 bindsym $mod+Shift+Return exec kitty

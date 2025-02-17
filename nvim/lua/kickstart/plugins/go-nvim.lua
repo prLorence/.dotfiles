@@ -62,7 +62,7 @@ return {
           return {}
         end,
       },
-      luasnip = true,
+      luasnip = false,
       -- lsp_on_attach = require("navigator.lspclient.attach").on_attach,
       -- lsp_cfg = true,
       -- test_efm = true, -- errorfomat for quickfix, default mix mode, set to true will be efm only
