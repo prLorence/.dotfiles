@@ -78,4 +78,8 @@ vim.keymap.set('n', '<leader>gc', function()
 end)
 
 -- vim.keymap.set('n', '-', '<CMD>Oil --float<CR>', { desc = 'Open parent directory' })
-vim.keymap.set('n', '-', '<CMD>lua MiniFiles.open()<CR>', { desc = 'Open parent directory' })
+vim.keymap.set('n', '-', function()
+  local MiniFiles = require 'mini.files'
+  MiniFiles.open(vim.api.nvim_buf_get_name(0), false)
+  MiniFiles.reveal_cwd()
+end, { desc = 'Open current directory' })
