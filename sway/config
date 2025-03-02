@@ -249,9 +249,9 @@ bindsym $mod+d exec webcord --enable-features=UseOzonePlatform --ozone-platform=
 bindsym $mod+n exec "SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland"
 bindsym $mod+i exec nautilus
 
-bindsym $mod+Shift+s exec grim -g "$(slurp)" - | swappy -f -
+bindsym $mod+Shift+s exec XDG_CURRENT_DESKTOP=sway flameshot gui
 
-bindsym Ctrl+$mod+v exec pavucontrol 
+bindsym Ctrl+$mod+v exec pavucontrol
 
 bindsym $mod+v exec "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"
 
@@ -272,8 +272,8 @@ default_border pixel 3
 title_align center
 
 # changes focus on window color
-# class                 border  backgr. text    indicator 
-client.focused 		#404258 #404258 #adcce8 #404258   
+# class                 border  backgr. text    indicator
+client.focused 		#404258 #404258 #adcce8 #404258
 client.unfocused 	#000000 #191817 #F9F3E9
 
 # window gaps
@@ -309,3 +309,5 @@ bindsym $mod+Shift+e mode "$power_control"
 bindswitch --reload --locked lid:on exec gtklock -s "$HOME/.config/gtklock/assets/dark.css" -d && systemctl suspend
 
 exec wl-paste --watch cliphist store
+
+for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0

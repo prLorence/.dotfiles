@@ -31,4 +31,7 @@ depends=(
 	mako
 	ladspa
 	noise-suppression-for-voice
+	flameshot
+	grim
+	imv
 )
