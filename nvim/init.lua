@@ -1,4 +1,5 @@
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+vim.loader.enable()
 
 require 'phetoush.set'
 require 'phetoush.remap'
@@ -6,6 +7,7 @@ require 'phetoush.keymaps'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
+
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.uv.fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -19,14 +21,11 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  -- require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.go-nvim',
-  -- require 'kickstart.plugins.cmp',
   require 'kickstart.plugins.blink',
   require 'kickstart.plugins.snacks',
-  -- require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.treesitter',
   require 'kickstart.plugins.mini-nvim',
   require 'kickstart.plugins.lsp',
@@ -48,10 +47,12 @@ require('lazy').setup({
   require 'kickstart.plugins.nvim-vtsls',
   require 'kickstart.plugins.ufo',
   require 'kickstart.plugins.statuscol',
-  require 'kickstart.plugins.rest',
+  -- require 'kickstart.plugins.rest',
+  require 'kickstart.plugins.ts-comments',
+  require 'kickstart.plugins.overseer',
 
   -- TYPESCRIPT PLUGINS
-  -- require 'kickstart.plugins.ts.typescript-tools',
+  require 'kickstart.plugins.ts.typescript-tools',
   require 'kickstart.plugins.ts.ts-error-translator',
   require 'kickstart.plugins.ts.workspace-diagnostics',
   require 'kickstart.plugins.ts.nvim-lint',

@@ -1,5 +1,6 @@
 return { -- Collection of various small independent plugins/modules
   'echasnovski/mini.nvim',
+  -- event = 'VeryLazy',
   config = function()
     -- Better Around/Inside textobjects
     --
@@ -8,6 +9,7 @@ return { -- Collection of various small independent plugins/modules
     --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
     --  - ci'  - [C]hange [I]nside [']quote
     require('mini.ai').setup { n_lines = 500 }
+    require('mini.sessions').setup()
 
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
     --
@@ -18,9 +20,9 @@ return { -- Collection of various small independent plugins/modules
     require('mini.files').setup {
       mappings = {
         close = 'q',
-        go_in = 'l',
+        go_in = '<M-l>',
         go_in_plus = '<CR>',
-        go_out = 'h',
+        go_out = '<M-h>',
         go_out_plus = '<BS>',
         mark_goto = "'",
         mark_set = 'm',
@@ -85,7 +87,64 @@ return { -- Collection of various small independent plugins/modules
       end,
     })
 
-    -- ... and there is more!
-    --  Check out: https://github.com/echasnovski/mini.nvim
+    vim.api.nvim_create_autocmd('User', {
+      pattern = 'MiniFilesWindowOpen',
+      callback = function(args)
+        local win_id = args.data.win_id
+
+        -- Customize window-local settings
+        local config = vim.api.nvim_win_get_config(win_id)
+        config.border, config.title_pos = 'double', 'right'
+        vim.api.nvim_win_set_config(win_id, config)
+      end,
+    })
+
+    -- sync on exit insert mode
+    vim.api.nvim_create_autocmd('User', {
+      pattern = 'MiniFilesWindowOpen',
+      callback = function(args)
+        local win_id = args.data.win_id
+        local buf_id = vim.api.nvim_win_get_buf(win_id) -- Get buffer ID for the window
+
+        -- Customize window-local settings
+        -- Map kj to MiniFiles.synchronize() specifically for this buffer
+        vim.keymap.set('i', 'kj', function()
+          -- It's good practice to require the module inside the callback
+          -- just in case, though it's likely already loaded.
+          MiniFiles.synchronize()
+          vim.api.nvim_input '<Esc>'
+        end, {
+          buffer = buf_id, -- Make the mapping local to the MiniFiles buffer
+          noremap = true, -- Standard practice: non-recursive mapping
+          silent = true, -- Don't echo the command being run
+          desc = 'MiniFiles: Synchronize directory', -- Description for which-key etc.
+        })
+      end,
+    })
+
+    vim.api.nvim_create_autocmd('User', {
+      pattern = 'MiniFilesWindowUpdate',
+      callback = function(args)
+        local config = vim.api.nvim_win_get_config(args.data.win_id)
+
+        -- Ensure fixed height
+        config.height = 10
+
+        -- Ensure no title padding
+        local n = #config.title
+        config.title[1][1] = config.title[1][1]:gsub('^ ', '')
+        config.title[n][1] = config.title[n][1]:gsub(' $', '')
+
+        vim.api.nvim_win_set_config(args.data.win_id, config)
+      end,
+    })
+
+    -- lsp rename on file opreation
+    vim.api.nvim_create_autocmd('User', {
+      pattern = 'MiniFilesActionRename',
+      callback = function(event)
+        Snacks.rename.on_rename_file(event.data.from, event.data.to)
+      end,
+    })
   end,
 }

@@ -1,5 +1,6 @@
 return {
   'luukvbaal/statuscol.nvim',
+  event = 'VeryLazy',
   config = function()
     -- from https://github.com/kevinhwang91/nvim-ufo/issues/4#issuecomment-1512772530
     local builtin = require 'statuscol.builtin'

@@ -46,6 +46,9 @@ local terraformSettings = {
 }
 
 local tsSettings = {
+  suggest = {
+    includeCompletionsForImportStatements = false,
+  },
   updateImportsOnFileMove = {
     enabled = 'always',
   },
@@ -64,12 +67,12 @@ local tsSettings = {
     enumMemberValues = { enabled = true },
   },
   implementationsCodeLens = {
-    enabled = true,
+    enabled = false,
     showOnInterfaceMethods = true,
   },
   referenceCodeLens = {
-    enabled = true,
-    showOnAllFunctions = true,
+    enabled = false,
+    showOnAllFunctions = false,
   },
   tsserver = {
     experimental = {
@@ -79,7 +82,7 @@ local tsSettings = {
     maxTsServerMemory = 4096,
     preferences = {
       importModuleSpecifier = os.getenv 'LSP_TS_IMPORT_MODULE_SPECIFIER_PROJECT_RELATIVE' and 'project-relative' or 'auto',
-      -- includePackageJsonAutoImports = 'off',
+      includePackageJsonAutoImports = 'auto',
     },
     workspaceSymbols = {
       scope = 'currentProject',
@@ -90,6 +93,7 @@ local tsSettings = {
 return {
   -- Main LSP Configuration
   'neovim/nvim-lspconfig',
+  event = 'VeryLazy',
   dependencies = {
     -- Automatically install LSPs and related tools to stdpath for Neovim
     { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
@@ -209,6 +213,7 @@ return {
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
     capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities())
+    -- capabilities = vim.tbl_deep_extend('force', capabilities, require('lsp-file-operations').default_capabilities())
 
     -- Enable the following language servers
     --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -254,14 +259,14 @@ return {
       },
       html = {},
       jq = {},
-      prettierd = {},
       prettier = {},
       markdownlint = {},
       cbfmt = {},
       buf = {},
-      eslint_d = {},
+      eslint = {},
       dockerls = {},
       docker_compose_language_service = {},
+      ruby_lsp = {},
       -- biome = {},
       -- ts_ls = {
       --   single_file_support = false,
@@ -289,22 +294,22 @@ return {
       --     'typescript.tsx',
       --   },
       -- },
-      vtsls = {
-        settings = {
-          typescript = tsSettings,
-          javascript = tsSettings,
-          vtsls = {
-            enableMoveToFileCodeAction = true,
-            autoUseWorkspaceTsdk = true,
-            experimental = {
-              completion = {
-                enableServerSideFuzzyMatch = true,
-                entriesLimit = 20,
-              },
-            },
-          },
-        },
-      },
+      -- vtsls = {
+      --   settings = {
+      --     typescript = tsSettings,
+      --     javascript = tsSettings,
+      --     vtsls = {
+      --       enableMoveToFileCodeAction = true,
+      --       autoUseWorkspaceTsdk = true,
+      --       experimental = {
+      --         completion = {
+      --           enableServerSideFuzzyMatch = true,
+      --           entriesLimit = 20,
+      --         },
+      --       },
+      --     },
+      --   },
+      -- },
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
       -- Some languages (like typescript) have entire language plugins that can be useful:

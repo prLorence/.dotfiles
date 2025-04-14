@@ -1,8 +1,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- vim.keymap.set('i', 'kj', '<Esc>:w<CR>')
-
 vim.keymap.set('v', '<M-S-j>', ":m '>+1<CR>gv=gv", { silent = true })
 vim.keymap.set('v', '<M-S-k>', ":m '<-2<CR>gv=gv", { silent = true })
 

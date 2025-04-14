@@ -1,10 +1,11 @@
 return {
   'saghen/blink.cmp',
   -- optional: provides snippets for the snippet source
+  event = 'VeryLazy',
   dependencies = { 'rafamadriz/friendly-snippets' },
 
   -- use a release tag to download pre-built binaries
-  version = '*',
+  version = 'v0.*', -- REQUIRED release tag to download pre-built binaries
   -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
   -- build = 'cargo build --release',
   -- If you use nix, you can build from source using latest nightly rust with:
@@ -21,7 +22,7 @@ return {
       preset = 'default',
       ['<M-k>'] = { 'select_prev', 'fallback' },
       ['<M-j>'] = { 'select_next', 'fallback' },
-      ['<TAB>'] = { 'accept', 'fallback' },
+      ['<Tab>'] = { 'accept', 'fallback' },
       ['<M-.>'] = { 'show_documentation', 'fallback' },
     },
 
@@ -38,7 +39,7 @@ return {
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'lsp', 'path', 'buffer' },
     },
   },
   opts_extend = { 'sources.default' },

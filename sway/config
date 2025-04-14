@@ -250,6 +250,7 @@ bindsym $mod+n exec "SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket obsidian --
 bindsym $mod+i exec nautilus
 
 bindsym $mod+Shift+s exec XDG_CURRENT_DESKTOP=sway flameshot gui
+bindsym Ctrl+Alt+Shift+4 exec grim -g "$(slurp)" - | swappy -f -
 
 bindsym Ctrl+$mod+v exec pavucontrol
 

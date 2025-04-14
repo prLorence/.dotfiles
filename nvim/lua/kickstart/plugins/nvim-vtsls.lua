@@ -1,5 +1,6 @@
 return {
   'yioneko/nvim-vtsls',
+  event = 'VeryLazy',
   config = function()
     require('vtsls').config {
       -- customize handlers for commands
