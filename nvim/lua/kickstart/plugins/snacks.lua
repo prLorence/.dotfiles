@@ -9,7 +9,22 @@ return {
     zen = { enabled = true },
     notifier = { enabled = true },
     bigfile = { enable = true },
-    indent = { enable = true },
+    indent = {
+      enable = true,
+      chunk = {
+        enabled = true,
+        -- only show chunk scopes in the current window
+        only_current = false,
+        hl = 'SnacksIndentChunk', ---@type string|string[] hl group for chunk scopes
+        char = {
+          corner_top = '┌',
+          corner_bottom = '└',
+          horizontal = '─',
+          vertical = '│',
+          arrow = '─',
+        },
+      },
+    },
     scratch = { enable = true },
     image = { enable = true },
     input = { enable = true },

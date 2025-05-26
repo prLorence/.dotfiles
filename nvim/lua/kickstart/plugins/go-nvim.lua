@@ -19,9 +19,9 @@ return {
       dap_debug_vt = true,
       dap_debug_gui = true,
       diagnostic = {
-        signs = {
-          text = { '🚑', '🔧', '🪛', '🪠' },
-        },
+        -- signs = {
+        --   text = { '🚑', '🔧', '🪛', '🪠' },
+        -- },
         update_in_insert = false,
       },
       -- diagnostic = { -- set diagnostic to false to disable vim.diagnostic setup
@@ -64,7 +64,7 @@ return {
       },
       luasnip = false,
       -- lsp_on_attach = require("navigator.lspclient.attach").on_attach,
-      -- lsp_cfg = true,
+      -- lsp_cfg = false,
       -- test_efm = true, -- errorfomat for quickfix, default mix mode, set to true will be efm only
     }
 

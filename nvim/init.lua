@@ -50,12 +50,16 @@ require('lazy').setup({
   -- require 'kickstart.plugins.rest',
   require 'kickstart.plugins.ts-comments',
   require 'kickstart.plugins.overseer',
+  require 'kickstart.plugins.rainbow-delimiters',
+  require 'kickstart.plugins.quicker',
+  require 'kickstart.plugins.schemastore',
 
   -- TYPESCRIPT PLUGINS
-  require 'kickstart.plugins.ts.typescript-tools',
-  require 'kickstart.plugins.ts.ts-error-translator',
+  -- require 'kickstart.plugins.ts.typescript-tools',
+  require 'kickstart.plugins.ts.format-ts-errors',
   require 'kickstart.plugins.ts.workspace-diagnostics',
   require 'kickstart.plugins.ts.nvim-lint',
+  -- require 'kickstart.plugins.ts.tsc',
 
   -- CSHARP PLUGINS
   -- require 'kickstart.plugins.roslyn',

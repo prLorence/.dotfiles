@@ -25,6 +25,11 @@ return {
       ['<Tab>'] = { 'accept', 'fallback' },
       ['<M-.>'] = { 'show_documentation', 'fallback' },
     },
+    completion = {
+      documentation = {
+        auto_show = true,
+      },
+    },
 
     appearance = {
       -- Sets the fallback highlight groups to nvim-cmp's highlight groups

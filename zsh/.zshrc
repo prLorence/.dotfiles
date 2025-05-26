@@ -26,11 +26,17 @@ eval "$(starship init zsh)"
 
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export ELECTRON_OZONE_PLATFORM_HINT=wayland
-    if [ "$DESKTOP_SESSION" = "sway" ]; then
-        export XDG_CURRENT_DESKTOP="sway"
-        export BEMENU_BACKEND="wayland"
-        export MOZ_ENABLE_WAYLAND=1
-    fi
+    export XDG_CURRENT_DESKTOP="sway"
+    export BEMENU_BACKEND="wayland"
+    export MOZ_ENABLE_WAYLAND=1
+    export _JAVA_AWT_WM_NONREPARENTIN=1
+    export DESKTOP_SESSION= "sway"
+    # if [ "$DESKTOP_SESSION" = "sway" ]; then
+    #     export XDG_CURRENT_DESKTOP="sway"
+    #     export BEMENU_BACKEND="wayland"
+    #     export MOZ_ENABLE_WAYLAND=1
+    #     export _JAVA_AWT_WM_NONREPARENTIN=1
+    # fi
 fi
 
 if [[ -z "${SSH_CONNECTION}" ]]; then
@@ -74,3 +80,10 @@ source <(fzf --zsh)
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
 enable-fzf-tab
+
+# bun completions
+[ -s "/home/phetoush/.bun/_bun" ] && source "/home/phetoush/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

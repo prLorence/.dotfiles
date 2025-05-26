@@ -27,7 +27,7 @@ depends=(
 	solaar
 	easyeffects
 	htop
-	mongodb-compass
+	mongodb-compass-bin
 	obs-studio
 	lsof
 	postman
@@ -49,7 +49,8 @@ depends=(
 	nautilus
 	brave
 	foot
-	bitwarden
+	bitwarden-bin
+	visual-studio-code-bin
 	tree
 	zsh-antidote
 	lazygit

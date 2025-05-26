@@ -22,6 +22,12 @@ return { -- Highlight, edit, and navigate code
       'markdown_inline',
       'json',
       'http',
+      'norg',
+      'scss',
+      'svelte',
+      'tsx',
+      'typst',
+      'vue',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
