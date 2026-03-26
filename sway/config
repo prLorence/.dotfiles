@@ -243,11 +243,11 @@ bar {
 
 # Application Shortcuts
 # bindsym $mod+b exec firefox
-bindsym $mod+b exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
-bindsym $mod+Shift+b exec vivaldi --enable-features=UseOzonePlatform --ozone-platform=wayland
+bindsym $mod+b exec thorium-browser --enable-features=UseOzonePlatform --ozone-platform=wayland
+# bindsym $mod+Shift+b exec vivaldi --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+m exec "spotify-launcher"
 # bindsym $mod+d exec webcord --enable-features=UseOzonePlatform --ozone-platform=wayland
-bindsym $mod+d exec discord --enable-features=UseOzonePlatform --ozone-platform=wayland
+bindsym $mod+d exec webcord --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+n exec "SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland"
 bindsym $mod+i exec nautilus
 
@@ -314,3 +314,7 @@ bindswitch --reload --locked lid:on exec gtklock -s "$HOME/.config/gtklock/asset
 exec wl-paste --watch cliphist store
 
 for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
+
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+exec eval "$(mise activate bash)"

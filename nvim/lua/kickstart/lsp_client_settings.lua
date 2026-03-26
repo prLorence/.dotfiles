@@ -63,15 +63,12 @@ function M.lsp_client_settings()
       insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
     },
     inlayHints = {
-      -- parameterNames = { enabled = 'literals' },
-      -- parameterTypes = { enabled = true },
-      -- variableTypes = { enabled = true },
-      -- propertyDeclarationTypes = { enabled = true },
-      -- functionLikeReturnTypes = { enabled = true },
-      -- enumMemberValues = { enabled = true },
+      enumMemberValues = { enabled = true },
       functionLikeReturnTypes = { enabled = true },
       parameterNames = { enabled = 'literals' },
-      variableTypes = { enabled = true },
+      parameterTypes = { enabled = true },
+      propertyDeclarationTypes = { enabled = true },
+      variableTypes = { enabled = false },
     },
     implementationsCodeLens = {
       enabled = false,
@@ -82,12 +79,13 @@ function M.lsp_client_settings()
       showOnAllFunctions = false,
     },
     tsserver = {
-      nodePath = '/home/phetoush/.bun/bin/bun',
+      nodePath = '~/.config/nvim/run-electron-as-node',
       experimental = {
         enableProjectDiagnostics = true,
       },
-      useSyntaxServer = 'auto',
-      maxTsServerMemory = 4096,
+      useSeparateSyntaxServer = false,
+      useSyntaxServer = 'never',
+      -- maxTsServerMemory = 4096,
       preferences = {
         importModuleSpecifier = os.getenv 'LSP_TS_IMPORT_MODULE_SPECIFIER_PROJECT_RELATIVE' and 'project-relative' or 'auto',
         includePackageJsonAutoImports = 'auto',
@@ -183,7 +181,83 @@ function M.lsp_client_settings()
       root_markers = { 'docker-compose.yaml', 'docker-compose.yml', 'compose.yaml', 'compose.yml' },
     },
     -- ruby_lsp = {},
-    -- ts_ls = {},
+    -- ts_ls = {
+    --   cmd = { 'bun', 'run', 'typescript-language-server', '--stdio' },
+    --   init_options = { hostInfo = 'neovim' },
+    --   settings = {
+    --     tsserver = {
+    --       useSyntaxServer = 'never',
+    --     },
+    --   },
+    --   handlers = {
+    --     -- handle rename request for certain code actions like extracting functions / types
+    --     ['_typescript.rename'] = function(_, result, ctx)
+    --       local client = assert(vim.lsp.get_client_by_id(ctx.client_id))
+    --       vim.lsp.util.show_document({
+    --         uri = result.textDocument.uri,
+    --         range = {
+    --           start = result.position,
+    --           ['end'] = result.position,
+    --         },
+    --       }, client.offset_encoding)
+    --       vim.lsp.buf.rename()
+    --       return vim.NIL
+    --     end,
+    --     ['textDocument/publishDiagnostics'] = function(_, result, ctx)
+    --       if result.diagnostics == nil then
+    --         return
+    --       end
+    --
+    --       -- ignore some tsserver diagnostics
+    --       local idx = 1
+    --       while idx <= #result.diagnostics do
+    --         local entry = result.diagnostics[idx]
+    --
+    --         local formatter = require('format-ts-errors')[entry.code]
+    --         entry.message = formatter and formatter(entry.message) or entry.message
+    --
+    --         -- codes: https://github.com/microsoft/TypeScript/blob/main/src/compiler/diagnosticMessages.json
+    --         if entry.code == 80001 then
+    --           -- { message = "File is a CommonJS module; it may be converted to an ES module.", }
+    --           table.remove(result.diagnostics, idx)
+    --         else
+    --           idx = idx + 1
+    --         end
+    --       end
+    --
+    --       vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx)
+    --     end,
+    --   },
+    --   on_attach = function(client)
+    --     -- ts_ls provides `source.*` code actions that apply to the whole file. These only appear in
+    --     -- `vim.lsp.buf.code_action()` if specified in `context.only`.
+    --     vim.api.nvim_buf_create_user_command(0, 'LspTypescriptSourceAction', function()
+    --       local source_actions = vim.tbl_filter(function(action)
+    --         return vim.startswith(action, 'source.')
+    --       end, client.server_capabilities.codeActionProvider.codeActionKinds)
+    --
+    --       vim.lsp.buf.code_action {
+    --         context = {
+    --           only = source_actions,
+    --         },
+    --       }
+    --     end, {})
+    --   end,
+    --   root_markers = { 'tsconfig.json', 'jsconfig.json', 'package.json', '.git' },
+    --   root_dir = require('lspconfig.util').root_pattern '.git',
+    -- filetypes = {
+    --   'javascript',
+    --   'javascriptreact',
+    --   'javascript.jsx',
+    --   'typescript',
+    --   'typescriptreact',
+    --   'typescript.tsx',
+    -- },
+    -- settings = {
+    --   typescript = jsts_settings,
+    --   javascript = jsts_settings,
+    -- },
+    -- },
     jsonls = {
       cmd = { 'vscode-json-language-server', '--stdio' },
       filetypes = { 'json', 'jsonc' },
@@ -199,8 +273,9 @@ function M.lsp_client_settings()
       },
     },
     vtsls = {
-      cmd = { '/home/phetoush/.bun/bin/bun', '/home/phetoush/.local/share/nvim/mason/bin/vtsls', '--stdio' },
-      root_markers = { 'tsconfig.json', 'jsonconfig.json' },
+      -- cmd = { 'bun', 'run', '/home/phetoush/.bun/bin/vtsls', '--stdio' },
+      cmd = { 'vtsls', '--stdio' },
+      root_markers = { 'tsconfig.json', 'jsconfig.json', 'package.json', '.git' },
       handlers = {
         ['textDocument/publishDiagnostics'] = function(_, result, ctx)
           if result.diagnostics == nil then
@@ -228,6 +303,7 @@ function M.lsp_client_settings()
         end,
       },
       settings = {
+        complete_function_calls = true,
         typescript = jsts_settings,
         javascript = jsts_settings,
         vtsls = {

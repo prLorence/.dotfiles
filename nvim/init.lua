@@ -42,7 +42,7 @@ require('lazy').setup({
   require 'kickstart.plugins.noneckpain',
   require 'kickstart.plugins.better-escape',
   require 'kickstart.plugins.early-retirement',
-  require 'kickstart.plugins.supermaven',
+  -- require 'kickstart.plugins.supermaven',
   require 'kickstart.plugins.noneckpain',
   require 'kickstart.plugins.nvim-vtsls',
   require 'kickstart.plugins.ufo',
@@ -62,10 +62,16 @@ require('lazy').setup({
   -- require 'kickstart.plugins.ts.tsc',
 
   -- CSHARP PLUGINS
-  -- require 'kickstart.plugins.roslyn',
+  require 'kickstart.plugins.roslyn',
+  require 'kickstart.plugins.csharp',
 
   -- COLORSCHEMES
   require 'kickstart.coloschemes.tokyonight',
+
+  -- AI PLUGINS
+  require 'kickstart.plugins.codecompanion',
+  require 'kickstart.plugins.github-copilot',
+  -- require 'kickstart.plugins.copilot-chat',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

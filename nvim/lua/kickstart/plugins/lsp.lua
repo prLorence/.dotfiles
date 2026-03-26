@@ -49,6 +49,7 @@ return {
       },
       registries = {
         'github:nvim-java/mason-registry',
+        'github:Crashdummyy/mason-registry',
         'github:mason-org/mason-registry',
       },
     }
@@ -71,7 +72,6 @@ return {
       root_markers = servers['vtsls'].root_markers,
       handlers = servers['vtsls'].handlers,
       settings = {
-        -- handlers = servers['vtsls'].handlers,
         typescript = servers['vtsls'].settings.typescript,
         javascript = servers['vtsls'].settings.javascript,
         vtsls = {

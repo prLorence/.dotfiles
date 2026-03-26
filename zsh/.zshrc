@@ -87,3 +87,4 @@ enable-fzf-tab
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+eval "$(/usr/bin/mise activate zsh)"
